@@ -29,6 +29,7 @@
 - **强制更新功能**：脚本已内置安全的强制更新（热更新）逻辑。
   - **首次使用**：会自动备份您的纯英文原始文件（后缀为 `.bak`）。
   - **后续更新**：如果检测到备份已存在，将自动先恢复英文原版文件，然后再应用全量最新的中文词条补丁。无需担心多次应用会导致汉化文本冲突。
+  - **共享词条源**：硬编码字符串替换规则现已拆分为 `translations\patches` 下的 `main/chat/workbench` 三个 JSON 文件，扩展与 Python 脚本共用同一份词条数据。
 
 ### Python 脚本使用指南
 
@@ -42,3 +43,13 @@ python patch_zh.py
 ```bash
 python patch_zh.py --revert
 ```
+
+### 词条生成脚本
+
+如果你更新了 `datafiles` 里的英文原文件或对应翻译结果，可以运行下面的脚本自动整理共享词条：
+
+```bash
+python generate_replacements.py
+```
+
+它会基于 `datafiles` 下 `.bak` 与 `.js` 的对照，更新 `translations\patches` 里的 JSON 替换表，并在写回后自动校验能否准确还原目标翻译结果。

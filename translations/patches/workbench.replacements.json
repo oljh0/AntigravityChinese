@@ -1,0 +1,414 @@
+[
+  [
+    "{value:B5.TURBO,label:\"Always Proceed\",description:\"Agent never asks for review. This maximizes the autonomy of the Agent, but also has the highest risk of the Agent operating over unsafe or injected Artifact content.\",disabledInSecureMode:!0}",
+    "{value:B5.TURBO,label:\"始终继续\",description:\"Agent 从不请求审查。这最大化了 Agent 的自主性，但也具有 Agent 操作不安全或注入的 Artifact 内容的最高风险。\",disabledInSecureMode:!0}"
+  ],
+  [
+    "children:\"Artifacts are files the agent creates during a conversation to help perform longer running tasks and allow the user to provide high-level feedback. Click to open in editor.\"",
+    "children:\"产物是 Agent 在对话中创建的文件，用于帮助执行较长时间运行的任务并允许用户提供高级反馈。点击在编辑器中打开。\""
+  ],
+  [
+    "{label:\"Always Proceed\",value:W1.EAGER,description:\"Always auto-execute commands unless they are in your deny list. This also allows Agent to auto-execute Browser controls.\"}",
+    "{label:\"始终继续\",value:W1.EAGER,description:\"始终自动执行命令，除非它们在您的拒绝列表中。这也允许 Agent 自动执行浏览器控制。\"}"
+  ],
+  [
+    "{value:B5.AUTO,label:\"Agent Decides\",description:\"Agent will decide when to ask for review based on task complexity and user preference.\"}",
+    "{value:B5.AUTO,label:\"Agent 决定\",description:\"Agent 将根据任务复杂性和用户偏好决定何时请求审查。\"}"
+  ],
+  [
+    "{value:B5.ALWAYS,label:\"Request Review\",description:\"Agent always asks for review.\",disabledInSecureMode:!1}",
+    "{value:B5.ALWAYS,label:\"请求审查\",description:\"Agent 始终请求审查。\",disabledInSecureMode:!1}"
+  ],
+  [
+    "description:[\"Predict the location of your next edit and navigates you there with a tab keypress\"]",
+    "description:[\"预测下一个编辑位置，按 Tab 键即可跳转到该位置\"]"
+  ],
+  [
+    "description:[\"Highlight newly inserted text after accepting a Tab completion.\"]",
+    "description:[\"接受 Tab 补全后高亮新插入的文本。\"]"
+  ],
+  [
+    "description:[\"Open files in the background if the agent creates or edits them\"]",
+    "description:[\"当 Agent 创建或编辑文件时在后台打开它们\"]"
+  ],
+  [
+    "description:[\"Quickly add and update imports with a tab keypress.\"]",
+    "description:[\"按 Tab 键快速添加和更新导入语句。\"]"
+  ],
+  [
+    "children:\"AI may make mistakes. Double-check all generated code.\"",
+    "children:\"AI 可能会犯错。请仔细检查所有生成的代码。\""
+  ],
+  [
+    "\"Auto-proceeded by the agent under your review policy.\"",
+    "\"已由 Agent 根据您的审查策略自动继续。\""
+  ],
+  [
+    "\"View and manage Agent memories, workflows, and rules\"",
+    "\"查看和管理 Agent 记忆、工作流和规则\""
+  ],
+  [
+    "{label:\"Fast\",value:RV.FAST,isDefaultWhenAvailable:!0}",
+    "{label:\"快速\",value:RV.FAST,isDefaultWhenAvailable:!0}"
+  ],
+  [
+    "\", please report the issue using our feedback form.\"",
+    "\" 时遇到困难，请使用我们的反馈表单报告问题。\""
+  ],
+  [
+    "description:[\"Open Agent panel on window reload\"]",
+    "description:[\"窗口重新加载时打开 Agent 面板\"]"
+  ],
+  [
+    "`Artifacts (${t.length} Files for Conversation)`",
+    "`对话产物 (${t.length} 个文件)`"
+  ],
+  [
+    "children:\"Add them to allow future interactions\"",
+    "children:\"将它们添加到允许列表以允许未来的交互\""
+  ],
+  [
+    "description:[\"Set the speed of tab suggestions\"]",
+    "description:[\"设置 Tab 建议的速度\"]"
+  ],
+  [
+    "\"Manually proceeded under your review policy.\"",
+    "\"已根据您的审查策略手动继续。\""
+  ],
+  [
+    "\"Ask anything, @ to mention, / for workflows\"",
+    "\"输入任何内容\\n@ 用于提及，/ 用于调用工作流\""
+  ],
+  [
+    "[\"Generating\",\"Working\",\"Loading\", \"Running\"]",
+    "[\"生成中\",\"工作中\",\"加载中\", \"运行中\"]"
+  ],
+  [
+    "textContent=\"JavaScript execution policy\"",
+    "textContent=\"JavaScript 执行策略\""
+  ],
+  [
+    ",\" result\",i.resources.length===1?\"\":\"s\"",
+    ",\" 个结果\""
+  ],
+  [
+    "`View all ${this.w.nameShort} shortcuts`",
+    "`查看所有 ${this.w.nameShort} 快捷键`"
+  ],
+  [
+    "\"Audio is not supported for this model\"",
+    "\"该模型不支持音频\""
+  ],
+  [
+    "children:\"Loading Browser recording...\"",
+    "children:\"正在加载浏览器录制...\""
+  ],
+  [
+    "textContent=\"Terminal execution policy\"",
+    "textContent=\"终端执行策略\""
+  ],
+  [
+    "children:\"Edit your SSH configuration\"",
+    "children:\"编辑你的 SSH 配置\""
+  ],
+  [
+    "\"If you are having difficulty using \"",
+    "\"如果你在使用 \""
+  ],
+  [
+    "children:[\"Start a New Conversation\"",
+    "children:[\"开始新对话\""
+  ],
+  [
+    ",\" result\",s.length===1?\"\":\"s\",\" \"",
+    ",\" 个结果 \""
+  ],
+  [
+    "text:l?\"Collapse all\":\"Expand all\"",
+    "text:l?\"全部折叠\":\"全部展开\""
+  ],
+  [
+    "label:\"Enable Tab Sounds (Beta)\"",
+    "label:\"启用 Tab 声音 (Beta)\""
+  ],
+  [
+    "textContent=\"Manage MCP servers\"",
+    "textContent=\"管理 MCP 服务器\""
+  ],
+  [
+    "title:\"Editor-Specific Settings\"",
+    "title:\"编辑器特定设置\""
+  ],
+  [
+    "textContent=\"Advanced Settings\"",
+    "textContent=\"高级设置\""
+  ],
+  [
+    "children:\"Loading MCP servers\"",
+    "children:\"正在加载 MCP 服务器\""
+  ],
+  [
+    "label:\"Agent Gitignore Access\"",
+    "label:\"Agent Gitignore 访问\""
+  ],
+  [
+    "label:\"Auto-Open Edited Files\"",
+    "label:\"自动打开已编辑文件\""
+  ],
+  [
+    "label:\"Highlight After Accept\"",
+    "label:\"接受后高亮\""
+  ],
+  [
+    "textContent=o?\"Cancel\":\"Start\"",
+    "textContent=o?\"取消\":\"开始\""
+  ],
+  [
+    "label:\"Suggestions in Editor\"",
+    "label:\"编辑器中的建议\""
+  ],
+  [
+    "textContent=\"View raw config\"",
+    "textContent=\"查看原始配置\""
+  ],
+  [
+    "children:\"Loading models...\"",
+    "children:\"正在加载模型...\""
+  ],
+  [
+    "label:\"Agent Auto-Fix Lints\"",
+    "label:\"Agent 自动修复 Lint\""
+  ],
+  [
+    "label:\"Open Agent on Reload\"",
+    "label:\"重新加载时打开 Agent\""
+  ],
+  [
+    "label:\"Tab Gitignore Access\"",
+    "label:\"Tab Gitignore 访问\""
+  ],
+  [
+    "textContent=\"Always Proceed\"",
+    "textContent=\"始终继续\""
+  ],
+  [
+    "textContent=\"Customizations\"",
+    "textContent=\"自定义\""
+  ],
+  [
+    "textContent=\"Request Review\"",
+    "textContent=\"请求审查\""
+  ],
+  [
+    "{label:\"Slow\",value:RV.SLOW}",
+    "{label:\"慢速\",value:RV.SLOW}"
+  ],
+  [
+    "`Open Agent Manager (${t})`",
+    "`打开 Agent 管理器 (${t})`"
+  ],
+  [
+    "textContent=\"Agent Decides\"",
+    "textContent=\"Agent 决定\""
+  ],
+  [
+    "textContent=\"Review policy\"",
+    "textContent=\"审查策略\""
+  ],
+  [
+    "children:\"1. Report Issue\"",
+    "children:\"1. 报告问题\""
+  ],
+  [
+    "children:\"Thought Process\"",
+    "children:\"思考过程\""
+  ],
+  [
+    "`Changes Overview (${h})`",
+    "`更改概览 (${h})`"
+  ],
+  [
+    "label:\"Clipboard Context\"",
+    "label:\"剪贴板上下文\""
+  ],
+  [
+    "\"No microphone detected\"",
+    "\"未检测到麦克风\""
+  ],
+  [
+    "`Thinking for ${TTe(t)}`",
+    "`思考中 ${TTe(t)}`"
+  ],
+  [
+    "children:\"Artifact Name\"",
+    "children:\"产物名称\""
+  ],
+  [
+    "children:\"Edit workflow\"",
+    "children:\"编辑工作流\""
+  ],
+  [
+    "label:\"Reset to default\"",
+    "label:\"重置为默认\""
+  ],
+  [
+    ",\" result\",s===1?\"\":\"s\"",
+    ",\" 个结果\""
+  ],
+  [
+    "children:\"Collapse All\"",
+    "children:\"全部折叠\""
+  ],
+  [
+    "children:\"Last Updated\"",
+    "children:\"最后更新\""
+  ],
+  [
+    "children:\"Report Issue\"",
+    "children:\"报告问题\""
+  ],
+  [
+    "\"Hide selection nudge\"",
+    "\"隐藏选中操作提示\""
+  ],
+  [
+    "children:\"Add context\"",
+    "children:\"添加上下文\""
+  ],
+  [
+    "label:\"Auto Execution\"",
+    "label:\"自动执行\""
+  ],
+  [
+    "textContent=\"Disabled\"",
+    "textContent=\"已禁用\""
+  ],
+  [
+    "children:\"Accept all\"",
+    "children:\"全部接受\""
+  ],
+  [
+    "children:\"Edit Model\"",
+    "children:\"编辑模型\""
+  ],
+  [
+    "children:\"Expand All\"",
+    "children:\"全部展开\""
+  ],
+  [
+    "children:\"Loading...\"",
+    "children:\"加载中...\""
+  ],
+  [
+    "i.ON=\"On\",i.OFF=\"Off\"",
+    "i.ON=\"开\",i.OFF=\"关\""
+  ],
+  [
+    "label:\"Review Policy\"",
+    "label:\"审查策略\""
+  ],
+  [
+    "label:\"Tab to Import\"",
+    "label:\"Tab 导入\""
+  ],
+  [
+    "\"Open Agent Manager\"",
+    "\"打开 Agent 管理器\""
+  ],
+  [
+    "children:\"Add Model\"",
+    "children:\"添加模型\""
+  ],
+  [
+    "children:\"Edit rule\"",
+    "children:\"编辑规则\""
+  ],
+  [
+    "label:\"AI Shortcuts\"",
+    "label:\"AI 快捷键\""
+  ],
+  [
+    "textContent=\"Manage\"",
+    "textContent=\"管理\""
+  ],
+  [
+    "textContent=\"Snooze\"",
+    "textContent=\"暂停\""
+  ],
+  [
+    "this.f.checksums||{}",
+    "{}||{}"
+  ],
+  [
+    "children:\"Get Logs\"",
+    "children:\"获取日志\""
+  ],
+  [
+    "children:[\"Proceed\"",
+    "children:[\"继续\""
+  ],
+  [
+    "label:\"Accept hunk\"",
+    "label:\"接受代码块\""
+  ],
+  [
+    "label:\"Tab to Jump\"",
+    "label:\"Tab 跳转\""
+  ],
+  [
+    "children:\"Comment\"",
+    "children:\"评论\""
+  ],
+  [
+    "label:\"Open Agent\"",
+    "label:\"打开 Agent\""
+  ],
+  [
+    "`Terminal (${d})`",
+    "`终端 (${d})`"
+  ],
+  [
+    "children:\"Accept\"",
+    "children:\"接受\""
+  ],
+  [
+    "children:\"Reject\"",
+    "children:\"拒绝\""
+  ],
+  [
+    "label:\"Tab Speed\"",
+    "label:\"Tab 速度\""
+  ],
+  [
+    "\"Accept Changes\"",
+    "\"接受更改\""
+  ],
+  [
+    "children:\"Model\"",
+    "children:\"模型\""
+  ],
+  [
+    "label:\"Settings\"",
+    "label:\"设置\""
+  ],
+  [
+    "`Thought for ${",
+    "`思考了 ${"
+  ],
+  [
+    "children:\"Send\"",
+    "children:\"发送\""
+  ],
+  [
+    "label:\"Running\"",
+    "label:\"运行中\""
+  ],
+  [
+    "label:\"Submit\"",
+    "label:\"提交\""
+  ],
+  [
+    "label:\"Run\"",
+    "label:\"运行\""
+  ]
+]

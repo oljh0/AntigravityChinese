@@ -1,0 +1,3258 @@
+[
+  [
+    "children:\"Artifacts are files the agent creates during a conversation to help perform longer running tasks and allow the user to provide high-level feedback. Click to open in editor.\"",
+    "children:\"产物是 Agent 在对话中创建的文件，用于帮助执行较长时间运行的任务并允许用户提供高级反馈。点击在编辑器中打开。\""
+  ],
+  [
+    "\"(Dev-only) Select a mixin to use in the agent. This will tailor Cascade for different task types by changing things like the system prompt, tools available, etc.\"",
+    "\"(仅开发) 选择要在代理中使用的混入。这将通过更改系统提示、可用工具等来为不同的任务类型定制 Cascade。\""
+  ],
+  [
+    "\"A component is changing from controlled to uncontrolled. This may be caused by the value changing from a defined value to undefined, which should not happen.\"",
+    "\"组件正在从受控变为非受控。这可能是由于值从已定义变为 undefined，这不应该发生。\""
+  ],
+  [
+    "\"A component is changing from uncontrolled to controlled. This may be caused by the value changing from undefined to a defined value, which should not happen.\"",
+    "\"组件正在从非受控变为受控。这可能是由于值从 undefined 变为已定义值，这不应该发生。\""
+  ],
+  [
+    "\"This tool runs code that can access IDE extension APIs and potentially change the functionality of your IDE the same way that an IDE extension or plugin can.\"",
+    "\"此工具运行的代码可以访问 IDE 扩展 API，并可能以与 IDE 扩展或插件相同的方式更改 IDE 的功能。\""
+  ],
+  [
+    "\"Messages can be sent while the agent is still working and your message will be queued and taken into consideration at the next available break in reasoning.\"",
+    "\"您可以在代理仍在工作时发送消息，您的消息将被排队，并在下一个可用的推理间歇时被考虑。\""
+  ],
+  [
+    "\"This browser lacks typed array (Uint8Array) support which is required by `buffer` v5.x. Use `buffer` v4.x if you require old browser support.\"",
+    "\"此浏览器缺少 `buffer` v5.x 所需的类型化数组 (Uint8Array) 支持。如果需要旧浏览器支持，请使用 `buffer` v4.x。\""
+  ],
+  [
+    "\"Unleash: You must either provide your own \\\"AbortController\\\" implementation or run in an environment where \\\"AbortController\\\" is available.\"",
+    "\"Unleash: 您必须提供自己的 \\\"AbortController\\\" 实现，或在 \\\"AbortController\\\" 可用的环境中运行。\""
+  ],
+  [
+    "\"Ignore warning and attempt to send messages anyway regardless of network connection status. As a result, messages may get dropped.\"",
+    "\"忽略警告并尝试发送消息，无论网络连接状态如何。因此，消息可能会丢失。\""
+  ],
+  [
+    "{mode:\"Planning\",description:\"Agent can plan before executing tasks. Use for deep research, complex tasks, or collaborative work\"}",
+    "{mode:\"Planning\",description:\"Agent 可以在执行任务前进行规划。适用于深度研究、复杂任务或协作工作\"}"
+  ],
+  [
+    "\"A chunk is a section of the page. Long pages are chunked so that only the sections that are relevant to your query are read.\"",
+    "\"块是页面的一个部分。长页面会被分块，以便只读取与您的查询相关的部分。\""
+  ],
+  [
+    "\"Unleash: You must either provide your own \\\"fetch\\\" implementation or run in an environment where \\\"fetch\\\" is available.\"",
+    "\"Unleash: 您必须提供自己的 \\\"fetch\\\" 实现，或在 \\\"fetch\\\" 可用的环境中运行。\""
+  ],
+  [
+    "\"Missing API key. Please make sure you are signed in to Antigravity. If the problem persists, please restart the IDE.\"",
+    "\"缺少 API 密钥。请确保您已登录 Antigravity。如果问题仍然存在，请重启 IDE。\""
+  ],
+  [
+    "\"Unleash SDK has already started, if you want to restart the SDK you should call client.stop() before starting again.\"",
+    "\"Unleash SDK 已启动，如果要重新启动 SDK，应先调用 client.stop()。\""
+  ],
+  [
+    "\"forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported\"",
+    "\"forceFrameRate 接受 0 到 125 之间的正整数，不支持强制帧率高于 125 fps\""
+  ],
+  [
+    "{mode:\"Fast\",description:\"Agent will execute tasks directly. Use for simple tasks that can be completed faster\"}",
+    "{mode:\"Fast\",description:\"Agent 将直接执行任务。适用于可以更快完成的简单任务\"}"
+  ],
+  [
+    "\"Artifacts are created when the agent performs more complex, longer running tasks while in Planning mode.\"",
+    "\"工件是代理在规划模式下执行更复杂、耗时更长的任务时创建的。\""
+  ],
+  [
+    "\". As always, you can use the thumbs up or thumbs down feedback mechanism to help improve our metrics.\"",
+    "\"。您可以使用点赞或点踩反馈机制来帮助改进我们的指标。\""
+  ],
+  [
+    "\"Moves this terminal session to the Terminal tab in your IDE. The agent will still be able to use it.\"",
+    "\"将此终端会话移动到 IDE 的终端选项卡。代理仍可以使用它。\""
+  ],
+  [
+    "\"When debug mode is on, you can see additional information about each steps in the conversation.\"",
+    "\"开启调试模式后，您可以查看对话中每个步骤的额外信息。\""
+  ],
+  [
+    "\"useRegisterChatClientRequestHandler must be used within a ChatClientServerContextProvider\"",
+    "\"useRegisterChatClientRequestHandler 必须在 ChatClientServerContextProvider 中使用\""
+  ],
+  [
+    "\"You can prompt the model to try again or start a new conversation if the error persists.\"",
+    "\"您可以重试提示模型，或者如果错误持续存在，可以开始新的对话。\""
+  ],
+  [
+    "\"This error is likely temporary. You can prompt the model to try again after some time.\"",
+    "\"此错误可能是暂时的。您可以稍后提示模型重试。\""
+  ],
+  [
+    "\"Agent execution terminated due to model provider overload. Please try again later.\"",
+    "\"代理执行因模型提供商过载而终止。请稍后重试。\""
+  ],
+  [
+    "children:\"The Agent attempted to interact with some sites that are not allowlisted\"",
+    "children:\"Agent 尝试与一些不在允许列表中的网站交互\""
+  ],
+  [
+    "children:\"Files results show if their associated language extension is installed.\"",
+    "children:\"文件结果会在安装了关联的语言扩展后显示。\""
+  ],
+  [
+    "\"useTrajectorySummariesContext must be used within a TrajectorySummariesProvider\"",
+    "\"useTrajectorySummariesContext 必须在 TrajectorySummariesProvider 中使用\""
+  ],
+  [
+    "\"You have to provide an `open` and an `onClose` prop to the `Dialog` component.\"",
+    "\"您必须为 `Dialog` 组件提供 `open` 和 `onClose` 属性。\""
+  ],
+  [
+    "children:\"Modify the config used for browser interactions. Saved automatically.\"",
+    "children:\"修改用于浏览器交互的配置。自动保存。\""
+  ],
+  [
+    "\"useAgentWorkbenchContext must be used within an AgentWorkbenchContextProvider\"",
+    "\"useAgentWorkbenchContext 必须在 AgentWorkbenchContextProvider 中使用\""
+  ],
+  [
+    "\"useLanguageServerContext must be used within a LanguageServerContextProvider\"",
+    "\"useLanguageServerContext 必须在 LanguageServerContextProvider 中使用\""
+  ],
+  [
+    "\"useMessageHistoryContext must be used within a MessageHistoryContextProvider\"",
+    "\"useMessageHistoryContext 必须在 MessageHistoryContextProvider 中使用\""
+  ],
+  [
+    "\"useOnSendMessageContext must be used within an OnSendMessageContextProvider\"",
+    "\"useOnSendMessageContext 必须在 OnSendMessageContextProvider 中使用\""
+  ],
+  [
+    "children:\"After reporting the issue, reload your window to resume Agent use.\"",
+    "children:\"报告问题后，重新加载窗口以恢复 Agent 使用。\""
+  ],
+  [
+    "\"Agent can resize browser windows to different dimensions or window states.\"",
+    "\"代理可以将浏览器窗口调整为不同的尺寸或窗口状态。\""
+  ],
+  [
+    "\"You provided an `onClose` prop to the `Dialog`, but forgot an `open` prop.\"",
+    "\"您为 `Dialog` 提供了 `onClose` 属性，但忘记了 `open` 属性。\""
+  ],
+  [
+    "\"You provided an `open` prop to the `Dialog`, but forgot an `onClose` prop.\"",
+    "\"您为 `Dialog` 提供了 `open` 属性，但忘记了 `onClose` 属性。\""
+  ],
+  [
+    "\"Opens the associated terminal session in the Terminal tab in your IDE.\"",
+    "\"在 IDE 的终端选项卡中打开关联的终端会话。\""
+  ],
+  [
+    "children:\"The agent will wait for you to install the browser extension.\"",
+    "children:\"Agent 将等待你安装浏览器扩展。\""
+  ],
+  [
+    "children:\"This plugin has been built by a verified reference publisher.\"",
+    "children:\"此插件由经过验证的参考发布者构建。\""
+  ],
+  [
+    "\"Get notified when the agent needs your attention or completes a task.\"",
+    "\"当代理需要您注意或完成任务时获得通知。\""
+  ],
+  [
+    "\"React.Children.only expected to receive a single React element child.\"",
+    "\"React.Children.only 期望接收单个 React 元素子节点。\""
+  ],
+  [
+    "\"Jumps to the location of the terminal session that ran this command.\"",
+    "\"跳转到运行此命令的终端会话位置。\""
+  ],
+  [
+    "\"useTokenThemeContext must be used within a TokenThemeContextProvider\"",
+    "\"useTokenThemeContext 必须在 TokenThemeContextProvider 中使用\""
+  ],
+  [
+    "\"Failed to add URL to allowlist: addToBrowserAllowlist is undefined\"",
+    "\"添加 URL 到白名单失败: addToBrowserAllowlist 未定义\""
+  ],
+  [
+    "`Ask anything (${r?\"⌘L\":\"Ctrl+L\"}), @ to mention, / for workflows`",
+    "`输入任何内容 (${r?\"⌘L\":\"Ctrl+L\"})\\n@ 用于提及，/ 用于调用工作流`"
+  ],
+  [
+    "\"useContextMenuContext must be used within a ContextMenuProvider\"",
+    "\"useContextMenuContext 必须在 ContextMenuProvider 中使用\""
+  ],
+  [
+    "children:\"AI may make mistakes. Double-check all generated code.\"",
+    "children:\"AI 可能会犯错。请仔细检查所有生成的代码。\""
+  ],
+  [
+    "\"Custom models are only supported on Cloudtop / Linux machines.\"",
+    "\"自定义模型仅在 Cloudtop / Linux 机器上支持。\""
+  ],
+  [
+    "\"useBrowserContext must be used within a BrowserContextProvider\"",
+    "\"useBrowserContext 必须在 BrowserContextProvider 中使用\""
+  ],
+  [
+    "children:\"This plugin has been built by the official publisher.\"",
+    "children:\"此插件由官方发布者构建。\""
+  ],
+  [
+    "inputPlaceholder:i=\"Ask anything, @ to mention, / for workflows\"",
+    "inputPlaceholder:i=\"输入任何内容\\n@ 用于提及，/ 用于调用工作流\""
+  ],
+  [
+    "\"Failed to capture browser console logs: No console logs found\"",
+    "\"捕获浏览器控制台日志失败: 未找到控制台日志\""
+  ],
+  [
+    "\"No chat model metadata available in latest generator metadata\"",
+    "\"最新生成器元数据中无可用的聊天模型元数据\""
+  ],
+  [
+    "\"Unleash: Fetching feature toggles did not have an ok response\"",
+    "\"Unleash: 获取功能开关未收到正常响应\""
+  ],
+  [
+    "\"Confirming this undo action will make the following changes:\"",
+    "\"确认此撤销操作将进行以下更改:\""
+  ],
+  [
+    "\"LLMs can generate incorrect responses that we cannot handle.\"",
+    "\"LLM 可能生成我们无法处理的错误响应。\""
+  ],
+  [
+    "Customize Agent to get a better, more personalized experience.",
+    "自定义 Agent 以获得更好、更个性化的体验。"
+  ],
+  [
+    "\"Chat client server stream canceled by original abort signal\"",
+    "\"聊天客户端服务器流被原始中止信号取消\""
+  ],
+  [
+    "children:\"The agent was prevented from accessing some sites\"",
+    "children:\"Agent 已被阻止访问某些网站\""
+  ],
+  [
+    "placeholder??\"Ask anything - use '@' to mention code blocks\"",
+    "placeholder??\"输入任何内容 - 用 '@' 用于提及代码块\""
+  ],
+  [
+    "\"Select a model using the model selector in the input box\"",
+    "\"使用输入框中的模型选择器选择模型\""
+  ],
+  [
+    "\"An error ID that helps the team investigate the error.\"",
+    "\"帮助团队调查错误的错误 ID。\""
+  ],
+  [
+    "\"Nonretryable error starting chat client server stream:\"",
+    "\"启动聊天客户端服务器流时发生不可重试错误:\""
+  ],
+  [
+    "\"Auto-proceeded by the agent under your review policy.\"",
+    "\"已由 Agent 根据您的审查策略自动继续。\""
+  ],
+  [
+    "\"Unleash failed to resolve \\\"AbortController\\\" factory\"",
+    "\"Unleash 无法解析 \\\"AbortController\\\" 工厂\""
+  ],
+  [
+    "\"Agent can click on specific elements in the browser.\"",
+    "\"代理可以点击浏览器中的特定元素。\""
+  ],
+  [
+    "\"Unexpected error starting chat client server stream:\"",
+    "\"启动聊天客户端服务器流时发生意外错误:\""
+  ],
+  [
+    "\"Failed to parse ContextScopeItem from mention node:\"",
+    "\"从提及节点解析 ContextScopeItem 失败:\""
+  ],
+  [
+    "\"No chat model metadata available for this generator\"",
+    "\"此生成器无可用的聊天模型元数据\""
+  ],
+  [
+    "children:\"Antigravity would like to use the browser.\"",
+    "children:\"Antigravity 希望使用浏览器。\""
+  ],
+  [
+    "children:\"Confirmation required to execute this step\"",
+    "children:\"执行此步骤需要确认\""
+  ],
+  [
+    "\", please report the issue using our feedback form.\"",
+    "\" 时遇到困难，请使用我们的反馈表单报告问题。\""
+  ],
+  [
+    "\"updateContext() must be used within a FlagProvider\"",
+    "\"updateContext() 必须在 FlagProvider 中使用\""
+  ],
+  [
+    "\"No screenshot returned from captureScreenshot RPC\"",
+    "\"captureScreenshot RPC 未返回截图\""
+  ],
+  [
+    "\"No step index found for artifact code action step\"",
+    "\"未找到工件代码操作步骤的步骤索引\""
+  ],
+  [
+    "\"This model is currently experiencing some issues.\"",
+    "\"此模型当前遇到一些问题。\""
+  ],
+  [
+    "\"Did you make sure to report this error on Slack?\"",
+    "\"您确定已在 Slack 上报告此错误了吗？\""
+  ],
+  [
+    "\"Failed to copy text using document.execCommand: \"",
+    "\"使用 document.execCommand 复制文本失败: \""
+  ],
+  [
+    "\"This undo action will not make any code changes.\"",
+    "\"此撤销操作不会进行任何代码更改。\""
+  ],
+  [
+    "children:\"Rules help guide the behavior of Agent.\"",
+    "children:\"规则可以帮助引导 Agent 的行为。\""
+  ],
+  [
+    "\"Objects are not valid as a React child (found: \"",
+    "\"对象不是有效的 React 子元素 (发现: \""
+  ],
+  [
+    "\"getVariant() must be used within a FlagProvider\"",
+    "\"getVariant() 必须在 FlagProvider 中使用\""
+  ],
+  [
+    "\"Cannot revert messages with file diff comments\"",
+    "\"无法撤销包含文件差异评论的消息\""
+  ],
+  [
+    "\"Failed to enable server, click to see details.\"",
+    "\"启用服务器失败，点击查看详情。\""
+  ],
+  [
+    "\"isEnabled() must be used within a FlagProvider\"",
+    "\"isEnabled() 必须在 FlagProvider 中使用\""
+  ],
+  [
+    "`Artifacts (${n.length} Files for Conversation)`",
+    "`产物 (${n.length} 个对话文件)`"
+  ],
+  [
+    "children:\"Add them to allow future interactions\"",
+    "children:\"将它们添加到允许列表以允许未来的交互\""
+  ],
+  [
+    "\"Attach the trajectory ID to the feedback form\"",
+    "\"将轨迹 ID 附加到反馈表单\""
+  ],
+  [
+    "\"Cannot revert messages with artifact comments\"",
+    "\"无法撤销包含工件评论的消息\""
+  ],
+  [
+    "\"Enter custom reminder text for the planner...\"",
+    "\"输入规划器的自定义提醒文本...\""
+  ],
+  [
+    "\"Image rendering blocked (Secure Mode enabled)\"",
+    "\"图像渲染被阻止 (安全模式已启用)\""
+  ],
+  [
+    "\"Too many requests, please try again in a bit!\"",
+    "\"请求过多，请稍后重试！\""
+  ],
+  [
+    "\"Manually proceeded under your review policy.\"",
+    "\"已根据您的审查策略手动继续。\""
+  ],
+  [
+    "\"Some non-image binary content was truncated.\"",
+    "\"部分非图像二进制内容已被截断。\""
+  ],
+  [
+    "children:\"Connect to an existing conversation\"",
+    "children:\"连接到现有对话\""
+  ],
+  [
+    "children:\"Fetched network requests for page.\"",
+    "children:\"已获取页面的网络请求。\""
+  ],
+  [
+    "\"Exception in backgroundFetchModelStatuses:\"",
+    "\"backgroundFetchModelStatuses 中发生异常:\""
+  ],
+  [
+    "\"Failed to update conversation annotations:\"",
+    "\"更新对话注释失败:\""
+  ],
+  [
+    "children:\"Fetched network request for page.\"",
+    "children:\"已获取页面的网络请求。\""
+  ],
+  [
+    "children:\"Reconnecting to remote authority.\"",
+    "children:\"正在重新连接到远程服务器。\""
+  ],
+  [
+    "\"Cannot revert messages with file comments\"",
+    "\"无法撤销包含文件评论的消息\""
+  ],
+  [
+    "\"Error starting chat client server stream:\"",
+    "\"启动聊天客户端服务器流时出错:\""
+  ],
+  [
+    "\"Failed to copy text using Clipboard API: \"",
+    "\"使用剪贴板 API 复制文本失败: \""
+  ],
+  [
+    "\"Agent can click and drag in the browser.\"",
+    "\"代理可以在浏览器中点击和拖动。\""
+  ],
+  [
+    "\"No step index found for code action step\"",
+    "\"未找到代码操作步骤的步骤索引\""
+  ],
+  [
+    "\"Unleash: unable to fetch feature toggles\"",
+    "\"Unleash: 无法获取功能开关\""
+  ],
+  [
+    "\"off() must be used within a FlagProvider\"",
+    "\"off() 必须在 FlagProvider 中使用\""
+  ],
+  [
+    "\"Error checking microphone availability:\"",
+    "\"检查麦克风可用性时出错:\""
+  ],
+  [
+    "\"Failed to capture browser console logs:\"",
+    "\"捕获浏览器控制台日志失败:\""
+  ],
+  [
+    "\"Unleash: unable to send feature metrics\"",
+    "\"Unleash: 无法发送功能指标\""
+  ],
+  [
+    "\"on() must be used within a FlagProvider\"",
+    "\"on() 必须在 FlagProvider 中使用\""
+  ],
+  [
+    "\"Attempt to write outside buffer bounds\"",
+    "\"尝试写入缓冲区边界外\""
+  ],
+  [
+    "\"Failed to parse toolCallArgumentsJson:\"",
+    "\"解析 toolCallArgumentsJson 失败:\""
+  ],
+  [
+    "\"No content available for this resource\"",
+    "\"此资源无可用内容\""
+  ],
+  [
+    "\"Open PLX dashboard for metadata index \"",
+    "\"打开元数据索引的 PLX 仪表板 \""
+  ],
+  [
+    "\"[Paste Interceptor] No selection found\"",
+    "\"[粘贴拦截器] 未找到选择内容\""
+  ],
+  [
+    ",\" result\",1===e.resources.length?\"\":\"s\"",
+    ",\" 个结果\""
+  ],
+  [
+    "\"Audio is not supported for this model\"",
+    "\"该模型不支持音频\""
+  ],
+  [
+    "\"Auto Agent not supported at GDM (yet)\"",
+    "\"GDM 暂不支持自动代理\""
+  ],
+  [
+    "\"Failed to fetch custom agent configs:\"",
+    "\"获取自定义代理配置失败:\""
+  ],
+  [
+    "\"Failed to parse quota reset timestamp\"",
+    "\"解析配额重置时间戳失败\""
+  ],
+  [
+    "\"Trying to access beyond buffer length\"",
+    "\"尝试访问超出缓冲区长度\""
+  ],
+  [
+    "\"Browser is not enabled for this plan\"",
+    "\"此计划未启用浏览器功能\""
+  ],
+  [
+    "\"If you believe this is a bug, please\"",
+    "\"如果您认为这是一个 bug，请\""
+  ],
+  [
+    "\"Language server client not available\"",
+    "\"语言服务器客户端不可用\""
+  ],
+  [
+    "\"Retrieving Console Logs from Browser\"",
+    "\"正在从浏览器获取控制台日志\""
+  ],
+  [
+    "\"Unknown error fetching browser pages\"",
+    "\"获取浏览器页面时发生未知错误\""
+  ],
+  [
+    "title:\"Your recent terminal commands:\"",
+    "title:\"你最近的终端命令：\""
+  ],
+  [
+    "\"Error opening workspace quick pick:\"",
+    "\"打开工作区快速选择时出错:\""
+  ],
+  [
+    "\"Error: unable to parse context item\"",
+    "\"错误: 无法解析上下文项\""
+  ],
+  [
+    "\"If you are having difficulty using \"",
+    "\"如果你在使用 \""
+  ],
+  [
+    "\"No trigger was found for the editor\"",
+    "\"未找到编辑器的触发器\""
+  ],
+  [
+    "\"Retrieved Console Logs from Browser\"",
+    "\"已从浏览器获取控制台日志\""
+  ],
+  [
+    "\"Unleash failed to resolve \\\"fetch\\\"\"",
+    "\"Unleash 无法解析 \\\"fetch\\\"\""
+  ],
+  [
+    "title:\"Your recent Browser activity:\"",
+    "title:\"你最近的浏览器活动：\""
+  ],
+  [
+    "\"Error in connection error handler:\"",
+    "\"连接错误处理程序中出错:\""
+  ],
+  [
+    "\"Error parsing file diff JSON data:\"",
+    "\"解析文件差异 JSON 数据时出错:\""
+  ],
+  [
+    "\"Expected array or object as schema\"",
+    "\"期望数组或对象作为架构\""
+  ],
+  [
+    "\"Max Context Characters (optional):\"",
+    "\"最大上下文字符数 (可选):\""
+  ],
+  [
+    "\"Trigger must be a single character\"",
+    "\"触发器必须是单个字符\""
+  ],
+  [
+    "\"Trigger must be one character long\"",
+    "\"触发器长度必须为一个字符\""
+  ],
+  [
+    "children:[\"Start a New Conversation\"",
+    "children:[\"开始新对话\""
+  ],
+  [
+    "title:\"Select Model to Send Message\"",
+    "title:\"选择模型以发送消息\""
+  ],
+  [
+    "\"Failed to parse tool JSON schema:\"",
+    "\"解析工具 JSON 模式失败:\""
+  ],
+  [
+    "\"No response from extension client\"",
+    "\"扩展客户端无响应\""
+  ],
+  [
+    "\"Open extracted DOM tree in editor\"",
+    "\"在编辑器中打开提取的 DOM 树\""
+  ],
+  [
+    "\"Uses Google conversational mixin.\"",
+    "\"使用 Google 对话混入。\""
+  ],
+  [
+    "children:\"Launching the browser...\"",
+    "children:\"正在启动浏览器...\""
+  ],
+  [
+    "\"Error while searching filesystem\"",
+    "\"搜索文件系统时出错\""
+  ],
+  [
+    "\"Failed to delete queued message:\"",
+    "\"删除排队消息失败:\""
+  ],
+  [
+    "\"Failed to get static experiments\"",
+    "\"获取静态实验失败\""
+  ],
+  [
+    "\"Failed to refresh user memories:\"",
+    "\"刷新用户记忆失败:\""
+  ],
+  [
+    "\"Failed to start screen recording\"",
+    "\"启动屏幕录制失败\""
+  ],
+  [
+    "\"Path must be a string. Received \"",
+    "\"路径必须是字符串。收到 \""
+  ],
+  [
+    "\"Unknown quota limit error reason\"",
+    "\"未知配额限制错误原因\""
+  ],
+  [
+    "\"With Markdown Trajectory Summary\"",
+    "\"包含 Markdown 轨迹摘要\""
+  ],
+  [
+    ",\" result\",1===a.length?\"\":\"s\",\" \"",
+    ",\" 个结果 \""
+  ],
+  [
+    "[\"Generating\",\"Working\",\"Loading\"]",
+    "[\"生成中\",\"工作中\",\"加载中\"]"
+  ],
+  [
+    "children:\"Allow This Conversation\"",
+    "children:\"本次对话允许\""
+  ],
+  [
+    "children:\"Authentication Required\"",
+    "children:\"需要身份验证\""
+  ],
+  [
+    "children:\"Configure Auto-Continue\"",
+    "children:\"配置自动继续\""
+  ],
+  [
+    "children:\"Disabled in strict mode\"",
+    "children:\"在严格模式下已禁用\""
+  ],
+  [
+    "text:l?\"Collapse all\":\"Expand all\"",
+    "text:l?\"全部折叠\":\"全部展开\""
+  ],
+  [
+    "title:\"Click to copy full command\"",
+    "title:\"点击复制完整命令\""
+  ],
+  [
+    "title:\"Copy full URL to clipboard\"",
+    "title:\"复制完整 URL 到剪贴板\""
+  ],
+  [
+    "title:\"Model quota limit exceeded\"",
+    "title:\"模型配额已超限\""
+  ],
+  [
+    "\"Error listing MCP server names:\"",
+    "\"列出 MCP 服务器名称时出错:\""
+  ],
+  [
+    "\"Error opening MCP config modal:\"",
+    "\"打开 MCP 配置弹窗时出错:\""
+  ],
+  [
+    "\"Error while analyzing directory\"",
+    "\"分析目录时出错\""
+  ],
+  [
+    "\"Failed to add URL to allowlist:\"",
+    "\"添加 URL 到白名单失败:\""
+  ],
+  [
+    "\"Failed to close all diff zones:\"",
+    "\"关闭所有差异区域失败:\""
+  ],
+  [
+    "\"Failed to fetch revert preview:\"",
+    "\"获取还原预览失败:\""
+  ],
+  [
+    "\"Failed to find the root element\"",
+    "\"未能找到根元素\""
+  ],
+  [
+    "\"Failed to update user settings:\"",
+    "\"更新用户设置失败:\""
+  ],
+  [
+    "\"First argument must be a string\"",
+    "\"第一个参数必须是字符串\""
+  ],
+  [
+    "\"Generator is already executing.\"",
+    "\"生成器已在执行中。\""
+  ],
+  [
+    "\"No generator metadata available\"",
+    "\"无可用的生成器元数据\""
+  ],
+  [
+    "\"No renderer found for step case\"",
+    "\"未找到步骤渲染器\""
+  ],
+  [
+    "\"Reading Browser Page in Browser\"",
+    "\"正在浏览器中读取页面\""
+  ],
+  [
+    "\"Simulating Key Press in Browser\"",
+    "\"正在浏览器中模拟按键\""
+  ],
+  [
+    "children:\"Copy the trajectory ID\"",
+    "children:\"复制轨迹 ID\""
+  ],
+  [
+    "children:\"Full output written to\"",
+    "children:\"完整输出已写入\""
+  ],
+  [
+    "children:\"Start Screen Recording\"",
+    "children:\"开始屏幕录制\""
+  ],
+  [
+    "\"Error fetching model statuses:\"",
+    "\"获取模型状态时出错:\""
+  ],
+  [
+    "\"Error while semantic searching\"",
+    "\"语义搜索时出错\""
+  ],
+  [
+    "\"Extension client not available\"",
+    "\"扩展客户端不可用\""
+  ],
+  [
+    "\"Failed to export conversation:\"",
+    "\"导出对话失败:\""
+  ],
+  [
+    "\"Failed to get workspace infos:\"",
+    "\"获取工作区信息失败:\""
+  ],
+  [
+    "\"Failed to open Review Changes:\"",
+    "\"打开审查更改失败:\""
+  ],
+  [
+    "\"Failed to parse quota metadata\"",
+    "\"解析配额元数据失败\""
+  ],
+  [
+    "\"Hashing function not available\"",
+    "\"哈希函数不可用\""
+  ],
+  [
+    "\"Simulated Key Press in Browser\"",
+    "\"在浏览器中模拟按键\""
+  ],
+  [
+    "\"The URL must be of scheme file\"",
+    "\"URL 必须是 file 协议\""
+  ],
+  [
+    "children:\"Manually set Agent ID\"",
+    "children:\"手动设置 Agent ID\""
+  ],
+  [
+    "children:\"No browser pages open\"",
+    "children:\"没有打开的浏览器页面\""
+  ],
+  [
+    "children:\"View network requests\"",
+    "children:\"查看网络请求\""
+  ],
+  [
+    "children:\"troubleshooting guide\"",
+    "children:\"故障排除指南\""
+  ],
+  [
+    "placeholder:\"Search MCP servers\"",
+    "placeholder:\"搜索 MCP 服务器\""
+  ],
+  [
+    "\"Agent terminated due to error\"",
+    "\"代理因错误而终止\""
+  ],
+  [
+    "\"Error opening configure page:\"",
+    "\"打开配置页面时出错:\""
+  ],
+  [
+    "\"Error while searching the web\"",
+    "\"搜索网页时出错\""
+  ],
+  [
+    "\"Failed to capture screenshot:\"",
+    "\"捕获截图失败:\""
+  ],
+  [
+    "\"No trajectory steps available\"",
+    "\"无可用轨迹步骤\""
+  ],
+  [
+    "\"Standard conversational mode.\"",
+    "\"标准对话模式。\""
+  ],
+  [
+    "\"Undo changes up to this point\"",
+    "\"撤销到此处的更改\""
+  ],
+  [
+    "children:\"An error was thrown.\"",
+    "children:\"发生了一个错误。\""
+  ],
+  [
+    "children:\"Knowledge Generation\"",
+    "children:\"知识生成\""
+  ],
+  [
+    "children:\"Something went wrong\"",
+    "children:\"出了点问题\""
+  ],
+  [
+    "children:\"View network request\"",
+    "children:\"查看网络请求\""
+  ],
+  [
+    "placeholder:\"Search metrics...\"",
+    "placeholder:\"搜索指标...\""
+  ],
+  [
+    "\"Absolute uri to pbtxt config\"",
+    "\"pbtxt 配置的绝对 URI\""
+  ],
+  [
+    "\"Always run terminal commands\"",
+    "\"始终运行终端命令\""
+  ],
+  [
+    "\"Error listing MCP resources:\"",
+    "\"列出 MCP 资源时出错:\""
+  ],
+  [
+    "\"Error while running MCP tool\"",
+    "\"运行 MCP 工具时出错\""
+  ],
+  [
+    "\"Failed to fetch user status:\"",
+    "\"获取用户状态失败:\""
+  ],
+  [
+    "\"Failed to open plugin page: \"",
+    "\"打开插件页面失败: \""
+  ],
+  [
+    "\"No message prompts available\"",
+    "\"无可用的消息提示\""
+  ],
+  [
+    "\"Read Browser Page in Browser\"",
+    "\"在浏览器中读取页面\""
+  ],
+  [
+    "\"Refresh Custom Agent Configs\"",
+    "\"刷新自定义代理配置\""
+  ],
+  [
+    "children:\"Delete Conversation\"",
+    "children:\"删除对话\""
+  ],
+  [
+    "children:\"Loading MCP servers\"",
+    "children:\"正在加载 MCP 服务器\""
+  ],
+  [
+    "children:\"No matching results\"",
+    "children:\"没有匹配的结果\""
+  ],
+  [
+    "children:\"Open System Browser\"",
+    "children:\"打开系统浏览器\""
+  ],
+  [
+    "children:\"Preview unavailable\"",
+    "children:\"预览不可用\""
+  ],
+  [
+    "children:\"Select a trajectory\"",
+    "children:\"选择一个轨迹\""
+  ],
+  [
+    "children:\"Show items analyzed\"",
+    "children:\"显示已分析项目\""
+  ],
+  [
+    "title:\"Could not send message\"",
+    "title:\"无法发送消息\""
+  ],
+  [
+    "\"Activities cannot be viewed\"",
+    "\"无法查看活动\""
+  ],
+  [
+    "\"Code Context Item Subranges\"",
+    "\"代码上下文子范围\""
+  ],
+  [
+    "\"Confirm Browser Interaction\"",
+    "\"确认浏览器交互\""
+  ],
+  [
+    "\"Error copying to clipboard:\"",
+    "\"复制到剪贴板时出错:\""
+  ],
+  [
+    "\"Error during tool execution\"",
+    "\"工具执行期间出错\""
+  ],
+  [
+    "\"Error fetching MCP servers:\"",
+    "\"获取 MCP 服务器时出错:\""
+  ],
+  [
+    "\"Error while running command\"",
+    "\"运行命令时出错\""
+  ],
+  [
+    "\"Failed to extract waveform:\"",
+    "\"提取波形失败:\""
+  ],
+  [
+    "\"Missing chat params context\"",
+    "\"缺少聊天参数上下文\""
+  ],
+  [
+    "\"No Javascript Result Output\"",
+    "\"无 JavaScript 结果输出\""
+  ],
+  [
+    "\"No URL returned from server\"",
+    "\"服务器未返回 URL\""
+  ],
+  [
+    "\"Selecting Option in Browser\"",
+    "\"正在浏览器中选择选项\""
+  ],
+  [
+    "\"background terminal command\"",
+    "\"后台终端命令\""
+  ],
+  [
+    "children:\"Additional options\"",
+    "children:\"其他选项\""
+  ],
+  [
+    "children:\"Manage MCP Servers\"",
+    "children:\"管理 MCP 服务器\""
+  ],
+  [
+    "children:\"Open in New Window\"",
+    "children:\"在新窗口中打开\""
+  ],
+  [
+    "children:\"Past Conversations\"",
+    "children:\"历史对话\""
+  ],
+  [
+    "children:\"Playback available\"",
+    "children:\"可以回放\""
+  ],
+  [
+    "children:\"Run MCP tool call?\"",
+    "children:\"运行 MCP 工具调用？\""
+  ],
+  [
+    "children:\"Set Browser Config\"",
+    "children:\"设置浏览器配置\""
+  ],
+  [
+    "children:\"View Created Links\"",
+    "children:\"查看已创建链接\""
+  ],
+  [
+    "label:\"Complete verification\"",
+    "label:\"完成验证\""
+  ],
+  [
+    "title:\"Verification required\"",
+    "title:\"需要验证\""
+  ],
+  [
+    "\"Auto-Run On Model Decision\"",
+    "\"根据模型决策自动运行\""
+  ],
+  [
+    "\"Cannot revert this message\"",
+    "\"无法撤销此消息\""
+  ],
+  [
+    "\"Coordinated Universal Time\"",
+    "\"协调世界时\""
+  ],
+  [
+    "\"Failed to create workflow:\"",
+    "\"创建工作流失败:\""
+  ],
+  [
+    "\"Malformed diff information\"",
+    "\"差异信息格式错误\""
+  ],
+  [
+    "\"Parser was already resumed\"",
+    "\"解析器已恢复\""
+  ],
+  [
+    "\"Step handler not available\"",
+    "\"步骤处理程序不可用\""
+  ],
+  [
+    "\"This operation was aborted\"",
+    "\"此操作已中止\""
+  ],
+  [
+    "\"Unsupported browser target\"",
+    "\"不支持的浏览器目标\""
+  ],
+  [
+    "\"User Implicit Trajectories\"",
+    "\"用户隐式轨迹\""
+  ],
+  [
+    "children:\"Continue response\"",
+    "children:\"继续响应\""
+  ],
+  [
+    "children:\"Conversation mode\"",
+    "children:\"对话模式\""
+  ],
+  [
+    "children:\"Loading models...\"",
+    "children:\"正在加载模型...\""
+  ],
+  [
+    "children:\"No results found.\"",
+    "children:\"未找到结果。\""
+  ],
+  [
+    "children:\"Read URL content?\"",
+    "children:\"读取 URL 内容？\""
+  ],
+  [
+    "children:\"Read URL rejected\"",
+    "children:\"读取 URL 被拒绝\""
+  ],
+  [
+    "children:\"Refresh workflows\"",
+    "children:\"刷新工作流\""
+  ],
+  [
+    "children:\"Rejected MCP tool\"",
+    "children:\"已拒绝 MCP 工具\""
+  ],
+  [
+    "children:\"Suggested Actions\"",
+    "children:\"建议操作\""
+  ],
+  [
+    "children:\"Unknown file edit\"",
+    "children:\"未知文件编辑\""
+  ],
+  [
+    "children:\"reload the window\"",
+    "children:\"重新加载窗口\""
+  ],
+  [
+    "label:\"Download Diagnostics\"",
+    "label:\"下载诊断信息\""
+  ],
+  [
+    "label:\"Select another model\"",
+    "label:\"选择其他模型\""
+  ],
+  [
+    "title:\"Capture console logs\"",
+    "title:\"捕获控制台日志\""
+  ],
+  [
+    "title:\"Enable Notifications\"",
+    "title:\"启用通知\""
+  ],
+  [
+    "title:\"Your modified files:\"",
+    "title:\"你修改的文件：\""
+  ],
+  [
+    "\"Always ask for permission\"",
+    "\"始终询问权限\""
+  ],
+  [
+    "\"An unknown error occurred\"",
+    "\"发生未知错误\""
+  ],
+  [
+    "\"Argument must be a Buffer\"",
+    "\"参数必须是 Buffer\""
+  ],
+  [
+    "\"Dismiss suggested actions\"",
+    "\"关闭建议操作\""
+  ],
+  [
+    "\"Error fetching workflows:\"",
+    "\"获取工作流时出错:\""
+  ],
+  [
+    "\"Error rendering CodeBlock\"",
+    "\"渲染代码块时出错\""
+  ],
+  [
+    "\"Error sharing trajectory:\"",
+    "\"分享轨迹时出错:\""
+  ],
+  [
+    "\"Execute Javascript policy\"",
+    "\"执行 JavaScript 策略\""
+  ],
+  [
+    "\"Function not implemented.\"",
+    "\"功能未实现。\""
+  ],
+  [
+    "\"Generating extension code\"",
+    "\"正在生成扩展代码\""
+  ],
+  [
+    "\"No trajectories available\"",
+    "\"无可用轨迹\""
+  ],
+  [
+    "\"Open Trajectory Dashboard\"",
+    "\"打开轨迹仪表板\""
+  ],
+  [
+    "\"Scrolling down in Browser\"",
+    "\"正在浏览器中向下滚动\""
+  ],
+  [
+    "\"Toggle Ephemeral Messages\"",
+    "\"切换临时消息\""
+  ],
+  [
+    "\"failed to fetch HEAD for \"",
+    "\"获取 HEAD 失败: \""
+  ],
+  [
+    "children:\"Added Annotation\"",
+    "children:\"已添加注释\""
+  ],
+  [
+    "children:\"Background Steps\"",
+    "children:\"后台步骤\""
+  ],
+  [
+    "children:\"Close Agent View\"",
+    "children:\"关闭 Agent 视图\""
+  ],
+  [
+    "children:\"No results found\"",
+    "children:\"未找到结果\""
+  ],
+  [
+    "children:\"Pending messages\"",
+    "children:\"待处理消息\""
+  ],
+  [
+    "children:\"Progress Updates\"",
+    "children:\"进度更新\""
+  ],
+  [
+    "\"Error in event listener:\"",
+    "\"事件监听器出错:\""
+  ],
+  [
+    "\"Error listing terminals:\"",
+    "\"列出终端时出错:\""
+  ],
+  [
+    "\"Error rendering Markdown\"",
+    "\"渲染 Markdown 时出错\""
+  ],
+  [
+    "\"Error rendering playback\"",
+    "\"渲染回放时出错\""
+  ],
+  [
+    "\"Image Diff Not Supported\"",
+    "\"不支持图像差异\""
+  ],
+  [
+    "\"Retrieving Browser Pages\"",
+    "\"正在获取浏览器页面\""
+  ],
+  [
+    "\"Scrolled down in Browser\"",
+    "\"在浏览器中向下滚动\""
+  ],
+  [
+    "\"Select Option in Browser\"",
+    "\"在浏览器中选择选项\""
+  ],
+  [
+    "\"Take trajectory snapshot\"",
+    "\"拍摄轨迹快照\""
+  ],
+  [
+    "children:\"1. Report Issue\"",
+    "children:\"1. 报告问题\""
+  ],
+  [
+    "children:\"Thought Process\"",
+    "children:\"思考过程\""
+  ],
+  [
+    "children:\"View Annotation\"",
+    "children:\"查看注释\""
+  ],
+  [
+    "title:\"Capture screenshot\"",
+    "title:\"截取屏幕\""
+  ],
+  [
+    "title:\"Copy trajectory ID\"",
+    "title:\"复制轨迹 ID\""
+  ],
+  [
+    "title:\"Share Conversation\"",
+    "title:\"分享对话\""
+  ],
+  [
+    "\"Agent Action DOM Diffs:\"",
+    "\"代理操作 DOM 差异:\""
+  ],
+  [
+    "\"Canceled extension code\"",
+    "\"已取消扩展代码\""
+  ],
+  [
+    "\"Checking command status\"",
+    "\"正在检查命令状态\""
+  ],
+  [
+    "\"Disabled in Secure Mode\"",
+    "\"在安全模式下已禁用\""
+  ],
+  [
+    "\"Error opening MCP page:\"",
+    "\"打开 MCP 页面时出错:\""
+  ],
+  [
+    "\"Extracting DOM elements\"",
+    "\"正在提取 DOM 元素\""
+  ],
+  [
+    "\"Generated image preview\"",
+    "\"生成的图像预览\""
+  ],
+  [
+    "\"Moving Mouse in Browser\"",
+    "\"正在浏览器中移动鼠标\""
+  ],
+  [
+    "\"Refresh trajectory list\"",
+    "\"刷新轨迹列表\""
+  ],
+  [
+    "\"Rejected extension code\"",
+    "\"已拒绝扩展代码\""
+  ],
+  [
+    "\"Resizing Browser window\"",
+    "\"正在调整浏览器窗口大小\""
+  ],
+  [
+    "\"Retrieved Browser Pages\"",
+    "\"已获取浏览器页面\""
+  ],
+  [
+    "\"Scrolling up in Browser\"",
+    "\"正在浏览器中向上滚动\""
+  ],
+  [
+    "\"Subagent Reminder Mode:\"",
+    "\"子代理提醒模式:\""
+  ],
+  [
+    "`Changes Overview (${d})`",
+    "`更改概览 (${d})`"
+  ],
+  [
+    "children:\"Cancel command\"",
+    "children:\"取消命令\""
+  ],
+  [
+    "children:\"Customizations\"",
+    "children:\"自定义\""
+  ],
+  [
+    "children:\"Failed to send\"",
+    "children:\"发送失败\""
+  ],
+  [
+    "children:\"Open allowlist\"",
+    "children:\"打开允许列表\""
+  ],
+  [
+    "children:\"Proceeded with\"",
+    "children:\"已继续执行\""
+  ],
+  [
+    "children:\"Recent actions\"",
+    "children:\"最近操作\""
+  ],
+  [
+    "children:\"Review Changes\"",
+    "children:\"审查更改\""
+  ],
+  [
+    "\"Browser Tool Set Mode:\"",
+    "\"浏览器工具集模式:\""
+  ],
+  [
+    "\"Checked command status\"",
+    "\"已检查命令状态\""
+  ],
+  [
+    "\"End of comment missing\"",
+    "\"缺少注释结尾\""
+  ],
+  [
+    "\"Extracted DOM elements\"",
+    "\"已提取 DOM 元素\""
+  ],
+  [
+    "\"Failed to send message\"",
+    "\"发送消息失败\""
+  ],
+  [
+    "\"No microphone detected\"",
+    "\"未检测到麦克风\""
+  ],
+  [
+    "\"No resources available\"",
+    "\"无可用资源\""
+  ],
+  [
+    "\"Opening URL in Browser\"",
+    "\"正在浏览器中打开 URL\""
+  ],
+  [
+    "\"Resized Browser window\"",
+    "\"已调整浏览器窗口大小\""
+  ],
+  [
+    "\"Running extension code\"",
+    "\"正在运行扩展代码\""
+  ],
+  [
+    "\"Scrolled up in Browser\"",
+    "\"在浏览器中向上滚动\""
+  ],
+  [
+    "\"Subagent Context Mode:\"",
+    "\"子代理上下文模式:\""
+  ],
+  [
+    "\"Unknown error occurred\"",
+    "\"发生未知错误\""
+  ],
+  [
+    "\"invalid base64 string.\"",
+    "\"无效的 base64 字符串。\""
+  ],
+  [
+    "`Thinking for ${TTe(t)}`",
+    "`思考中 ${TTe(t)}`"
+  ],
+  [
+    "children:\"Artifact Name\"",
+    "children:\"产物名称\""
+  ],
+  [
+    "children:\"Edit workflow\"",
+    "children:\"编辑工作流\""
+  ],
+  [
+    "children:\"Good response\"",
+    "children:\"好的响应\""
+  ],
+  [
+    "children:\"Refresh rules\"",
+    "children:\"刷新规则\""
+  ],
+  [
+    "children:\"Send Feedback\"",
+    "children:\"发送反馈\""
+  ],
+  [
+    "children:\"View snapshot\"",
+    "children:\"查看快照\""
+  ],
+  [
+    "children:\"file an issue\"",
+    "children:\"提交问题\""
+  ],
+  [
+    "label:\"Screen Recording\"",
+    "label:\"屏幕录制\""
+  ],
+  [
+    "title:\"Confirm dismiss?\"",
+    "title:\"确认忽略？\""
+  ],
+  [
+    "\"Billed at API pricing\"",
+    "\"按 API 定价计费\""
+  ],
+  [
+    "\"Error fetching rules:\"",
+    "\"获取规则时出错:\""
+  ],
+  [
+    "\"Error while searching\"",
+    "\"搜索时出错\""
+  ],
+  [
+    "\"Invalid metadata page\"",
+    "\"无效的元数据页面\""
+  ],
+  [
+    "\"Move Mouse in Browser\"",
+    "\"在浏览器中移动鼠标\""
+  ],
+  [
+    "\"No versions available\"",
+    "\"无可用版本\""
+  ],
+  [
+    "\"Opened URL in Browser\"",
+    "\"已在浏览器中打开 URL\""
+  ],
+  [
+    "\"Paste or type ID here\"",
+    "\"在此粘贴或输入 ID\""
+  ],
+  [
+    "\"Toggle Incognito Mode\"",
+    "\"切换无痕模式\""
+  ],
+  [
+    "\"Unknown request case:\"",
+    "\"未知请求类型:\""
+  ],
+  [
+    "\"clientKey is required\"",
+    "\"需要 clientKey\""
+  ],
+  [
+    ",\" result\",1===a?\"\":\"s\"",
+    ",\" 个结果\""
+  ],
+  [
+    ",\" result\",1===h?\"\":\"s\"",
+    ",\" 个结果\""
+  ],
+  [
+    "Exit code ${e.exitCode}",
+    "\\u9000\\u51FA\\u7801 ${e.exitCode}"
+  ],
+  [
+    "children:\"Bad response\"",
+    "children:\"差的响应\""
+  ],
+  [
+    "children:\"Collapse All\"",
+    "children:\"全部折叠\""
+  ],
+  [
+    "children:\"Confirm Undo\"",
+    "children:\"确认撤销\""
+  ],
+  [
+    "children:\"Conversation\"",
+    "children:\"对话\""
+  ],
+  [
+    "children:\"Copy command\"",
+    "children:\"复制命令\""
+  ],
+  [
+    "children:\"Denied Sites\"",
+    "children:\"被拒绝的网站\""
+  ],
+  [
+    "children:\"Files Edited\"",
+    "children:\"已编辑文件\""
+  ],
+  [
+    "children:\"Last Updated\"",
+    "children:\"最后更新\""
+  ],
+  [
+    "children:\"Report Issue\"",
+    "children:\"报告问题\""
+  ],
+  [
+    "children:\"Unknown edit\"",
+    "children:\"未知编辑\""
+  ],
+  [
+    "label:\"Copy debug info\"",
+    "label:\"复制调试信息\""
+  ],
+  [
+    "\"Active Browser pages\"",
+    "\"活动浏览器页面\""
+  ],
+  [
+    "\"BigInt not supported\"",
+    "\"不支持 BigInt\""
+  ],
+  [
+    "\"Canceled creation of\"",
+    "\"已取消创建\""
+  ],
+  [
+    "\"Canceled deletion of\"",
+    "\"已取消删除\""
+  ],
+  [
+    "\"No @-mention results\"",
+    "\"无 @ 引用结果\""
+  ],
+  [
+    "\"Not a redirect error\"",
+    "\"不是重定向错误\""
+  ],
+  [
+    "\"Scrolling in Browser\"",
+    "\"正在浏览器中滚动\""
+  ],
+  [
+    "\"Show fewer resources\"",
+    "\"显示较少资源\""
+  ],
+  [
+    "\"Toggle Debug Sidebar\"",
+    "\"切换调试侧边栏\""
+  ],
+  [
+    "\"Unexpected undefined\"",
+    "\"意外的未定义\""
+  ],
+  [
+    "\"appName is required.\"",
+    "\"需要 appName。\""
+  ],
+  [
+    "\"unable to serialize \"",
+    "\"无法序列化 \""
+  ],
+  [
+    "children:\"Add context\"",
+    "children:\"添加上下文\""
+  ],
+  [
+    "children:\"Cancel step\"",
+    "children:\"取消步骤\""
+  ],
+  [
+    "children:\"Ran command\"",
+    "children:\"执行命令\""
+  ],
+  [
+    "label:\"Always Proceed\"",
+    "label:\"始终继续\""
+  ],
+  [
+    "label:\"Ask every time\"",
+    "label:\"每次询问\""
+  ],
+  [
+    "label:\"Customizations\"",
+    "label:\"自定义\""
+  ],
+  [
+    "label:\"Request Review\"",
+    "label:\"请求审查\""
+  ],
+  [
+    "\"Active Browser page\"",
+    "\"活动浏览器页面\""
+  ],
+  [
+    "\"Chat Model Metadata\"",
+    "\"聊天模型元数据\""
+  ],
+  [
+    "\"Clicking in Browser\"",
+    "\"正在浏览器中点击\""
+  ],
+  [
+    "\"Dragging in Browser\"",
+    "\"正在浏览器中拖拽\""
+  ],
+  [
+    "\"Error parsing JSON:\"",
+    "\"解析 JSON 时出错:\""
+  ],
+  [
+    "\"Error while editing\"",
+    "\"编辑时出错\""
+  ],
+  [
+    "\"Error while viewing\"",
+    "\"查看时出错\""
+  ],
+  [
+    "\"Expected a function\"",
+    "\"期望一个函数\""
+  ],
+  [
+    "\"Failed precondition\"",
+    "\"前置条件失败\""
+  ],
+  [
+    "\"Found references to\"",
+    "\"找到引用\""
+  ],
+  [
+    "\"Gemini Computer Use\"",
+    "\"Gemini 计算机使用\""
+  ],
+  [
+    "\"Invariant Violation\"",
+    "\"不变量违规\""
+  ],
+  [
+    "\"Scrolled in Browser\"",
+    "\"在浏览器中滚动\""
+  ],
+  [
+    "\"Show page allowlist\"",
+    "\"显示页面允许列表\""
+  ],
+  [
+    "\"To provide feedback\"",
+    "\"提供反馈\""
+  ],
+  [
+    "\"Trajectory Snapshot\"",
+    "\"轨迹快照\""
+  ],
+  [
+    "\"Typing into Browser\"",
+    "\"正在浏览器中输入\""
+  ],
+  [
+    "\"Unexpected object: \"",
+    "\"意外的对象: \""
+  ],
+  [
+    "\"User uploaded image\"",
+    "\"用户上传的图像\""
+  ],
+  [
+    "children:\"Accept all\"",
+    "children:\"全部接受\""
+  ],
+  [
+    "children:\"Allow Once\"",
+    "children:\"允许一次\""
+  ],
+  [
+    "children:\"Edit Model\"",
+    "children:\"编辑模型\""
+  ],
+  [
+    "children:\"Expand All\"",
+    "children:\"全部展开\""
+  ],
+  [
+    "children:\"Learn more\"",
+    "children:\"了解更多\""
+  ],
+  [
+    "children:\"No results\"",
+    "children:\"无结果\""
+  ],
+  [
+    "children:\"Reject all\"",
+    "children:\"全部拒绝\""
+  ],
+  [
+    "children:\"Reload IDE\"",
+    "children:\"重新加载 IDE\""
+  ],
+  [
+    "children:\"View plans\"",
+    "children:\"查看计划\""
+  ],
+  [
+    "label:\"Agent Decides\"",
+    "label:\"Agent 决定\""
+  ],
+  [
+    "text:\"Go to Terminal\"",
+    "text:\"前往终端\""
+  ],
+  [
+    "title:\"Previous page\"",
+    "title:\"上一页\""
+  ],
+  [
+    "\"2. Resetting Agent\"",
+    "\"2. 重置代理\""
+  ],
+  [
+    "\"Clicked in Browser\"",
+    "\"在浏览器中点击\""
+  ],
+  [
+    "\"Code Context Items\"",
+    "\"代码上下文项\""
+  ],
+  [
+    "\"Configure Auto-Run\"",
+    "\"配置自动运行\""
+  ],
+  [
+    "\"Dragged in Browser\"",
+    "\"在浏览器中拖拽\""
+  ],
+  [
+    "\"Dynamic Wait Tool:\"",
+    "\"动态等待工具:\""
+  ],
+  [
+    "\"Ephemeral Options:\"",
+    "\"临时选项:\""
+  ],
+  [
+    "\"Error editing file\"",
+    "\"编辑文件时出错\""
+  ],
+  [
+    "\"Error viewing file\"",
+    "\"查看文件时出错\""
+  ],
+  [
+    "\"Expected character\"",
+    "\"期望字符\""
+  ],
+  [
+    "\"Expected substring\"",
+    "\"期望子字符串\""
+  ],
+  [
+    "\"File Diff Comments\"",
+    "\"文件差异评论\""
+  ],
+  [
+    "\"Index out of range\"",
+    "\"索引超出范围\""
+  ],
+  [
+    "\"Insert in terminal\"",
+    "\"插入到终端\""
+  ],
+  [
+    "\"Invalid code point\"",
+    "\"无效的代码点\""
+  ],
+  [
+    "\"Invalid time value\"",
+    "\"无效的时间值\""
+  ],
+  [
+    "\"Out of range index\"",
+    "\"索引超出范围\""
+  ],
+  [
+    "\"Ran extension code\"",
+    "\"已运行扩展代码\""
+  ],
+  [
+    "\"Rendering playback\"",
+    "\"渲染回放\""
+  ],
+  [
+    "\"Resource exhausted\"",
+    "\"资源耗尽\""
+  ],
+  [
+    "\"Run extension code\"",
+    "\"运行扩展代码\""
+  ],
+  [
+    "\"Semantic searching\"",
+    "\"语义搜索中\""
+  ],
+  [
+    "\"Show all resources\"",
+    "\"显示所有资源\""
+  ],
+  [
+    "\"Trajectory Metrics\"",
+    "\"轨迹指标\""
+  ],
+  [
+    "\"Unknown encoding: \"",
+    "\"未知编码: \""
+  ],
+  [
+    "\"Uses custom mixin.\"",
+    "\"使用自定义混入。\""
+  ],
+  [
+    "\"out of range index\"",
+    "\"索引超出范围\""
+  ],
+  [
+    "children:\"Add Model\"",
+    "children:\"添加模型\""
+  ],
+  [
+    "children:\"Artifacts\"",
+    "children:\"产物\""
+  ],
+  [
+    "children:\"Configure\"",
+    "children:\"配置\""
+  ],
+  [
+    "children:\"Copy diff\"",
+    "children:\"复制差异\""
+  ],
+  [
+    "children:\"Edit rule\"",
+    "children:\"编辑规则\""
+  ],
+  [
+    "children:\"Installed\"",
+    "children:\"已安装\""
+  ],
+  [
+    "children:\"MCP Store\"",
+    "children:\"MCP 商店\""
+  ],
+  [
+    "children:\"Open diff\"",
+    "children:\"打开差异\""
+  ],
+  [
+    "children:\"Show more\"",
+    "children:\"显示更多\""
+  ],
+  [
+    "children:\"View Diff\"",
+    "children:\"查看差异\""
+  ],
+  [
+    "children:\"View Page\"",
+    "children:\"查看页面\""
+  ],
+  [
+    "children:\"Workflows\"",
+    "children:\"工作流\""
+  ],
+  [
+    "label:\"Always Allow\"",
+    "label:\"始终允许\""
+  ],
+  [
+    "label:\"Conversation\"",
+    "label:\"对话\""
+  ],
+  [
+    "label:\"Select Model\"",
+    "label:\"选择模型\""
+  ],
+  [
+    "title:\"Mention Page\"",
+    "title:\"提及页面\""
+  ],
+  [
+    "\"Arguments Schema:\"",
+    "\"参数模式:\""
+  ],
+  [
+    "\"Artifact Comments\"",
+    "\"工件评论\""
+  ],
+  [
+    "\"Copy to clipboard\"",
+    "\"复制到剪贴板\""
+  ],
+  [
+    "\"Deadline exceeded\"",
+    "\"超时\""
+  ],
+  [
+    "\"Expected a string\"",
+    "\"期望一个字符串\""
+  ],
+  [
+    "\"JavaScript Result\"",
+    "\"JavaScript 结果\""
+  ],
+  [
+    "\"Manually Captured\"",
+    "\"手动捕获\""
+  ],
+  [
+    "\"Manually Rejected\"",
+    "\"手动拒绝\""
+  ],
+  [
+    "\"No Model Selected\"",
+    "\"未选择模型\""
+  ],
+  [
+    "\"No snapshot taken\"",
+    "\"未拍摄快照\""
+  ],
+  [
+    "\"Permission denied\"",
+    "\"权限被拒绝\""
+  ],
+  [
+    "\"Record voice memo\"",
+    "\"录制语音备忘\""
+  ],
+  [
+    "\"Requested changes\"",
+    "\"请求的更改\""
+  ],
+  [
+    "\"Select from known\"",
+    "\"从已知中选择\""
+  ],
+  [
+    "\"Semantic searched\"",
+    "\"已语义搜索\""
+  ],
+  [
+    "\"Taking Screenshot\"",
+    "\"正在截图\""
+  ],
+  [
+    "\"Toggle Debug Mode\"",
+    "\"切换调试模式\""
+  ],
+  [
+    "\"Type into Browser\"",
+    "\"在浏览器中输入\""
+  ],
+  [
+    "\"Uses your API key\"",
+    "\"使用您的 API 密钥\""
+  ],
+  [
+    "\"[Yesterday at] LT\"",
+    "\"[昨天] LT\""
+  ],
+  [
+    "children:\"Analyzed\"",
+    "children:\"已分析\""
+  ],
+  [
+    "children:\"Built-In\"",
+    "children:\"内置\""
+  ],
+  [
+    "children:\"Comments\"",
+    "children:\"评论\""
+  ],
+  [
+    "children:\"Features\"",
+    "children:\"功能\""
+  ],
+  [
+    "children:\"Feedback\"",
+    "children:\"反馈\""
+  ],
+  [
+    "children:\"Get Logs\"",
+    "children:\"获取日志\""
+  ],
+  [
+    "children:\"Previous\"",
+    "children:\"上一步\""
+  ],
+  [
+    "children:\"Thinking\"",
+    "children:\"思考中\""
+  ],
+  [
+    "children:[\"Proceed\"",
+    "children:[\"继续\""
+  ],
+  [
+    "label:\"MCP Servers\"",
+    "label:\"MCP 服务器\""
+  ],
+  [
+    "\"Canceled edit to\"",
+    "\"已取消编辑\""
+  ],
+  [
+    "\"Custom Reminder:\"",
+    "\"自定义提醒:\""
+  ],
+  [
+    "\"Document Answers\"",
+    "\"文档答案\""
+  ],
+  [
+    "\"Inspected commit\"",
+    "\"已检查的提交\""
+  ],
+  [
+    "\"Invalid argument\"",
+    "\"无效参数\""
+  ],
+  [
+    "\"List resources: \"",
+    "\"列出资源: \""
+  ],
+  [
+    "\"Open in Terminal\"",
+    "\"在终端中打开\""
+  ],
+  [
+    "\"Pending comments\"",
+    "\"待处理评论\""
+  ],
+  [
+    "\"Scroll to bottom\"",
+    "\"滚动到底部\""
+  ],
+  [
+    "\"Terminal command\"",
+    "\"终端命令\""
+  ],
+  [
+    "\"Trajectory Stats\"",
+    "\"轨迹统计\""
+  ],
+  [
+    "\"Unnamed resource\"",
+    "\"未命名资源\""
+  ],
+  [
+    "\"[Tomorrow at] LT\"",
+    "\"[明天] LT\""
+  ],
+  [
+    "`Artifacts (${d})`",
+    "`产物 (${d})`"
+  ],
+  [
+    "children:\"Comment\"",
+    "children:\"评论\""
+  ],
+  [
+    "children:\"Confirm\"",
+    "children:\"确认\""
+  ],
+  [
+    "children:\"Default\"",
+    "children:\"默认\""
+  ],
+  [
+    "children:\"Details\"",
+    "children:\"详细信息\""
+  ],
+  [
+    "children:\"Dismiss\"",
+    "children:\"忽略\""
+  ],
+  [
+    "children:\"History\"",
+    "children:\"历史记录\""
+  ],
+  [
+    "children:\"Install\"",
+    "children:\"安装\""
+  ],
+  [
+    "children:\"Preview\"",
+    "children:\"预览\""
+  ],
+  [
+    "children:\"Refresh\"",
+    "children:\"刷新\""
+  ],
+  [
+    "children:\"See all\"",
+    "children:\"查看全部\""
+  ],
+  [
+    "children:\"Sources\"",
+    "children:\"来源\""
+  ],
+  [
+    "label:\"Allow Once\"",
+    "label:\"允许一次\""
+  ],
+  [
+    "label:\"Always run\"",
+    "label:\"始终运行\""
+  ],
+  [
+    "placeholder:\"Find\"",
+    "placeholder:\"查找\""
+  ],
+  [
+    "title:\"First page\"",
+    "title:\"第一页\""
+  ],
+  [
+    "title:\"Full Error\"",
+    "title:\"完整错误\""
+  ],
+  [
+    "\"Always Auto-Run\"",
+    "\"始终自动运行\""
+  ],
+  [
+    "\"Back to content\"",
+    "\"返回内容\""
+  ],
+  [
+    "\"Browser Content\"",
+    "\"浏览器内容\""
+  ],
+  [
+    "\"Clear NUX state\"",
+    "\"清除新用户状态\""
+  ],
+  [
+    "\"Click Feedback:\"",
+    "\"点击反馈:\""
+  ],
+  [
+    "\"Failed to load \"",
+    "\"加载失败 \""
+  ],
+  [
+    "\"No credits used\"",
+    "\"未使用积分\""
+  ],
+  [
+    "\"Not implemented\"",
+    "\"未实现\""
+  ],
+  [
+    "\"Read resource: \"",
+    "\"读取资源: \""
+  ],
+  [
+    "\"Segment Metrics\"",
+    "\"分段指标\""
+  ],
+  [
+    "\"Toggle Dev View\"",
+    "\"切换开发视图\""
+  ],
+  [
+    "\"Took Screenshot\"",
+    "\"已截图\""
+  ],
+  [
+    "\"URL is required\"",
+    "\"需要 URL\""
+  ],
+  [
+    "\"Unauthenticated\"",
+    "\"未认证\""
+  ],
+  [
+    "\"Upload to Agent\"",
+    "\"上传到代理\""
+  ],
+  [
+    "\"url is required\"",
+    "\"需要 url\""
+  ],
+  [
+    "`Terminal (${d})`",
+    "`终端 (${d})`"
+  ],
+  [
+    "children:\"Accept\"",
+    "children:\"接受\""
+  ],
+  [
+    "children:\"Cancel\"",
+    "children:\"取消\""
+  ],
+  [
+    "children:\"Create\"",
+    "children:\"创建\""
+  ],
+  [
+    "children:\"Custom\"",
+    "children:\"自定义\""
+  ],
+  [
+    "children:\"Delete\"",
+    "children:\"删除\""
+  ],
+  [
+    "children:\"Expand\"",
+    "children:\"展开\""
+  ],
+  [
+    "children:\"Global\"",
+    "children:\"全局\""
+  ],
+  [
+    "children:\"Images\"",
+    "children:\"图片\""
+  ],
+  [
+    "children:\"Launch\"",
+    "children:\"启动\""
+  ],
+  [
+    "children:\"Reject\"",
+    "children:\"拒绝\""
+  ],
+  [
+    "children:\"Review\"",
+    "children:\"审查\""
+  ],
+  [
+    "label:\"Ask first\"",
+    "label:\"先询问\""
+  ],
+  [
+    "label:\"Try again\"",
+    "label:\"再试一次\""
+  ],
+  [
+    "label:\"Workflows\"",
+    "label:\"工作流\""
+  ],
+  [
+    "label:\"Workspace\"",
+    "label:\"工作区\""
+  ],
+  [
+    "title:\"Last page\"",
+    "title:\"最后一页\""
+  ],
+  [
+    "title:\"Next page\"",
+    "title:\"下一页\""
+  ],
+  [
+    "title:\"View Page\"",
+    "title:\"查看页面\""
+  ],
+  [
+    "\"Already exists\"",
+    "\"已存在\""
+  ],
+  [
+    "\"Artifact image\"",
+    "\"工件图像\""
+  ],
+  [
+    "\"Browser Tools:\"",
+    "\"浏览器工具:\""
+  ],
+  [
+    "\"Conversational\"",
+    "\"对话式\""
+  ],
+  [
+    "\"Default Config\"",
+    "\"默认配置\""
+  ],
+  [
+    "\"Developer Menu\"",
+    "\"开发者菜单\""
+  ],
+  [
+    "\"Enlarged image\"",
+    "\"放大的图像\""
+  ],
+  [
+    "\"Enter Agent ID\"",
+    "\"输入代理 ID\""
+  ],
+  [
+    "\"Error Details:\"",
+    "\"错误详情:\""
+  ],
+  [
+    "\"Error occurred\"",
+    "\"发生错误\""
+  ],
+  [
+    "\"Files to edit:\"",
+    "\"要编辑的文件:\""
+  ],
+  [
+    "\"Never Auto-Run\"",
+    "\"从不自动运行\""
+  ],
+  [
+    "\"No description\"",
+    "\"无描述\""
+  ],
+  [
+    "\"Rendered Step:\"",
+    "\"渲染步骤:\""
+  ],
+  [
+    "\"Show allowlist\"",
+    "\"显示允许列表\""
+  ],
+  [
+    "\"Site Allowlist\"",
+    "\"网站允许列表\""
+  ],
+  [
+    "\"Stop recording\"",
+    "\"停止录制\""
+  ],
+  [
+    "\"System Message\"",
+    "\"系统消息\""
+  ],
+  [
+    "\"Typeahead menu\"",
+    "\"自动完成菜单\""
+  ],
+  [
+    "\"for more help.\"",
+    "\"获取更多帮助。\""
+  ],
+  [
+    "children:\"Clear\"",
+    "children:\"清除\""
+  ],
+  [
+    "children:\"Close\"",
+    "children:\"关闭\""
+  ],
+  [
+    "children:\"Error\"",
+    "children:\"错误\""
+  ],
+  [
+    "children:\"Model\"",
+    "children:\"模型\""
+  ],
+  [
+    "children:\"Retry\"",
+    "children:\"重试\""
+  ],
+  [
+    "children:\"Rules\"",
+    "children:\"规则\""
+  ],
+  [
+    "children:\"Setup\"",
+    "children:\"设置\""
+  ],
+  [
+    "label:\"Mentions\"",
+    "label:\"提及\""
+  ],
+  [
+    "label:\"Terminal\"",
+    "label:\"终端\""
+  ],
+  [
+    "title:\"Comments\"",
+    "title:\"评论\""
+  ],
+  [
+    "\"Accessibility\"",
+    "\"辅助功能\""
+  ],
+  [
+    "\"Authorization\"",
+    "\"授权\""
+  ],
+  [
+    "\"Back to Agent\"",
+    "\"返回 Agent\""
+  ],
+  [
+    "\"Browser Mode:\"",
+    "\"浏览器模式:\""
+  ],
+  [
+    "\"Cleared Count\"",
+    "\"已清除计数\""
+  ],
+  [
+    "\"Conversations\"",
+    "\"聊天列表\""
+  ],
+  [
+    "\"Custom Config\"",
+    "\"自定义配置\""
+  ],
+  [
+    "\"Debug Sidebar\"",
+    "\"调试侧边栏\""
+  ],
+  [
+    "\"Electron Mode\"",
+    "\"Electron 模式\""
+  ],
+  [
+    "\"Error Details\"",
+    "\"错误详情\""
+  ],
+  [
+    "\"File Comments\"",
+    "\"文件评论\""
+  ],
+  [
+    "\"Full Metadata\"",
+    "\"完整元数据\""
+  ],
+  [
+    "\"Image Answers\"",
+    "\"图像答案\""
+  ],
+  [
+    "\"No trajectory\"",
+    "\"无轨迹\""
+  ],
+  [
+    "\"Page contents\"",
+    "\"页面内容\""
+  ],
+  [
+    "\"Select Model:\"",
+    "\"选择模型:\""
+  ],
+  [
+    "\"Select option\"",
+    "\"选择选项\""
+  ],
+  [
+    "\"Send feedback\"",
+    "\"发送反馈\""
+  ],
+  [
+    "\"Sherlog Links\"",
+    "\"Sherlog 链接\""
+  ],
+  [
+    "\"Trajectory ID\"",
+    "\"轨迹 ID\""
+  ],
+  [
+    "\"Unimplemented\"",
+    "\"未实现\""
+  ],
+  [
+    "\"Unknown error\"",
+    "\"未知错误\""
+  ],
+  [
+    "\"Unknown state\"",
+    "\"未知状态\""
+  ],
+  [
+    "\"Unknown unit \"",
+    "\"未知单位 \""
+  ],
+  [
+    "\"User Implicit\"",
+    "\"用户隐式\""
+  ],
+  [
+    "\"[Today at] LT\"",
+    "\"[今天] LT\""
+  ],
+  [
+    "\"a few seconds\"",
+    "\"几秒\""
+  ],
+  [
+    "\"premature EOF\"",
+    "\"过早的文件结束\""
+  ],
+  [
+    "`Thought for ${",
+    "`思考了 ${"
+  ],
+  [
+    "children:\"Deny\"",
+    "children:\"拒绝\""
+  ],
+  [
+    "children:\"Good\"",
+    "children:\"好\""
+  ],
+  [
+    "children:\"Next\"",
+    "children:\"下一步\""
+  ],
+  [
+    "children:\"Open\"",
+    "children:\"打开\""
+  ],
+  [
+    "children:\"Save\"",
+    "children:\"保存\""
+  ],
+  [
+    "children:\"Send\"",
+    "children:\"发送\""
+  ],
+  [
+    "text:\"Relocate\"",
+    "text:\"重新定位\""
+  ],
+  [
+    "\"Always allow\"",
+    "\"始终允许\""
+  ],
+  [
+    "\"Browser Code\"",
+    "\"浏览器代码\""
+  ],
+  [
+    "\"Browser Text\"",
+    "\"浏览器文本\""
+  ],
+  [
+    "\"Code Snippet\"",
+    "\"代码片段\""
+  ],
+  [
+    "\"Console Logs\"",
+    "\"控制台日志\""
+  ],
+  [
+    "\"Description:\"",
+    "\"描述:\""
+  ],
+  [
+    "\"Initializing\"",
+    "\"初始化中\""
+  ],
+  [
+    "\"Invalid date\"",
+    "\"无效日期\""
+  ],
+  [
+    "\"Milliseconds\"",
+    "\"毫秒\""
+  ],
+  [
+    "\"Out of range\"",
+    "\"超出范围\""
+  ],
+  [
+    "\"Reading page\"",
+    "\"正在读取页面\""
+  ],
+  [
+    "\"Remove audio\"",
+    "\"移除音频\""
+  ],
+  [
+    "\"Repositories\"",
+    "\"仓库\""
+  ],
+  [
+    "\"Run command?\"",
+    "\"运行命令?\""
+  ],
+  [
+    "\"Unidentified\"",
+    "\"未识别\""
+  ],
+  [
+    "\"Unknown path\"",
+    "\"未知路径\""
+  ],
+  [
+    "\"Visible only\"",
+    "\"仅可见\""
+  ],
+  [
+    "\"invalid UTF8\"",
+    "\"无效的 UTF8\""
+  ],
+  [
+    "children:\"Bad\"",
+    "children:\"差\""
+  ],
+  [
+    "children:\"New\"",
+    "children:\"新建\""
+  ],
+  [
+    "label:\"Enable\"",
+    "label:\"启用\""
+  ],
+  [
+    "label:\"Errors\"",
+    "label:\"错误\""
+  ],
+  [
+    "label:\"Export\"",
+    "label:\"导出\""
+  ],
+  [
+    "label:\"Global\"",
+    "label:\"全局\""
+  ],
+  [
+    "label:\"Reject\"",
+    "label:\"拒绝\""
+  ],
+  [
+    "\"DOM Element\"",
+    "\"DOM 元素\""
+  ],
+  [
+    "\"Description\"",
+    "\"描述\""
+  ],
+  [
+    "\"Directories\"",
+    "\"目录\""
+  ],
+  [
+    "\"In progress\"",
+    "\"进行中\""
+  ],
+  [
+    "\"Line Ranges\"",
+    "\"行范围\""
+  ],
+  [
+    "\"MCP servers\"",
+    "\"MCP 服务器\""
+  ],
+  [
+    "\"Model Label\"",
+    "\"模型标签\""
+  ],
+  [
+    "\"Parentheses\"",
+    "\"圆括号\""
+  ],
+  [
+    "\"Ran command\"",
+    "\"行行命令\""
+  ],
+  [
+    "\"Recommended\"",
+    "\"推荐\""
+  ],
+  [
+    "\"Unavailable\"",
+    "\"不可用\""
+  ],
+  [
+    "label:\"Media\"",
+    "label:\"媒体\""
+  ],
+  [
+    "label:\"Paste\"",
+    "label:\"粘贴\""
+  ],
+  [
+    "label:\"Retry\"",
+    "label:\"重试\""
+  ],
+  [
+    "label:\"Rules\"",
+    "label:\"规则\""
+  ],
+  [
+    "\"%d minutes\"",
+    "\"%d 分钟\""
+  ],
+  [
+    "\"%d seconds\"",
+    "\"%d 秒\""
+  ],
+  [
+    "\"Allow once\"",
+    "\"允许一次\""
+  ],
+  [
+    "\"At mention\"",
+    "\"@ 引用\""
+  ],
+  [
+    "\"Created At\"",
+    "\"创建时间\""
+  ],
+  [
+    "\"Custom URI\"",
+    "\"自定义 URI\""
+  ],
+  [
+    "\"Debug Mode\"",
+    "\"调试模式\""
+  ],
+  [
+    "\"Disclosure\"",
+    "\"披露\""
+  ],
+  [
+    "\"Image URL:\"",
+    "\"图像 URL:\""
+  ],
+  [
+    "\"MCP Tool: \"",
+    "\"MCP 工具: \""
+  ],
+  [
+    "\"Max Tokens\"",
+    "\"最大 Token 数\""
+  ],
+  [
+    "\"Processing\"",
+    "\"处理中\""
+  ],
+  [
+    "\"Retrieving\"",
+    "\"获取中\""
+  ],
+  [
+    "\"Step JSON:\"",
+    "\"步骤 JSON:\""
+  ],
+  [
+    "\"Tool Calls\"",
+    "\"工具调用\""
+  ],
+  [
+    "label:\"Copy\"",
+    "label:\"复制\""
+  ],
+  [
+    "label:\"Deny\"",
+    "label:\"拒绝\""
+  ],
+  [
+    "label:\"Free\"",
+    "label:\"免费\""
+  ],
+  [
+    "\"%d months\"",
+    "\"%d 个月\""
+  ],
+  [
+    "\"Alt text:\"",
+    "\"替代文本:\""
+  ],
+  [
+    "\"Attribute\"",
+    "\"属性\""
+  ],
+  [
+    "\"Backwards\"",
+    "\"向后\""
+  ],
+  [
+    "\"Caps Lock\"",
+    "\"大写锁定\""
+  ],
+  [
+    "\"Copy Link\"",
+    "\"复制链接\""
+  ],
+  [
+    "\"Data loss\"",
+    "\"数据丢失\""
+  ],
+  [
+    "\"Footnotes\"",
+    "\"脚注\""
+  ],
+  [
+    "\"Metadata:\"",
+    "\"元数据:\""
+  ],
+  [
+    "\"Model URL\"",
+    "\"模型 URL\""
+  ],
+  [
+    "\"Read page\"",
+    "\"读取页面\""
+  ],
+  [
+    "\"Reference\"",
+    "\"引用\""
+  ],
+  [
+    "\"Retrieved\"",
+    "\"已获取\""
+  ],
+  [
+    "\"Run code?\"",
+    "\"运行代码?\""
+  ],
+  [
+    "\"Searching\"",
+    "\"搜索中\""
+  ],
+  [
+    "\"See plans\"",
+    "\"查看方案\""
+  ],
+  [
+    "\"Show less\"",
+    "\"显示更少\""
+  ],
+  [
+    "\"Step Type\"",
+    "\"步骤类型\""
+  ],
+  [
+    "\"Underflow\"",
+    "\"下溢\""
+  ],
+  [
+    "Ran command",
+    "执行命令"
+  ],
+  [
+    "label:\"Run\"",
+    "label:\"运行\""
+  ],
+  [
+    "text:\"Open\"",
+    "text:\"打开\""
+  ],
+  [
+    "\"%d hours\"",
+    "\"%d 小时\""
+  ],
+  [
+    "\"%d weeks\"",
+    "\"%d 周\""
+  ],
+  [
+    "\"%d years\"",
+    "\"%d 年\""
+  ],
+  [
+    "\"Accepted\"",
+    "\"已接受\""
+  ],
+  [
+    "\"Activity\"",
+    "\"活动\""
+  ],
+  [
+    "\"Approved\"",
+    "\"已批准\""
+  ],
+  [
+    "\"Baseline\"",
+    "\"基线\""
+  ],
+  [
+    "\"Canceled\"",
+    "\"已取消\""
+  ],
+  [
+    "\"Clicking\"",
+    "\"点击中\""
+  ],
+  [
+    "\"Combobox\"",
+    "\"组合框\""
+  ],
+  [
+    "\"Created:\"",
+    "\"创建于:\""
+  ],
+  [
+    "\"Creating\"",
+    "\"创建中\""
+  ],
+  [
+    "\"Deleting\"",
+    "\"删除中\""
+  ],
+  [
+    "\"Diameter\"",
+    "\"直径\""
+  ],
+  [
+    "\"Forwards\"",
+    "\"向前\""
+  ],
+  [
+    "\"Fragment\"",
+    "\"片段\""
+  ],
+  [
+    "\"Internal\"",
+    "\"内部\""
+  ],
+  [
+    "\"Metadata\"",
+    "\"元数据\""
+  ],
+  [
+    "\"Overflow\"",
+    "\"溢出\""
+  ],
+  [
+    "\"Pressing\"",
+    "\"按下中\""
+  ],
+  [
+    "\"Profiler\"",
+    "\"分析器\""
+  ],
+  [
+    "\"Scrolled\"",
+    "\"已滚动\""
+  ],
+  [
+    "\"Searched\"",
+    "\"已搜索\""
+  ],
+  [
+    "\"Sections\"",
+    "\"部分\""
+  ],
+  [
+    "\"Terminal\"",
+    "\"终端命令\""
+  ],
+  [
+    "\"Wait for\"",
+    "\"等待\""
+  ],
+  [
+    "\"a minute\"",
+    "\"一分钟\""
+  ],
+  [
+    "\"untitled\"",
+    "\"未命名\""
+  ],
+  [
+    "\"%d days\"",
+    "\"%d 天\""
+  ],
+  [
+    "\"Aborted\"",
+    "\"已中止\""
+  ],
+  [
+    "\"Clicked\"",
+    "\"已点击\""
+  ],
+  [
+    "\"Closing\"",
+    "\"关闭中\""
+  ],
+  [
+    "\"Deleted\"",
+    "\"已删除\""
+  ],
+  [
+    "\"Editing\"",
+    "\"编辑中\""
+  ],
+  [
+    "\"Enabled\"",
+    "\"已启用\""
+  ],
+  [
+    "\"Focused\"",
+    "\"已聚焦\""
+  ],
+  [
+    "\"Folders\"",
+    "\"文件夹\""
+  ],
+  [
+    "\"Forward\"",
+    "\"前进\""
+  ],
+  [
+    "\"Greater\"",
+    "\"大于\""
+  ],
+  [
+    "\"Heading\"",
+    "\"标题\""
+  ],
+  [
+    "\"Hide 0s\"",
+    "\"隐藏 0 秒\""
+  ],
+  [
+    "\"Listbox\"",
+    "\"列表框\""
+  ],
+  [
+    "\"Minutes\"",
+    "\"分钟\""
+  ],
+  [
+    "\"Nothing\"",
+    "\"无\""
+  ],
+  [
+    "\"Opening\"",
+    "\"打开中\""
+  ],
+  [
+    "\"Pressed\"",
+    "\"已按下\""
+  ],
+  [
+    "\"Radius:\"",
+    "\"半径:\""
+  ],
+  [
+    "\"Reading\"",
+    "\"读取中\""
+  ],
+  [
+    "\"Seconds\"",
+    "\"秒\""
+  ],
+  [
+    "\"See our\"",
+    "\"查看我们的\""
+  ],
+  [
+    "\"Show 0s\"",
+    "\"显示 0 秒\""
+  ],
+  [
+    "\"Source:\"",
+    "\"来源:\""
+  ],
+  [
+    "\"Unmount\"",
+    "\"卸载\""
+  ],
+  [
+    "\"Waiting\"",
+    "\"等待中\""
+  ],
+  [
+    "\"a month\"",
+    "\"一个月\""
+  ],
+  [
+    "\"an hour\"",
+    "\"一小时\""
+  ],
+  [
+    "\"%s ago\"",
+    "\"%s前\""
+  ],
+  [
+    "\"Active\"",
+    "\"活动\""
+  ],
+  [
+    "\"Closed\"",
+    "\"已关闭\""
+  ],
+  [
+    "\"Copied\"",
+    "\"已复制\""
+  ],
+  [
+    "\"Dialog\"",
+    "\"对话框\""
+  ],
+  [
+    "\"Folder\"",
+    "\"文件夹\""
+  ],
+  [
+    "\"Hidden\"",
+    "\"已隐藏\""
+  ],
+  [
+    "\"Legacy\"",
+    "\"旧版\""
+  ],
+  [
+    "\"Metric\"",
+    "\"指标\""
+  ],
+  [
+    "\"Mixins\"",
+    "\"混入\""
+  ],
+  [
+    "\"Output\"",
+    "\"输出\""
+  ],
+  [
+    "\"Shapes\"",
+    "\"形状\""
+  ],
+  [
+    "\"Upload\"",
+    "\"上传\""
+  ],
+  [
+    "\"a week\"",
+    "\"一周\""
+  ],
+  [
+    "\"a year\"",
+    "\"一年\""
+  ],
+  [
+    "\"Bytes\"",
+    "\"字节\""
+  ],
+  [
+    "\"Empty\"",
+    "\"空\""
+  ],
+  [
+    "\"Equal\"",
+    "\"相等\""
+  ],
+  [
+    "\"Files\"",
+    "\"文件\""
+  ],
+  [
+    "\"Focus\"",
+    "\"聚焦\""
+  ],
+  [
+    "\"Hours\"",
+    "\"小时\""
+  ],
+  [
+    "\"I did\"",
+    "\"已完成\""
+  ],
+  [
+    "\"Input\"",
+    "\"输入\""
+  ],
+  [
+    "\"Month\"",
+    "\"月\""
+  ],
+  [
+    "\"Ready\"",
+    "\"就绪\""
+  ],
+  [
+    "\"Right\"",
+    "\"右\""
+  ],
+  [
+    "\"Rules\"",
+    "\"规则\""
+  ],
+  [
+    "\"Sheet\"",
+    "\"表格\""
+  ],
+  [
+    "\"Step:\"",
+    "\"步骤:\""
+  ],
+  [
+    "\"Users\"",
+    "\"用户\""
+  ],
+  [
+    "\"Value\"",
+    "\"值\""
+  ],
+  [
+    "\"a day\"",
+    "\"一天\""
+  ],
+  [
+    "\"in %s\"",
+    "\"%s后\""
+  ],
+  [
+    "\"BETA\"",
+    "\"测试版\""
+  ],
+  [
+    "\"Cost\"",
+    "\"成本\""
+  ],
+  [
+    "\"Dead\"",
+    "\"已终止\""
+  ],
+  [
+    "\"Goal\"",
+    "\"目标\""
+  ],
+  [
+    "\"Less\"",
+    "\"小于\""
+  ],
+  [
+    "\"Move\"",
+    "\"移动\""
+  ],
+  [
+    "\"None\"",
+    "\"无\""
+  ]
+]
