@@ -80,8 +80,8 @@ function getSettingsReplacements() {
         ['label:"Tab Gitignore Access",description:"Allow Tab to view and edit the files in .gitignore. Use with caution if your .gitignore lists files containing credentia',
             'label:"Tab Gitignore 访问",description:"允许 Tab 查看和编辑 .gitignore 中的文件。如果 .gitignore 中包含敏感凭据文件请谨慎使用'],
         // === Browser Screen ===
-        ['label:"Enable Browser Tools",description:"When enabled, Agent can use browser tools to open URLs, read web pages, and interact with browser content. This allows t',
-            'label:"启用浏览器工具",description:"启用后，Agent 可以使用浏览器工具打开 URL、读取网页并与浏览器内容互动。这允许'],
+        ['label:"Enable Browser Tools",description:"When enabled, Agent can use browser tools to open URLs, read web pages, and interact with browser content. This allows the Agent access to important (and often critical) knowledge and methods of validation, but any browser integration does increase exposure to external malicious parties for security exploits.',
+            'label:"启用浏览器工具",description:"启用后，Agent 可以使用浏览器工具打开 URL、读取网页并与浏览器内容交互。这使得 Agent 能够访问重要（且往往至关重要）的知识和验证方法，但任何浏览器集成都会增加安全漏洞被外部恶意方利用的风险。'],
         ['label:"Browser Javascript Execution Policy",description:', 'label:"浏览器 JavaScript 执行策略",description:'],
         ['label:"Chrome Binary Path",description:"Path to the Chrome/Chromium executable. Leave empty for auto-detection.',
             'label:"Chrome 可执行文件路径",description:"Chrome/Chromium 可执行文件的路径。留空则自动检测。'],
