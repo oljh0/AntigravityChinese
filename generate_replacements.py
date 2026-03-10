@@ -25,6 +25,9 @@ PATCHES_DIR = REPO_ROOT / "translations" / "patches"
 PATCH_MARKER_RE = re.compile(r"^/\* zh-hans-patched-[^*]*\*/\r?\n?")
 LOCAL_WINDOW = 4000
 MIN_ANCHOR = 8
+VISIBLE_FIELD_RE = re.compile(
+    r'(?P<prefix>(?<![\w])(?:children|label|text|placeholder|tooltip|title|inputPlaceholder|textContent)\s*[:=]\s*)(?P<quote>["\'])(?P<value>.*?)(?<!\\)(?P=quote)'
+)
 
 
 @dataclass(frozen=True)
@@ -144,6 +147,27 @@ def derive_residual_replacements(original: str, translated: str) -> list[tuple[s
     return replacements
 
 
+def derive_field_literal_replacements(current: str, translated: str) -> list[tuple[str, str]]:
+    current_matches = list(VISIBLE_FIELD_RE.finditer(current))
+    translated_matches = list(VISIBLE_FIELD_RE.finditer(translated))
+    replacements: list[tuple[str, str]] = []
+
+    for current_match, translated_match in zip(current_matches, translated_matches):
+        if current_match.group("prefix") != translated_match.group("prefix"):
+            continue
+        if current_match.group("quote") != translated_match.group("quote"):
+            continue
+
+        current_full = current_match.group(0)
+        translated_full = translated_match.group(0)
+        if current_full == translated_full:
+            continue
+
+        replacements.append((current_full, translated_full))
+
+    return replacements
+
+
 def build_replacements(target: Target) -> list[tuple[str, str]]:
     original = target.original_path.read_text(encoding="utf-8", errors="replace")
     translated = strip_patch_marker(
@@ -152,6 +176,12 @@ def build_replacements(target: Target) -> list[tuple[str, str]]:
 
     replacements = normalize_replacements(load_replacements(target.patch_path))
     current = apply_replacements(original, replacements)
+
+    if current != translated:
+        field_residual = derive_field_literal_replacements(current, translated)
+        if field_residual:
+            replacements = normalize_replacements([*replacements, *field_residual])
+            current = apply_replacements(original, replacements)
 
     if current != translated:
         residual = derive_residual_replacements(current, translated)
