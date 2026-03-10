@@ -172,6 +172,14 @@
     "\"输入任何内容，@ 用于提及，/ 用于调用工作流\""
   ],
   [
+    "children:\"Fetched network requests for page.\"",
+    "children:\"已获取页面的网络请求。\""
+  ],
+  [
+    "children:\"Fetched network request for page.\"",
+    "children:\"已获取页面的网络请求。\""
+  ],
+  [
     "label:\"Enable Terminal Sandbox\",description:",
     "label:\"启用终端沙盒\",description:"
   ],
@@ -216,6 +224,10 @@
     "children:\"正在加载浏览器录制...\""
   ],
   [
+    "children:\"Open extracted DOM in editor\"",
+    "children:\"在编辑器中打开提取的 DOM\""
+  ],
+  [
     "value:Zd.AUTO,children:\"Agent Decides\"",
     "value:Zd.AUTO,children:\"Agent 决定\""
   ],
@@ -226,6 +238,10 @@
   [
     "label:\"Enable Telemetry\",description:",
     "label:\"启用遥测\",description:"
+  ],
+  [
+    "children:\"Error rendering playback\"",
+    "children:\"渲染回放时出错\""
   ],
   [
     ",\" result\",a.length===1?\"\":\"s\",\" \"",
@@ -248,12 +264,60 @@
     "tooltip:\"开始新对话\""
   ],
   [
+    "children:\"No resources available\"",
+    "children:\"没有可用资源\""
+  ],
+  [
     "label:\"Open New Remote Workspace\"",
     "label:\"打开新远程工作区\""
   ],
   [
+    "title:\"Error fetching MCP prompt\"",
+    "title:\"获取 MCP 提示词出错\""
+  ],
+  [
+    "children:\"Mouse button released\"",
+    "children:\"鼠标按钮已释放\""
+  ],
+  [
+    "children:\"No browser pages open\"",
+    "children:\"没有打开的浏览器页面\""
+  ],
+  [
+    "children:\"View network requests\"",
+    "children:\"查看网络请求\""
+  ],
+  [
+    "children:\"MCP Servers Disabled\"",
+    "children:\"MCP 服务器已禁用\""
+  ],
+  [
+    "children:\"Mouse button pressed\"",
+    "children:\"鼠标按钮已按下\""
+  ],
+  [
+    "children:\"View network request\"",
+    "children:\"查看网络请求\""
+  ],
+  [
+    "placeholder:\"Search metrics...\"",
+    "placeholder:\"搜索指标...\""
+  ],
+  [
     "children:\"Loading metrics...\"",
     "children:\"正在加载指标...\""
+  ],
+  [
+    "children:\"Playback available\"",
+    "children:\"可回放\""
+  ],
+  [
+    "children:\"Python Coming Soon\"",
+    "children:\"Python 即将推出\""
+  ],
+  [
+    "children:\"Rendering playback\"",
+    "children:\"正在渲染回放\""
   ],
   [
     "children:\"Conversation mode\"",
@@ -282,6 +346,10 @@
   [
     "children:[\"Settings - \",t]",
     "children:[\"设置 - \",t]"
+  ],
+  [
+    "label:\"Getting scripts...\"",
+    "label:\"正在获取脚本...\""
   ],
   [
     "label:\"Open New Workspace\"",
@@ -316,6 +384,22 @@
     "children:\"编辑器窗口\""
   ],
   [
+    "children:\"Full Metadata\"",
+    "children:\"完整元数据\""
+  ],
+  [
+    "children:\"Python Script\"",
+    "children:\"Python 脚本\""
+  ],
+  [
+    "label:\"New Agent Script\"",
+    "label:\"新建 Agent 脚本\""
+  ],
+  [
+    "label:\"Purchase Credits\"",
+    "label:\"购买点数\""
+  ],
+  [
     ",\" result\",a===1?\"\":\"s\"",
     ",\" 个结果\""
   ],
@@ -334,6 +418,10 @@
   [
     "label:\"Discard changes\"",
     "label:\"放弃更改\""
+  ],
+  [
+    "label:\"Enable Overages\"",
+    "label:\"启用超额\""
   ],
   [
     "text:\"Provide Feedback\"",
@@ -372,16 +460,76 @@
     "children:\"产物\""
   ],
   [
+    "children:\"Configure\"",
+    "children:\"配置\""
+  ],
+  [
+    "children:\"Open Diff\"",
+    "children:\"打开差异\""
+  ],
+  [
+    "label:\"Always Allow\"",
+    "label:\"始终允许\""
+  ],
+  [
+    "label:\"Conversation\"",
+    "label:\"对话\""
+  ],
+  [
+    "children:\"Analyzed\"",
+    "children:\"已分析\""
+  ],
+  [
+    "label:\"MCP Servers\"",
+    "label:\"MCP 服务器\""
+  ],
+  [
     "label:\"Ran command\"",
     "label:\"执行命令\""
+  ],
+  [
+    "children:\"Command\"",
+    "children:\"命令\""
   ],
   [
     "children:\"Comment\"",
     "children:\"评论\""
   ],
   [
+    "children:\"Decline\"",
+    "children:\"拒绝\""
+  ],
+  [
+    "children:\"Details\"",
+    "children:\"详细信息\""
+  ],
+  [
+    "children:\"Dismiss\"",
+    "children:\"忽略\""
+  ],
+  [
+    "children:\"Hide 0s\"",
+    "children:\"隐藏 0 值\""
+  ],
+  [
+    "children:\"Preview\"",
+    "children:\"预览\""
+  ],
+  [
     "children:\"Proceed\"",
     "children:\"继续\""
+  ],
+  [
+    "children:\"Show 0s\"",
+    "children:\"显示 0 值\""
+  ],
+  [
+    "children:\"Skipped\"",
+    "children:\"已跳过\""
+  ],
+  [
+    "label:\"Allow Once\"",
+    "label:\"允许一次\""
   ],
   [
     "`Terminal (${d})`",
@@ -396,12 +544,48 @@
     "children:\"编辑器\""
   ],
   [
+    "children:\"Metric\"",
+    "children:\"指标\""
+  ],
+  [
+    "children:\"Output\"",
+    "children:\"输出\""
+  ],
+  [
+    "children:\"Prompt\"",
+    "children:\"提示词\""
+  ],
+  [
     "children:\"Reject\"",
     "children:\"拒绝\""
   ],
   [
+    "children:\"Submit\"",
+    "children:\"提交\""
+  ],
+  [
+    "label:\"See Plans\"",
+    "label:\"查看套餐\""
+  ],
+  [
+    "children:\"Count\"",
+    "children:\"数量\""
+  ],
+  [
     "children:\"Model\"",
     "children:\"模型\""
+  ],
+  [
+    "children:\"Setup\"",
+    "children:\"设置\""
+  ],
+  [
+    "children:\"Value\"",
+    "children:\"值\""
+  ],
+  [
+    "label:\"Terminal\"",
+    "label:\"终端\""
   ],
   [
     "`Thought for ${",
@@ -420,20 +604,68 @@
     "children:\"跳过\""
   ],
   [
+    "children:\"View\"",
+    "children:\"查看\""
+  ],
+  [
     "label:\"Running\"",
     "label:\"运行中\""
+  ],
+  [
+    "label:\"Unknown\"",
+    "label:\"未知\""
   ],
   [
     "children:\"Add\"",
     "children:\"添加\""
   ],
   [
+    "children:\"Dev\"",
+    "children:\"开发\""
+  ],
+  [
+    "children:\"Off\"",
+    "children:\"关闭\""
+  ],
+  [
+    "label:\"Source\"",
+    "label:\"来源\""
+  ],
+  [
+    "label:\"Status\"",
+    "label:\"状态\""
+  ],
+  [
     "label:\"Close\"",
     "label:\"关闭\""
   ],
   [
+    "label:\"Rules\"",
+    "label:\"规则\""
+  ],
+  [
+    "label:\"Copy\"",
+    "label:\"复制\""
+  ],
+  [
+    "label:\"Deny\"",
+    "label:\"拒绝\""
+  ],
+  [
+    "label:\"Logs\"",
+    "label:\"日志\""
+  ],
+  [
+    "label:\"Tool\"",
+    "label:\"工具\""
+  ],
+  [
     "label:\"Undo\"",
     "label:\"撤销\""
+  ],
+  [
+    "label:\"User\"",
+    "label:\"用户\""
   ],
   [
     "label:\"Run\"",

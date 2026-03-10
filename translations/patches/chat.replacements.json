@@ -264,6 +264,10 @@
     "\"Unleash 无法解析 \\\"AbortController\\\" 工厂\""
   ],
   [
+    "children:\"Your administrator has disabled MCP servers.\"",
+    "children:\"你的管理员已禁用 MCP 服务器。\""
+  ],
+  [
     "\"Agent can click on specific elements in the browser.\"",
     "\"代理可以点击浏览器中的特定元素。\""
   ],
@@ -492,6 +496,10 @@
     "\"尝试访问超出缓冲区长度\""
   ],
   [
+    "children:\"Open extracted DOM in editor\"",
+    "children:\"在编辑器中打开提取的 DOM\""
+  ],
+  [
     "\"Browser is not enabled for this plan\"",
     "\"此计划未启用浏览器功能\""
   ],
@@ -594,6 +602,10 @@
   [
     "children:\"Launching the browser...\"",
     "children:\"正在启动浏览器...\""
+  ],
+  [
+    "children:\"Open Page in Background:\"",
+    "children:\"在后台打开页面：\""
   ],
   [
     "\"Error while searching filesystem\"",
@@ -736,6 +748,10 @@
     "children:\"开始屏幕录制\""
   ],
   [
+    "title:\"Error fetching MCP prompt\"",
+    "title:\"获取 MCP 提示词出错\""
+  ],
+  [
     "\"Error fetching model statuses:\"",
     "\"获取模型状态时出错:\""
   ],
@@ -778,6 +794,10 @@
   [
     "children:\"Manually set Agent ID\"",
     "children:\"手动设置 Agent ID\""
+  ],
+  [
+    "children:\"Mouse button released\"",
+    "children:\"鼠标按钮已释放\""
   ],
   [
     "children:\"No browser pages open\"",
@@ -830,6 +850,14 @@
   [
     "children:\"Knowledge Generation\"",
     "children:\"知识生成\""
+  ],
+  [
+    "children:\"MCP Servers Disabled\"",
+    "children:\"MCP 服务器已禁用\""
+  ],
+  [
+    "children:\"Mouse button pressed\"",
+    "children:\"鼠标按钮已按下\""
   ],
   [
     "children:\"Something went wrong\"",
@@ -908,6 +936,10 @@
     "children:\"显示已分析项目\""
   ],
   [
+    "children:\"Workspace API Tool:\"",
+    "children:\"工作区 API 工具：\""
+  ],
+  [
     "title:\"Could not send message\"",
     "title:\"无法发送消息\""
   ],
@@ -982,6 +1014,10 @@
   [
     "children:\"Playback available\"",
     "children:\"可以回放\""
+  ],
+  [
+    "children:\"Python Coming Soon\"",
+    "children:\"Python 即将推出\""
   ],
   [
     "children:\"Run MCP tool call?\"",
@@ -1240,6 +1276,10 @@
     "children:\"查看注释\""
   ],
   [
+    "label:\"Getting scripts...\"",
+    "label:\"正在获取脚本...\""
+  ],
+  [
     "title:\"Capture screenshot\"",
     "title:\"截取屏幕\""
   ],
@@ -1412,6 +1452,10 @@
     "children:\"好的响应\""
   ],
   [
+    "children:\"Python Script\"",
+    "children:\"Python 脚本\""
+  ],
+  [
     "children:\"Refresh rules\"",
     "children:\"刷新规则\""
   ],
@@ -1426,6 +1470,14 @@
   [
     "children:\"file an issue\"",
     "children:\"提交问题\""
+  ],
+  [
+    "label:\"New Agent Script\"",
+    "label:\"新建 Agent 脚本\""
+  ],
+  [
+    "label:\"Purchase Credits\"",
+    "label:\"购买点数\""
   ],
   [
     "label:\"Screen Recording\"",
@@ -1534,6 +1586,10 @@
   [
     "label:\"Copy debug info\"",
     "label:\"复制调试信息\""
+  ],
+  [
+    "label:\"Enable Overages\"",
+    "label:\"启用超额\""
   ],
   [
     "\"Active Browser pages\"",
@@ -1872,6 +1928,10 @@
     "children:\"MCP 商店\""
   ],
   [
+    "children:\"Open Diff\"",
+    "children:\"打开差异\""
+  ],
+  [
     "children:\"Open diff\"",
     "children:\"打开差异\""
   ],
@@ -1890,6 +1950,10 @@
   [
     "children:\"Workflows\"",
     "children:\"工作流\""
+  ],
+  [
+    "children:\"Workspace\"",
+    "children:\"工作区\""
   ],
   [
     "label:\"Always Allow\"",
@@ -2084,12 +2148,20 @@
     "`产物 (${d})`"
   ],
   [
+    "children:\"Command\"",
+    "children:\"命令\""
+  ],
+  [
     "children:\"Comment\"",
     "children:\"评论\""
   ],
   [
     "children:\"Confirm\"",
     "children:\"确认\""
+  ],
+  [
+    "children:\"Decline\"",
+    "children:\"拒绝\""
   ],
   [
     "children:\"Default\"",
@@ -2122,6 +2194,10 @@
   [
     "children:\"See all\"",
     "children:\"查看全部\""
+  ],
+  [
+    "children:\"Skipped\"",
+    "children:\"已跳过\""
   ],
   [
     "children:\"Sources\"",
@@ -2252,6 +2328,10 @@
     "children:\"启动\""
   ],
   [
+    "children:\"Prompt\"",
+    "children:\"提示词\""
+  ],
+  [
     "children:\"Reject\"",
     "children:\"拒绝\""
   ],
@@ -2260,8 +2340,16 @@
     "children:\"审查\""
   ],
   [
+    "children:\"Submit\"",
+    "children:\"提交\""
+  ],
+  [
     "label:\"Ask first\"",
     "label:\"先询问\""
+  ],
+  [
+    "label:\"See Plans\"",
+    "label:\"查看套餐\""
   ],
   [
     "label:\"Try again\"",
@@ -2374,6 +2462,10 @@
   [
     "children:\"Close\"",
     "children:\"关闭\""
+  ],
+  [
+    "children:\"Count\"",
+    "children:\"数量\""
   ],
   [
     "children:\"Error\"",
@@ -2548,6 +2640,14 @@
     "children:\"发送\""
   ],
   [
+    "children:\"View\"",
+    "children:\"查看\""
+  ],
+  [
+    "label:\"Unknown\"",
+    "label:\"未知\""
+  ],
+  [
     "text:\"Relocate\"",
     "text:\"重新定位\""
   ],
@@ -2628,8 +2728,20 @@
     "children:\"差\""
   ],
   [
+    "children:\"Dev\"",
+    "children:\"开发\""
+  ],
+  [
     "children:\"New\"",
     "children:\"新建\""
+  ],
+  [
+    "children:\"Off\"",
+    "children:\"关闭\""
+  ],
+  [
+    "children:\"Set\"",
+    "children:\"设置\""
   ],
   [
     "label:\"Enable\"",
@@ -2650,6 +2762,14 @@
   [
     "label:\"Reject\"",
     "label:\"拒绝\""
+  ],
+  [
+    "label:\"Source\"",
+    "label:\"来源\""
+  ],
+  [
+    "label:\"Status\"",
+    "label:\"状态\""
   ],
   [
     "\"DOM Element\"",
@@ -2782,6 +2902,18 @@
   [
     "label:\"Free\"",
     "label:\"免费\""
+  ],
+  [
+    "label:\"Logs\"",
+    "label:\"日志\""
+  ],
+  [
+    "label:\"Tool\"",
+    "label:\"工具\""
+  ],
+  [
+    "label:\"User\"",
+    "label:\"用户\""
   ],
   [
     "\"%d months\"",
