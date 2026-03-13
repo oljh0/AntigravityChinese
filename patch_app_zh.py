@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from scripts.antigravity.patch_zh import main
+from scripts.copilot_cli.patch_app_zh import main
 
 
 if __name__ == "__main__":
