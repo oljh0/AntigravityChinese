@@ -36,7 +36,7 @@ function getTargets(base) {
 // 替换规则定义
 // ═══════════════════════════════════════════════════════════════
 
-const REPLACEMENTS_DIR = path.join(__dirname, 'translations', 'patches');
+const REPLACEMENTS_DIR = path.join(__dirname, 'translations', 'patches', 'antigravity');
 const REPLACEMENT_FILES = {
     main: 'main.replacements.json',
     chat: 'chat.replacements.json',
