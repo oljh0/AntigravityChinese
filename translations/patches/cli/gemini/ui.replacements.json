@@ -94,5 +94,65 @@
   [
     "\"Do you want to allow this read?\"",
     "\"您是否要允许此次读取？\""
+  ],
+  [
+    "help:\"Show session info and workspace summary.\"",
+    "help:\"显示会话信息和工作区摘要。\""
+  ],
+  [
+    "help:\"Clear the conversation history\"",
+    "help:\"清除会话历史记录\""
+  ],
+  [
+    "help:\"Summarize conversation history to reduce context window usage\"",
+    "help:\"总结对话历史以减少上下文窗口占用\""
+  ],
+  [
+    "help:\"Copy the last response to the clipboard\"",
+    "help:\"将最后一条响应复制到剪贴板\""
+  ],
+  [
+    "help:\"Show context window token usage and visualization\"",
+    "help:\"显示上下文窗口 Token 使用情况及可视化\""
+  ],
+  [
+    "help:\"Change working directory or show current directory\"",
+    "help:\"切换工作目录或显示当前目录\""
+  ],
+  [
+    "help:\"Exit the CLI\"",
+    "help:\"退出 CLI\""
+  ],
+  [
+    "help:\"Restart the CLI, preserving the current session\"",
+    "help:\"重启 CLI 并保留当前会话\""
+  ],
+  [
+    "help:\"Show available experimental features\"",
+    "help:\"显示可用的实验性功能\""
+  ],
+  [
+    "help:\"Review the changes made in the current directory\"",
+    "help:\"查看当前目录中所做的更改\""
+  ],
+  [
+    "help:\"Provide feedback about the CLI\"",
+    "help:\"提供关于 CLI 的反馈\""
+  ],
+  [
+    "help:\"Select AI model to use\"",
+    "help:\"选择要使用的 AI 模型\""
+  ],
+  [
+    "help:\"Manage agent skills for enhanced capabilities\"",
+    "help:\"管理代理技能以增强功能\""
+  ],
+  [
+    "help:\"Share session or research report to markdown file or GitHub gist\"",
+    "help:\"将会话或研究报告分享为 Markdown 文件或 GitHub Gist\""
+  ],
+  [
+    "help:\"Collect debug logs to .tgz file or GitHub gist\"",
+    "help:\"将调试日志收集到 .tgz 文件或 GitHub Gist\""
   ]
 ]
