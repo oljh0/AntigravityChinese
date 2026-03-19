@@ -1,0 +1,74 @@
+[
+  [
+    "Wait a moment for shpool to stabilize terminal size and state.",
+    "请稍等片刻，等待 shpool 稳定终端尺寸和状态。"
+  ],
+  [
+    "This is an unexpected error. Please file a bug report using the /bug tool.",
+    "这是一个意外错误。请使用 /bug 工具提交错误报告。"
+  ],
+  [
+    "CRITICAL: Unhandled Promise Rejection!",
+    "严重：未处理的 Promise 拒绝！"
+  ],
+  [
+    "[\"Generating\",\"Working\",\"Loading\"]",
+    "[\"生成中\",\"工作中\",\"加载中\"]"
+  ],
+  [
+    "children:\"Loading...\"",
+    "children:\"加载中...\""
+  ],
+  [
+    "\"Press any key to retry\"",
+    "\"按任意键重试\""
+  ],
+  [
+    "label:\"Connecting\"",
+    "label:\"正在连接\""
+  ],
+  [
+    "label:\"Connected\"",
+    "label:\"已连接\""
+  ],
+  [
+    "Invalid value for dnsResolutionOrder in settings:",
+    "设置中的 dnsResolutionOrder 值无效："
+  ],
+  [
+    "Using default \"ipv4first\".",
+    "使用默认值 \"ipv4first\"。"
+  ],
+  [
+    "Current heap size",
+    "当前堆大小"
+  ],
+  [
+    "Need to relaunch with more memory:",
+    "需要以更多内存重新启动："
+  ],
+  [
+    "Update check failed:",
+    "更新检查失败："
+  ],
+  [
+    "Failed to cleanup expired sessions:",
+    "清理过期会话失败："
+  ],
+  [
+    "Error resuming session:",
+    "恢复会话出错："
+  ],
+  [
+    "Nothing to rewind to",
+    "没有可回退的内容"
+  ],
+  [
+    "label: 'Yes'",
+    "label: '是'"
+  ],
+  [
+    "label: 'No'",
+    "label: '否'"
+  ]
+]

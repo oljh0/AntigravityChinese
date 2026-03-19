@@ -1,0 +1,98 @@
+[
+  [
+    "Press Ctrl-S to enter selection mode to copy text.",
+    "按 Ctrl-S 进入选择模式以复制文本。"
+  ],
+  [
+    "Paste Timed out. Possibly due to slow connection.",
+    "粘贴超时。可能是由于连接较慢。"
+  ],
+  [
+    "Use Ctrl-O to expand and collapse blocks of content.",
+    "使用 Ctrl-O 展开和折叠内容块。"
+  ],
+  [
+    "Use Shift+Tab to unfocus",
+    "使用 Shift+Tab 取消焦点"
+  ],
+  [
+    "Press Esc to close",
+    "按 Esc 关闭"
+  ],
+  [
+    "text:\"Start conversation\"",
+    "text:\"开始对话\""
+  ],
+  [
+    "text:\"Provide Feedback\"",
+    "text:\"提供反馈\""
+  ],
+  [
+    "text:l?\"Collapse all\":\"Expand all\"",
+    "text:l?\"全部折叠\":\"全部展开\""
+  ],
+  [
+    "tooltip:\"Start a new conversation\"",
+    "tooltip:\"开始新对话\""
+  ],
+  [
+    "children:\"Thought Process\"",
+    "children:\"思考过程\""
+  ],
+  [
+    "`Thinking for ${",
+    "`思考中 ${"
+  ],
+  [
+    "`Thought for ${",
+    "`思考了 ${"
+  ],
+  [
+    "placeholder = '  Type your message or @path/to/file'",
+    "placeholder = '  输入消息或使用 @path/to/file 提及文件'"
+  ],
+  [
+    "message: 'Move cursor within placeholder to expand'",
+    "message: '将光标移至占位符内以展开'"
+  ],
+  [
+    "statusText = 'Shell mode'",
+    "statusText = 'Shell 模式'"
+  ],
+  [
+    "statusText = 'YOLO mode'",
+    "statusText = 'YOLO 模式'"
+  ],
+  [
+    "statusText = 'Plan mode'",
+    "statusText = '计划模式'"
+  ],
+  [
+    "statusText = 'Accepting edits'",
+    "statusText = '自动接受编辑'"
+  ],
+  [
+    "\"(r:)\", ' '",
+    "\"(反向搜索:)\", ' '"
+  ],
+  [
+    "\"Press Ctrl+C again to exit.\"",
+    "\"请再按一次 Ctrl+C 退出。\""
+  ],
+  [
+    "\"Press Ctrl+D again to exit.\"",
+    "\"请再按一次 Ctrl+D 退出。\""
+  ],
+  [
+    "\"Authentication cancelled.\"",
+    "\"身份验证已取消。\""
+  ],
+  [
+    "\"The following files are outside your workspace:\"",
+    "\"以下文件在您的工作区之外：\""
+  ],
+  [
+    "\"Do you want to allow this read?\"",
+    "\"您是否要允许此次读取？\""
+  ]
+]

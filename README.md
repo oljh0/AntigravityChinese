@@ -1,92 +1,88 @@
 # AntigravityChinese (Antigravity IDE 汉化补丁)
 
-这是一个同时服务于 **Antigravity 客户端汉化** 与 **Copilot CLI `app.js` 翻译补丁** 的项目。
+[![Version](https://img.shields.io/badge/version-1.0.3-green.svg)](package.json)
 
-当前结构按用途分为三层：
+本项目致力于为 **Antigravity IDE** 提供全方位的简体中文本地化支持。它不仅包含官方扩展的翻译，还通过自动补丁技术汉化了 IDE 核心中硬编码的字符串。同时，本项目也为 **Copilot CLI** 和 **Gemini CLI** 提供汉化支持。
 
-- `extension.js` + `translations\`：Antigravity 扩展与共享翻译资源
-- `scripts\antigravity\` / `scripts\copilot_cli\`：按产品拆分的补丁脚本
-- `scripts\shared\`：共享生成工具
+## 🌟 核心特性
 
-为兼容旧用法，仓库根目录仍保留 `patch_zh.py`、`patch_app_zh.py`、`generate_replacements.py` 作为薄包装入口。
-
-## 1. 自动汉化扩展插件（推荐）
-- **适用场景**：这是作为 VS Code/Antigravity 扩展提供给用户的核心文件，具备优秀的跨平台适用性（支持 Windows、macOS 和 Linux）。
-- **工作机制**：当扩展激活时，它会自动推导和寻找 IDE 的核心安装路径，并在后台动态应用硬编码文本的汉化替换。每次 Antigravity 更新后，只需重新加载窗口即可自动重新打补丁。因此它是最自动化及普适的方式。
-
-### ✨ 扩展插件打包与安装指南
-基于现有的项目文件，您可以通过 `@vscode/vsce` 将其打包成为一个可直接分发安装的 `.vsix` 文件：
-
-1. **环境准备**：请确保您的系统已安装 [Node.js](https://nodejs.org/)。
-2. **执行打包**：在项目根目录下，运行以下免安装依赖打包命令：
-   ```bash
-   npx -y @vscode/vsce package --no-dependencies
-   ```
-3. **完成打包**：命令执行成功后，会在当前目录下生成一个类似 `antigravitychinese-0.0.1.vsix`（版本号取决于 `package.json` 中的设置）的安装包文件。
-4. **进行安装**：
-   - 打开您的 Antigravity IDE，进入侧边栏的 **Extensions (扩展)** 面板。
-   - 点击右上角的 `...` 菜单，选择 **Install from VSIX...**。
-   - 在弹出的文件选择器中选择刚刚生成的 `.vsix` 文件。
-5. **生效**：安装完成后，**完全重新启动 IDE** 或执行 **Reload Window (重新加载窗口)** 命令即可生效。
+- **全方位汉化**：涵盖 IDE 菜单、设置、聊天界面及核心工作台。
+- **自动化补丁**：内置扩展插件自动识别安装路径，一键应用补丁。
+- **自动更新屏蔽**：可选屏蔽 IDE 自动更新，防止汉化失效。
+- **多产品支持**：除了 IDE，还支持 Copilot CLI 和 Gemini CLI 的汉化。
+- **安全可靠**：自动备份原始文件，支持随时还原。
 
 ---
 
-## 2. 本地热更新脚本（`scripts\antigravity\patch_zh.py` / `scripts\copilot_cli\patch_app_zh.py`）
-- **适用场景**：主要适用于开发者用来在本地快速打补丁。当前默认配置的路径适用于 **Windows 环境**。
-- **说明**：在这个独立的 Python 脚本中，当前自动推导 Windows 下 `LOCALAPPDATA` 中的 Antigravity 默认安装路径进行处理（例如 `C:\Users\用户名\AppData\Local\Programs\Antigravity\resources\app`）。
-- **强制更新功能**：脚本已内置安全的强制更新（热更新）逻辑。
-  - **首次使用**：会自动备份您的纯英文原始文件（后缀为 `.bak`）。
-  - **后续更新**：如果检测到备份已存在，将自动先恢复英文原版文件，然后再应用全量最新的中文词条补丁。无需担心多次应用会导致汉化文本冲突。
-  - **共享词条源**：硬编码字符串替换规则按产品拆分存放：`translations\patches\antigravity\*.replacements.json` 与 `translations\patches\copilot_cli\app.replacements.json`。
-  - **`scripts\copilot_cli\patch_app_zh.py`**：默认会自动发现 `%USERPROFILE%\.copilot\pkg\universal\*\app.js` 中**最新且实际存在**的版本目录，不再依赖写死版本号；同时仍支持通过 `--target` 显式指定目标文件，并可通过 `--copilot-home` 覆盖 `.copilot` 根目录。
+## 🚀 快速开始：使用汉化扩展插件（推荐）
 
-### Python 脚本使用指南
+这是最简单、最自动化的汉化方式，支持 Windows、macOS 和 Linux。
 
-**应用 / 强制更新汉化**：
+### 1. 打包与安装
+1. **安装环境**：确保系统中已安装 [Node.js](https://nodejs.org/)。
+2. **生成安装包**：在项目根目录下运行：
+   ```bash
+   npx -y @vscode/vsce package --no-dependencies
+   ```
+3. **安装扩展**：
+   - 打开 Antigravity IDE。
+   - 进入 **Extensions (扩展)** 面板。
+   - 点击右上角 `...` -> **Install from VSIX...**。
+   - 选择生成的 `.vsix` 文件。
+4. **生效**：安装后重启 IDE，扩展会自动检测并尝试应用补丁。
+
+### 2. 手动管理补丁
+您也可以通过命令面板（`Ctrl+Shift+P`）手动执行以下命令：
+- `Antigravity 中文: 应用中文汉化补丁`
+- `Antigravity 中文: 恢复英文原始文件`
+- `Antigravity 中文: 切换屏蔽 Antigravity 自动更新`
+
+---
+
+## 🛠️ 高级工具：本地热更新脚本
+
+适用于开发者或需要对 CLI 工具进行汉化的场景。
+
+### 1. Antigravity IDE 汉化
 ```bash
-python scripts\antigravity\patch_zh.py
+python scripts/ide/antigravity/patch_zh.py
 ```
-*(无论是否曾汉化过，此命令都将确保以安全的姿态为您应用最新的汉化包)*
+*该脚本会自动备份原文件并在更新时安全地重新应用补丁。*
 
-**撤销汉化，彻底还原英文版**：
+### 2. Copilot CLI 汉化
 ```bash
-python scripts\antigravity\patch_zh.py --revert
-```
-
-**更新 Copilot `app.js` 翻译**：
-```bash
-python scripts\copilot_cli\patch_app_zh.py
-```
-
-**仅检查 Copilot `app.js` 翻译，不写入文件**：
-```bash
-python scripts\copilot_cli\patch_app_zh.py --dry-run
-```
-
-**恢复 Copilot `app.js` 原文件**：
-```bash
-python scripts\copilot_cli\patch_app_zh.py --revert
-```
-
-**指定自定义 Copilot 目录**：
-```bash
-python scripts\copilot_cli\patch_app_zh.py --copilot-home D:\Custom\.copilot
+python scripts/cli/copilot/patch_app_zh.py
 ```
 
-### 词条生成脚本
-
-如果你更新了 `datafiles` 里的英文原文件或对应翻译结果，可以运行下面的脚本自动整理共享词条：
-
+### 3. Gemini CLI 汉化
 ```bash
-python scripts\shared\generate_replacements.py
+python scripts/cli/gemini/patch_app_zh.py
 ```
 
-它会基于 `datafiles` 下 `.bak` 与 `.js` 的对照，更新 `translations\patches\antigravity` 里的 JSON 替换表，并在写回后自动校验能否准确还原目标翻译结果。
+### 4. 常用选项
+- `--revert`: 撤销汉化，恢复原始英文版。
+- `--dry-run`: 仅检查匹配情况，不修改文件。
 
-如果你习惯旧命令，也可以继续使用根目录兼容入口：
+---
 
-```bash
-python patch_zh.py
-python patch_app_zh.py --dry-run
-python generate_replacements.py
-```
+## 📁 项目结构
+
+- `extension.js`: 核心扩展逻辑，负责 IDE 动态补丁。
+- `translations/`: 存放所有翻译资源。
+  - `extensions/`: 官方扩展的 i18n 翻译。
+  - `patches/`: 硬编码字符串的替换规则。
+- `scripts/`: 各产品的独立补丁脚本。
+- `datafiles/`: 原始文件备份与对照数据。
+
+---
+
+## 🤝 贡献与反馈
+
+如果您发现了遗漏的翻译或有任何改进建议，欢迎提交 Issue 或 Pull Request。
+
+- **词条生成**：如果您更新了对照数据，运行 `python scripts/shared/generate_replacements.py` 即可同步更新替换表。
+
+---
+
+## 📄 开源协议
+本项目采用 [MIT License](https://opensource.org/licenses/MIT) 开源。

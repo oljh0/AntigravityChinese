@@ -19,8 +19,8 @@ import sys
 from pathlib import Path
 
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
-TRANSLATIONS_DIR = REPO_ROOT / "translations" / "patches" / "antigravity"
+REPO_ROOT = Path(__file__).resolve().parents[3]
+TRANSLATIONS_DIR = REPO_ROOT / "translations" / "patches" / "ide" / "antigravity"
 
 local_app_data = os.environ.get("LOCALAPPDATA")
 if not local_app_data:
