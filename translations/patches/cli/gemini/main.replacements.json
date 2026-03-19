@@ -1,0 +1,14 @@
+[
+  [
+    "No input provided via stdin. Input can be provided by piping data into gemini or using the --prompt option.",
+    "未通过 stdin 提供输入。可以通过管道将数据传输到 gemini 或使用 --prompt 选项。"
+  ],
+  [
+    "Session ID: %s",
+    "会话 ID: %s"
+  ],
+  [
+    "Installed extensions:",
+    "已安装的扩展："
+  ]
+]

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-根据 datafiles 中的 .bak/.js 对照，整理并更新共享替换词条。
+根据 datafiles 中的 .bak/.js 对照，整理并更新共享替换词条�?
 """
 
 from __future__ import annotations
@@ -60,7 +60,7 @@ def load_replacements(filepath: Path) -> list[tuple[str, str]]:
 
     data = json.loads(filepath.read_text(encoding="utf-8"))
     if not isinstance(data, list):
-        raise ValueError(f"替换表格式无效: {filepath}")
+        raise ValueError(f"替换表格式无�? {filepath}")
 
     replacements: list[tuple[str, str]] = []
     for pair in data:
@@ -70,7 +70,7 @@ def load_replacements(filepath: Path) -> list[tuple[str, str]]:
             or not isinstance(pair[0], str)
             or not isinstance(pair[1], str)
         ):
-            raise ValueError(f"替换表格式无效: {filepath}")
+            raise ValueError(f"替换表格式无�? {filepath}")
         replacements.append((pair[0], pair[1]))
     return replacements
 
@@ -185,7 +185,7 @@ def build_replacements(target: Target) -> list[tuple[str, str]]:
 
     if current != translated:
         raise RuntimeError(
-            f"{target.source_name} 仍存在未覆盖差异，无法自动生成完整替换表。"
+            f"{target.source_name} 仍存在未覆盖差异，无法自动生成完整替换表�?
         )
 
     return replacements
@@ -200,7 +200,7 @@ def main() -> None:
         results.append((target.patch_name, len(replacements)))
 
     for filename, count in results:
-        print(f"{filename}: {count} 条")
+        print(f"{filename}: {count} �?)
 
 
 if __name__ == "__main__":

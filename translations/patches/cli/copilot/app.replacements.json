@@ -1,0 +1,1682 @@
+[
+  [
+    "c=24,I=t.totalPremiumRequests===1?\"Premium request\":\"Premium requests\";return Hb.default.createElement(j,{flexDirection:\"column\"},Hb.default.createElement(H,null,Hb.default.createElement(H,{color:s},\"Total usage est:\".padEnd(c)),Hb.default.createElement(H,null,o,\" \",I)),Hb.default.createElement(H,null,Hb.default.createElement(H,{color:s},\"API time spent:\".padEnd(c)),Hb.default.createElement(H,null,r)),Hb.default.createElement(H,null,Hb.default.createElement(H,{color:s},\"Total session time:\".padEnd(c)),Hb.default.createElement(H,null,n)),Hb.default.createElement(H,null,Hb.default.createElement(H,{color:s},\"Total code changes:\".padEnd(c)),",
+    "c=24,I=t.totalPremiumRequests===1?\"Premium request\":\"Premium requests\";return Hb.default.createElement(j,{flexDirection:\"column\"},Hb.default.createElement(H,null,Hb.default.createElement(H,{color:s},\"用量预估:\".padEnd(c)),Hb.default.createElement(H,null,o,\" \",I)),Hb.default.createElement(H,null,Hb.default.createElement(H,{color:s},\"API 用时:\".padEnd(c)),Hb.default.createElement(H,null,r)),Hb.default.createElement(H,null,Hb.default.createElement(H,{color:s},\"会话时长:\".padEnd(c)),Hb.default.createElement(H,null,n)),Hb.default.createElement(H,null,Hb.default.createElement(H,{color:s},\"代码总变更:\".padEnd(c)),"
+  ],
+  [
+    "description:\"Fetches documentation about you, the GitHub Copilot CLI, and your capabilities. Use this tool when the user asks how to use you, what you can do, or about specific features of the GitHub Copilot CLI.\"",
+    "description:\"获取关于你、GitHub Copilot CLI 以及你的能力的文档。当用户询问如何使用你、你能做什么，或 GitHub Copilot CLI 的特定功能时，请使用此工具。\""
+  ],
+  [
+    "description:\"Reload all extensions from disk. Call this after creating or modifying extension files in .github/extensions/ or the user extensions directory. New tools are available immediately after reload.\"",
+    "description:\"从磁盘重新加载所有扩展。在 .github/extensions/ 或用户扩展目录中创建或修改扩展文件后，请调用此项。重新加载后，新工具会立即可用。\""
+  ],
+  [
+    "description:\"Value to fill in the field. If the field is a checkbox, the value should be `true` or `false`. If the field is a combobox, the value should be the text of the option.\"",
+    "description:\"要填入字段的值。如果字段是复选框，值应为 `true` 或 `false`。如果字段是组合框，值应为选项文本。\""
+  ],
+  [
+    "description:\"Fetches a URL from the internet and returns the page as either markdown or raw HTML. Use this to safely retrieve up-to-date information from HTML web pages.\"",
+    "description:\"从互联网抓取 URL，并将页面内容作为 Markdown 或原始 HTML 返回。可用它安全地获取 HTML 网页中的最新信息。\""
+  ],
+  [
+    "text:\"Session tool approvals, allow-all mode, and autopilot permission state have been reset. Saved approvals for this location were also cleared.\"",
+    "text:\"会话工具审批、allow-all 模式以及自动驾驶权限状态已重置。此位置已保存的审批记录也已清除。\""
+  ],
+  [
+    "\"Session tool approvals, allow-all mode, and autopilot permission state have been reset. Saved approvals for this location were also cleared.\"",
+    "\"会话工具审批、allow-all 模式以及自动驾驶权限状态已重置。此位置已保存的审批记录也已清除。\""
+  ],
+  [
+    "description:\"The task for the agent to perform. Be specific about what you want. Provide complete context to be able to perform the task.\"",
+    "description:\"要让代理执行的任务。请尽量明确你的需求，并提供完成任务所需的完整上下文。\""
+  ],
+  [
+    "text:\"Autopilot mode enabled with limited permissions. Some operations may be auto-denied. Use /allow-all to grant full permissions.\"",
+    "text:\"已启用受限权限的自动驾驶模式。某些操作可能会被自动拒绝。使用 /allow-all 可授予完整权限。\""
+  ],
+  [
+    "\"Autopilot mode enabled with limited permissions. Some operations may be auto-denied. Use /allow-all to grant full permissions.\"",
+    "\"已启用受限权限的自动驾驶模式。某些操作可能会被自动拒绝。使用 /allow-all 可授予完整权限。\""
+  ],
+  [
+    "description:\"Install the browser specified in the config. Call this if you get an error about the browser not being installed.\"",
+    "description:\"安装配置中指定的浏览器。如果遇到浏览器未安装相关错误，请调用此项。\""
+  ],
+  [
+    "text:\"Detected Azure DevOps repository. GitHub MCP server has been disabled. Use /mcp enable github-mcp-server to re-enable.\"",
+    "text:\"检测到 Azure DevOps 仓库。GitHub MCP 服务器已被禁用。请使用 /mcp enable github-mcp-server 重新启用。\""
+  ],
+  [
+    "text:\"\\u{1F4A1} No copilot instructions found. Run /init to generate a copilot-instructions.md file for this project.\"",
+    "text:\"\\u{1F4A1} 未找到 copilot 指令。请运行 /init 为此项目生成 copilot-instructions.md 文件。\""
+  ],
+  [
+    "description:\"Human-readable source element description used to obtain the permission to interact with the element\"",
+    "description:\"用于申请与源元素交互权限的人类可读源元素描述\""
+  ],
+  [
+    "description:\"Human-readable target element description used to obtain the permission to interact with the element\"",
+    "description:\"用于申请与目标元素交互权限的人类可读目标元素描述\""
+  ],
+  [
+    "description:\"Semantic code search subagent. Search for code snippets and examples using natural language queries.\"",
+    "description:\"语义代码搜索子代理。可使用自然语言查询代码片段和示例。\""
+  ],
+  [
+    "description:\"Use the `apply_patch` tool to edit files. This is a FREEFORM tool, so do not wrap the patch in JSON.\"",
+    "description:\"使用 `apply_patch` 工具编辑文件。这是一个 FREEFORM 工具，因此不要把补丁包装成 JSON。\""
+  ],
+  [
+    "description:\"Propose follow-up work items discovered during your current task for tracking and future action.\"",
+    "description:\"为当前任务中发现的后续工作项提出建议，便于跟踪和后续处理。\""
+  ],
+  [
+    "\"The system vault (keychain, keyring, password manager, etc.) is not available. You may need to install one.\"",
+    "\"系统密钥库（钥匙串、密钥环、密码管理器等）不可用。你可能需要先安装一个。\""
+  ],
+  [
+    "description:\"Welcome animation for GitHub Copilot CLI with progressive logo, text reveal, and shine effects\"",
+    "description:\"GitHub Copilot CLI 的欢迎动画，包含渐进式 Logo、文字显现和闪光效果\""
+  ],
+  [
+    "description:\"A short (3-5 word) description of the task. This will be displayed as the intent in the UI.\"",
+    "description:\"任务的简短描述（3 到 5 个词）。它将作为意图显示在界面中。\""
+  ],
+  [
+    "text:\"Session store is not enabled. Enable the SESSION_STORE experimental feature flag to use /reindex.\"",
+    "text:\"会话存储尚未启用。请启用 SESSION_STORE 实验性功能标记后再使用 /reindex。\""
+  ],
+  [
+    "J0.default.createElement(H,{color:n},J0.default.createElement(H,{bold:!0},\"\\u2190 \\u2192\"),\" navigate\")",
+    "J0.default.createElement(H,{color:n},J0.default.createElement(H,{bold:!0},\"\\u2190 \\u2192\"),\" 导航\")"
+  ],
+  [
+    "description:\"Array of values to select in the dropdown. This can be a single value or multiple values.\"",
+    "description:\"下拉列表中要选择的值数组。可以是单个值，也可以是多个值。\""
+  ],
+  [
+    "description:\"Human-readable element description used to obtain permission to interact with the element\"",
+    "description:\"用于申请与该元素交互权限的人类可读元素描述\""
+  ],
+  [
+    "description:\"Practical code examples for tools, hooks, events \\u2014 read if stuck or need inspiration\"",
+    "description:\"关于工具、钩子和事件的实用代码示例 \\u2014 遇到卡点或需要灵感时请阅读\""
+  ],
+  [
+    "description:\"Autonomous mode that runs until task completion without user interaction (experimental)\"",
+    "description:\"在无需用户交互的情况下持续运行直到任务完成的自主模式（实验性）\""
+  ],
+  [
+    "text:\"All permissions are now enabled. Tool, path, and URL requests will be automatically approved.\"",
+    "text:\"现已启用所有权限。工具、路径和 URL 请求将被自动批准。\""
+  ],
+  [
+    "description:\"Capture accessibility snapshot of the current page, this is better than screenshot\"",
+    "description:\"捕获当前页面的无障碍快照，这比截图更适合分析页面结构\""
+  ],
+  [
+    "description:\"Step-by-step workflow, complete type signatures, gotchas \\u2014 highly recommended\"",
+    "description:\"分步工作流、完整类型签名与注意事项 \\u2014 强烈推荐阅读\""
+  ],
+  [
+    "\"All permissions are now enabled. Tool, path, and URL requests will be automatically approved.\"",
+    "\"现已启用所有权限。工具、路径和 URL 请求将被自动批准。\""
+  ],
+  [
+    "description:\"Fast and precise code search using ripgrep. Search for patterns in file contents.\"",
+    "description:\"使用 ripgrep 进行快速且精确的代码搜索，可在文件内容中搜索模式。\""
+  ],
+  [
+    "`Failed to open browser (exit code ${c}). Please visit ${n} and enter the code ${r} manually.`",
+    "`无法打开浏览器（退出码 ${c}）。请访问 ${n} 并手动输入代码 ${r}。`"
+  ],
+  [
+    "description:\"Name of the key to press or a character to generate, such as `ArrowLeft` or `a`\"",
+    "description:\"要按下的按键名称或要生成的字符，例如 `ArrowLeft` 或 `a`\""
+  ],
+  [
+    "description:\"Tab index, used for close/select. If omitted for close, current tab is closed.\"",
+    "description:\"标签页索引，用于关闭或选择。若用于关闭时省略，则关闭当前标签页。\""
+  ],
+  [
+    "help:\"Initialize Copilot instructions for this repository, or suppress the init suggestion\"",
+    "help:\"为此仓库初始化 Copilot 指令，或屏蔽初始化建议\""
+  ],
+  [
+    "\"Error: Session store is not enabled. Enable the SESSION_STORE experimental feature flag.\"",
+    "\"错误：Session Store 尚未启用。请启用 SESSION_STORE 实验性功能标记。\""
+  ],
+  [
+    "description:\"Fast file pattern matching using glob patterns. Find files by name patterns.\"",
+    "description:\"使用 glob 模式进行快速文件匹配，可按文件名模式查找文件。\""
+  ],
+  [
+    "help:\"Toggle streamer mode (hides preview model names and quota details for streaming)\"",
+    "help:\"切换主播模式（隐藏预览模型名称和流式显示的额度详情）\""
+  ],
+  [
+    "description:\"Architecture overview, discovery rules, lifecycle \\u2014 read this first\"",
+    "description:\"架构概览、发现规则与生命周期 \\u2014 请先阅读此项\""
+  ],
+  [
+    "placeholder:\"e.g., An agent that reviews React components for accessibility issues...\"",
+    "placeholder:\"例如：一个用于审查 React 组件可访问性问题的代理...\""
+  ],
+  [
+    "text:\"No pull request found for the current branch. Use `/pr create` to create one.\"",
+    "text:\"当前分支未找到拉取请求。请使用 `/pr create` 创建。\""
+  ],
+  [
+    "text:\"Context information is not yet available. Please wait for login to complete.\"",
+    "text:\"上下文信息暂不可用，请等待登录完成。\""
+  ],
+  [
+    "`Failed to copy to clipboard. Please visit ${n} and enter the code ${r} manually.`",
+    "`无法复制到剪贴板。请访问 ${n} 并手动输入代码 ${r}。`"
+  ],
+  [
+    "help:\"Display changelog for CLI versions. Add 'summarize' to get an AI summary.\"",
+    "help:\"显示 CLI 版本的更新日志。添加 'summarize' 可获取 AI 摘要。\""
+  ],
+  [
+    "help:\"Show available experimental features, or enable/disable experimental mode\"",
+    "help:\"显示可用的实验性功能，或启用/禁用实验模式\""
+  ],
+  [
+    "label:\"Yes, and approve all file operations for the rest of the running session\"",
+    "label:\"是，并批准本次运行会话剩余时间内的所有文件操作\""
+  ],
+  [
+    "label:\"Yes, and approve all memory storage for the rest of the running session\"",
+    "label:\"是，并批准本次运行会话剩余时间内的所有记忆存储\""
+  ],
+  [
+    "description:\"Wait for text to appear or disappear or a specified time to pass\"",
+    "description:\"等待文本出现、消失，或等待指定时间过去\""
+  ],
+  [
+    "text:\"Could not determine the GitHub repository or branch for this directory.\"",
+    "text:\"无法确定此目录对应的 GitHub 仓库或分支。\""
+  ],
+  [
+    "`Failed to open browser. Please visit ${n} and enter the code ${r} manually.`",
+    "`无法打开浏览器。请访问 ${n} 并手动输入代码 ${r}。`"
+  ],
+  [
+    "text:\"LSP configurations reloaded. Changes will apply to newly opened files.\"",
+    "text:\"LSP 配置已重新加载。更改将应用到新打开的文件。\""
+  ],
+  [
+    "text:\"No checkpoints yet. Checkpoints are created when context is compacted.\"",
+    "text:\"目前还没有检查点。上下文被压缩时会自动创建检查点。\""
+  ],
+  [
+    "description:\"delete from cursor to end of line (joins lines at end of line)\"",
+    "description:\"从光标位置删除到行尾（若在行尾则会合并下一行）\""
+  ],
+  [
+    "help:\"Show session info and workspace summary. Use subcommands for details.\"",
+    "help:\"显示会话信息和工作区摘要。使用子命令查看详细内容。\""
+  ],
+  [
+    "text:\"Restart is not available. The CLI was not started through the loader.\"",
+    "text:\"无法执行重启。该 CLI 不是通过加载器启动的。\""
+  ],
+  [
+    "\"Would you like to store the token in the plain text config file instead?\"",
+    "\"你是否希望改为将令牌存储到纯文本配置文件中？\""
+  ],
+  [
+    "help:\"Run deep research investigation using GitHub search and web sources\"",
+    "help:\"使用 GitHub 搜索和网页来源进行深度研究调查\""
+  ],
+  [
+    "placeholder:\"e.g., Always use TypeScript, prefer functional components...\"",
+    "placeholder:\"例如：始终使用 TypeScript，优先函数式组件...\""
+  ],
+  [
+    "description:\"Whether to perform a double click instead of a single click\"",
+    "description:\"是否执行双击而不是单击\""
+  ],
+  [
+    "help:\"Analyze the current session log, optionally with a custom prompt\"",
+    "help:\"分析当前会话日志，也可附带自定义提示词\""
+  ],
+  [
+    "help:\"Share session or research report to markdown file or GitHub gist\"",
+    "help:\"将会话或研究报告分享为 Markdown 文件或 GitHub Gist\""
+  ],
+  [
+    "help:\"View and manage background tasks (subagents and shell sessions)\"",
+    "help:\"查看并管理后台任务（子代理和 Shell 会话）\""
+  ],
+  [
+    "placeholder:\"Type here... (Shift+Enter for newlines, Enter to submit)\"",
+    "placeholder:\"在此输入...（Shift+Enter 换行，Enter 提交）\""
+  ],
+  [
+    "text:\"No research reports found in this session. Run /research first.\"",
+    "text:\"当前会话中未找到研究报告。请先运行 /research。\""
+  ],
+  [
+    "text:\"You must be logged in to create gists. Please run /login first.\"",
+    "text:\"你必须先登录才能创建 Gist。请先运行 /login。\""
+  ],
+  [
+    "help:\"Summarize conversation history to reduce context window usage\"",
+    "help:\"总结会话历史以减少上下文窗口占用\""
+  ],
+  [
+    "help:\"Switch to a different session (optionally specify session ID)\"",
+    "help:\"切换到其他会话（可选指定会话 ID）\""
+  ],
+  [
+    "text:\"Failed to retrieve authentication token. Please log in again.\"",
+    "text:\"获取身份验证令牌失败。请重新登录。\""
+  ],
+  [
+    "description:\"Exact source element reference from the page snapshot\"",
+    "description:\"来自页面快照的精确源元素引用\""
+  ],
+  [
+    "description:\"Exact target element reference from the page snapshot\"",
+    "description:\"来自页面快照的精确目标元素引用\""
+  ],
+  [
+    "description:\"Plan mode for creating and executing multi-step plans\"",
+    "description:\"用于创建和执行多步骤计划的计划模式\""
+  ],
+  [
+    "help:\"Configure terminal for multiline input support (shift+enter)\"",
+    "help:\"配置终端以支持多行输入（shift+enter）\""
+  ],
+  [
+    "\"Use /session checkpoints <number> to view a specific checkpoint.\"",
+    "\"使用 /session checkpoints <编号> 查看特定检查点。\""
+  ],
+  [
+    "description:\"execute command in your local shell (bypass Copilot)\"",
+    "description:\"在本地 Shell 中执行命令（绕过 Copilot）\""
+  ],
+  [
+    "Use /add-dir <directory> to add a directory to the allowed list.`",
+    "请使用 /add-dir <目录> 将目录添加到允许列表。`"
+  ],
+  [
+    "description:\"Returns all network requests since loading the page\"",
+    "description:\"返回自页面加载以来的所有网络请求\""
+  ],
+  [
+    "description:\"The type of specialized agent to use for this task.\"",
+    "description:\"此任务要使用的专用代理类型。\""
+  ],
+  [
+    "text:\"Init suggestion is already suppressed for this repository.\"",
+    "text:\"此仓库的初始化建议已被屏蔽。\""
+  ],
+  [
+    "\"Run with --experimental or use /experimental for more commands\"",
+    "\"使用 --experimental 运行，或使用 /experimental 获取更多命令\""
+  ],
+  [
+    "description:\"Default agent mode for conversational interactions\"",
+    "description:\"用于对话交互的默认代理模式\""
+  ],
+  [
+    "description:\"The text of the prompt in case of a prompt dialog.\"",
+    "description:\"在提示输入对话框场景下要填写的文本。\""
+  ],
+  [
+    "description:\"Whether to submit entered text (press Enter after)\"",
+    "description:\"是否在输入后提交文本（即随后按 Enter）\""
+  ],
+  [
+    "$c.default.createElement(H,{bold:!0},\"ctrl+c\"),\" again to exit\"",
+    "$c.default.createElement(H,{bold:!0},\"ctrl+c\"),\" 再按一次退出\""
+  ],
+  [
+    "description:\"Evaluate JavaScript expression on page or element\"",
+    "description:\"在页面或元素上执行 JavaScript 表达式\""
+  ],
+  [
+    "help:\"Send this session to GitHub and Copilot will create a PR\"",
+    "help:\"将此会话发送到 GitHub，并由 Copilot 创建 PR\""
+  ],
+  [
+    "label:\"GitHub Enterprise Cloud with data residency (*.ghe.com)\"",
+    "label:\"具备数据驻留能力的 GitHub Enterprise Cloud（*.ghe.com）\""
+  ],
+  [
+    "description:\"Image format for the screenshot. Default is png.\"",
+    "description:\"截图的图像格式，默认为 png。\""
+  ],
+  [
+    "text:\"You must be logged in to use `/pr`. Run `/login` first.\"",
+    "text:\"你必须先登录才能使用 `/pr`。请先运行 `/login`。\""
+  ],
+  [
+    "description:\"Suggest improvements to copilot-instructions.md\"",
+    "description:\"为 copilot-instructions.md 提出改进建议\""
+  ],
+  [
+    "help:\"Rename the current session (alias for /session rename)\"",
+    "help:\"重命名当前会话（/session rename 的别名）\""
+  ],
+  [
+    "text:\"URL elicitation was declined or cancelled by the user.\"",
+    "text:\"URL 收集已被用户拒绝或取消。\""
+  ],
+  [
+    "$c.default.createElement(H,{bold:!0},\"right-click\"),\" copy\"",
+    "$c.default.createElement(H,{bold:!0},\"右键\"),\" 复制\""
+  ],
+  [
+    "description:\"Get personalized tips based on usage patterns\"",
+    "description:\"根据使用模式获取个性化建议\""
+  ],
+  [
+    "description:\"List, create, close, or select a browser tab.\"",
+    "description:\"列出、创建、关闭或选择浏览器标签页。\""
+  ],
+  [
+    "text:\"Failed to load skills. Run /skills for more details.\"",
+    "text:\"加载技能失败。请运行 /skills 查看更多详情。\""
+  ],
+  [
+    "text:\"Workspace features are not enabled for this session.\"",
+    "text:\"当前会话未启用工作区功能。\""
+  ],
+  [
+    "text:`No directories are currently allowed for file access.",
+    "text:`当前没有允许访问文件的目录。"
+  ],
+  [
+    "\" enabled \\xB7 Changes apply to the current session only.\"",
+    "\" 已启用 \\xB7 更改仅应用于当前会话。\""
+  ],
+  [
+    "\"Subdirectories of allowed paths are added automatically.\"",
+    "\"允许路径的子目录会自动加入。\""
+  ],
+  [
+    "help:\"Add a directory to the allowed list for file access\"",
+    "help:\"将目录加入允许访问的文件列表\""
+  ],
+  [
+    "label:\"Yes, and add these directories to the allowed list\"",
+    "label:\"是，并将这些目录加入允许列表\""
+  ],
+  [
+    "text:\"No timeline entries to share. The session is empty.\"",
+    "text:\"没有可分享的时间线记录。当前会话为空。\""
+  ],
+  [
+    "description:\"Get a report on your work from the last day\"",
+    "description:\"获取你最近一天工作的报告\""
+  ],
+  [
+    "help:\"Change working directory or show current directory\"",
+    "help:\"切换工作目录或显示当前目录\""
+  ],
+  [
+    "label:\"Yes, and remember this folder for future sessions\"",
+    "label:\"是，并在后续会话中记住此文件夹\""
+  ],
+  [
+    "placeholder:\"A brief description of what this agent does\"",
+    "placeholder:\"简要描述此代理的功能\""
+  ],
+  [
+    "\"Press any key to copy to clipboard and open browser...\"",
+    "\"按任意键复制到剪贴板并打开浏览器...\""
+  ],
+  [
+    "\"\\u2191\\u2193 Navigate \\xB7 Enter Toggle \\xB7 Esc Close\"",
+    "\"\\u2191\\u2193 导航 \\xB7 Enter 切换 \\xB7 Esc 关闭\""
+  ],
+  [
+    "description:\"Perform drag and drop between two elements\"",
+    "description:\"在两个元素之间执行拖放操作\""
+  ],
+  [
+    "description:\"mention files, include contents in context\"",
+    "description:\"提及文件，并将其内容纳入上下文\""
+  ],
+  [
+    "help:\"Display version information and check for updates\"",
+    "help:\"显示版本信息并检查更新\""
+  ],
+  [
+    "help:\"Enable fleet mode for parallel subagent execution\"",
+    "help:\"启用 fleet 模式以并行执行子代理\""
+  ],
+  [
+    "help:\"Index all session history into the session store.\"",
+    "help:\"将全部会话历史索引到会话存储中。\""
+  ],
+  [
+    "help:\"Show context window token usage and visualization\"",
+    "help:\"显示上下文窗口的 Token 使用情况和可视化信息\""
+  ],
+  [
+    "text:\"MCP configuration reloaded and servers restarted.\"",
+    "text:\"MCP 配置已重新加载，服务器已重启。\""
+  ],
+  [
+    "help:\"Browse and select from available agents (if any)\"",
+    "help:\"浏览并选择可用代理（如果有）\""
+  ],
+  [
+    "help:\"Review the changes made in the current directory\"",
+    "help:\"审查当前目录中的更改\""
+  ],
+  [
+    "description:\"Reload data into the session store index\"",
+    "description:\"将数据重新加载到会话存储索引中\""
+  ],
+  [
+    "help:\"Display all allowed directories for file access\"",
+    "help:\"显示所有允许访问文件的目录\""
+  ],
+  [
+    "help:\"Enable all permissions (tools, paths, and URLs)\"",
+    "help:\"启用所有权限（工具、路径和 URL）\""
+  ],
+  [
+    "help:\"Operate on pull requests for the current branch\"",
+    "help:\"操作当前分支的拉取请求\""
+  ],
+  [
+    "help:\"Restart the CLI, preserving the current session\"",
+    "help:\"重启 CLI，并保留当前会话\""
+  ],
+  [
+    "text:\"Init suggestion suppressed for this repository.\"",
+    "text:\"已为此仓库屏蔽初始化建议。\""
+  ],
+  [
+    "\"No timeline entries to share. The session is empty.\"",
+    "\"没有可分享的时间线记录。当前会话为空。\""
+  ],
+  [
+    "description:\"delete from cursor to beginning of line\"",
+    "description:\"从光标位置删除到行首\""
+  ],
+  [
+    "description:\"move to beginning of line (when typing)\"",
+    "description:\"移动到行首（输入时）\""
+  ],
+  [
+    "help:\"Collect debug logs to .tgz file or GitHub gist\"",
+    "help:\"收集调试日志到 .tgz 文件或 GitHub Gist\""
+  ],
+  [
+    "title:\"Choose merge strategy for conflict resolution\"",
+    "title:\"选择用于冲突解决的合并策略\""
+  ],
+  [
+    "description:\"expand recent timeline (when no input)\"",
+    "description:\"展开最近的时间线（无输入时）\""
+  ],
+  [
+    "label:\"Accept plan and build on default permissions\"",
+    "label:\"接受计划并以默认权限执行\""
+  ],
+  [
+    "text:\"MCP host not available for server management.\"",
+    "text:\"MCP 主机当前不可用于服务器管理。\""
+  ],
+  [
+    "title:\"Set up terminal for multi-line input support\"",
+    "title:\"配置终端以支持多行输入\""
+  ],
+  [
+    "\"Use /add-dir <directory> to add more directories.\"",
+    "\"使用 /add-dir <目录> 添加更多目录。\""
+  ],
+  [
+    "description:\"cancel / clear input / copy selection\"",
+    "description:\"取消 / 清空输入 / 复制所选内容\""
+  ],
+  [
+    "description:\"cycle modes (interactive \\u2192 plan)\"",
+    "description:\"循环切换模式（interactive \\u2192 plan）\""
+  ],
+  [
+    "help:\"Display session usage metrics and statistics\"",
+    "help:\"显示会话使用指标和统计信息\""
+  ],
+  [
+    "label:\"Accept plan and build on autopilot + /fleet\"",
+    "label:\"接受计划并以自动驾驶 + /fleet 模式执行\""
+  ],
+  [
+    "label:\"No, and tell Copilot what to do differently\"",
+    "label:\"否，并告诉 Copilot 应如何改做\""
+  ],
+  [
+    "text:\"Autopilot mode enabled with all permissions.\"",
+    "text:\"已启用带全部权限的自动驾驶模式。\""
+  ],
+  [
+    "text:\"Session name must be 100 characters or less.\"",
+    "text:\"会话名称长度不能超过 100 个字符。\""
+  ],
+  [
+    "title:\"Install the browser specified in the config\"",
+    "title:\"安装配置中指定的浏览器\""
+  ],
+  [
+    "help:\"Create an implementation plan before coding\"",
+    "help:\"在编码前创建实现计划\""
+  ],
+  [
+    "placeholder:\"Type your comment and press Enter...\"",
+    "placeholder:\"输入你的评论并按 Enter...\""
+  ],
+  [
+    "text:\"Reindexing sessions into SQLite store\\u2026\"",
+    "text:\"正在将会话重新索引到 SQLite 存储中\\u2026\""
+  ],
+  [
+    "description:\"Run `copilot login` in the terminal\"",
+    "description:\"在终端中运行 `copilot login`\""
+  ],
+  [
+    "description:\"expand all timeline (when no input)\"",
+    "description:\"展开全部时间线（无输入时）\""
+  ],
+  [
+    "description:\"run command while preserving input\"",
+    "description:\"在保留当前输入的同时运行命令\""
+  ],
+  [
+    "label:\"No, I will login each time I use Copilot\"",
+    "label:\"否，我将在每次使用 Copilot 时登录\""
+  ],
+  [
+    "description:\"Button to click, defaults to left\"",
+    "description:\"要点击的鼠标按钮，默认为左键\""
+  ],
+  [
+    "description:\"The text to wait for to disappear\"",
+    "description:\"要等待其消失的文本\""
+  ],
+  [
+    "description:\"move to end of line (when typing)\"",
+    "description:\"移动到行尾（输入时）\""
+  ],
+  [
+    "help:\"Run code review agent to analyze changes\"",
+    "help:\"运行代码审查代理来分析更改\""
+  ],
+  [
+    "help:\"View and toggle custom instruction files\"",
+    "help:\"查看并切换自定义指令文件\""
+  ],
+  [
+    "label:\"Exit plan mode and I will prompt myself\"",
+    "label:\"退出计划模式，我将自行继续提示\""
+  ],
+  [
+    "\"Autopilot mode enabled with all permissions.\"",
+    "\"已启用带全部权限的自动驾驶模式。\""
+  ],
+  [
+    "help:\"Copy the last response to the clipboard\"",
+    "help:\"将上一条回复复制到剪贴板\""
+  ],
+  [
+    "help:\"Manage skills for enhanced capabilities\"",
+    "help:\"管理技能以增强能力\""
+  ],
+  [
+    "label:\"Auto-connect to matching IDE workspace\"",
+    "label:\"自动连接到匹配的 IDE 工作区\""
+  ],
+  [
+    "description:\"Type text into editable element\"",
+    "description:\"在可编辑元素中输入文本\""
+  ],
+  [
+    "help:\"Manage plugins and plugin marketplaces\"",
+    "help:\"管理插件和插件市场\""
+  ],
+  [
+    "text:\"You have been logged out successfully.\"",
+    "text:\"你已成功退出登录。\""
+  ],
+  [
+    "\"Enter your GitHub Enterprise instance URL:\"",
+    "\"输入你的 GitHub Enterprise 实例 URL：\""
+  ],
+  [
+    "description:\"Select an option in a dropdown\"",
+    "description:\"在下拉列表中选择一个选项\""
+  ],
+  [
+    "description:\"edit prompt in external editor\"",
+    "description:\"在外部编辑器中编辑提示内容\""
+  ],
+  [
+    "description:\"toggle model reasoning display\"",
+    "description:\"切换模型推理显示\""
+  ],
+  [
+    "label:\"Enable all permissions (recommended)\"",
+    "label:\"启用全部权限（推荐）\""
+  ],
+  [
+    "description:\"Text to type into the element\"",
+    "description:\"要输入到元素中的文本\""
+  ],
+  [
+    "description:\"Whether to accept the dialog.\"",
+    "description:\"是否接受该对话框。\""
+  ],
+  [
+    "help:\"Manage language server configuration\"",
+    "help:\"管理语言服务器配置\""
+  ],
+  [
+    "help:\"Preview TUIkit components and tokens\"",
+    "help:\"预览 TUIkit 组件和设计令牌\""
+  ],
+  [
+    "help:\"Update the CLI to the latest version\"",
+    "help:\"将 CLI 更新到最新版本\""
+  ],
+  [
+    "text:\"No other sessions found to clean up.\"",
+    "text:\"未找到其他可清理的会话。\""
+  ],
+  [
+    "text:\"Unable to load available models list\"",
+    "text:\"无法加载可用模型列表\""
+  ],
+  [
+    "description:\"Go back to the previous page\"",
+    "description:\"返回上一页\""
+  ],
+  [
+    "description:\"Height of the browser window\"",
+    "description:\"浏览器窗口高度\""
+  ],
+  [
+    "description:\"Returns all console messages\"",
+    "description:\"返回所有控制台消息\""
+  ],
+  [
+    "description:\"Upload one or multiple files\"",
+    "description:\"上传一个或多个文件\""
+  ],
+  [
+    "description:\"cancel the current operation\"",
+    "description:\"取消当前操作\""
+  ],
+  [
+    "label:\"Accept plan and build on autopilot\"",
+    "label:\"接受计划并以自动驾驶模式执行\""
+  ],
+  [
+    "`Checkpoint History (${r.length} total):`",
+    "`检查点历史（共 ${r.length} 条）：`"
+  ],
+  [
+    "`Selected custom agent: ${p.displayName}`",
+    "`已选择自定义代理：${p.displayName}`"
+  ],
+  [
+    "description:\"Perform click on a web page\"",
+    "description:\"在网页上执行点击操作\""
+  ],
+  [
+    "description:\"Press a key on the keyboard\"",
+    "description:\"按下键盘上的某个按键\""
+  ],
+  [
+    "description:\"The time to wait in seconds\"",
+    "description:\"等待时间，单位为秒\""
+  ],
+  [
+    "description:\"Width of the browser window\"",
+    "description:\"浏览器窗口宽度\""
+  ],
+  [
+    "help:\"Session history tools and insights\"",
+    "help:\"会话历史工具与洞察\""
+  ],
+  [
+    "help:\"Show help for interactive commands\"",
+    "help:\"显示交互命令的帮助信息\""
+  ],
+  [
+    "label:\"Continue with limited permissions\"",
+    "label:\"以受限权限继续\""
+  ],
+  [
+    "text:\"Copied last response to clipboard.\"",
+    "text:\"已将上一条回复复制到剪贴板。\""
+  ],
+  [
+    "text:\"Fetching pull request status\\u2026\"",
+    "text:\"正在获取拉取请求状态\\u2026\""
+  ],
+  [
+    "\"& send to github, copilot creates a pr\"",
+    "\"& 发送到 GitHub，由 Copilot 创建 PR\""
+  ],
+  [
+    "description:\"Hover over element on page\"",
+    "description:\"在页面元素上悬停\""
+  ],
+  [
+    "label:\"Generating agent with Copilot...\"",
+    "label:\"正在使用 Copilot 生成代理...\""
+  ],
+  [
+    "label:\"Submit a private feedback survey\"",
+    "label:\"提交私密反馈问卷\""
+  ],
+  [
+    "label:\"User (~/.config/copilot/agents/)\"",
+    "label:\"用户（~/.config/copilot/agents/）\""
+  ],
+  [
+    "label:\"Yes, remember screen reader mode\"",
+    "label:\"是，记住屏幕阅读器模式\""
+  ],
+  [
+    "text:\"No users are currently logged in.\"",
+    "text:\"当前没有已登录用户。\""
+  ],
+  [
+    "text:`Failed to share session: ${de(a)}`",
+    "text:`分享会话失败：${de(a)}`"
+  ],
+  [
+    "\"Waiting for editor process to exit...\"",
+    "\"正在等待编辑器进程退出...\""
+  ],
+  [
+    "\"What account do you want to log into?\"",
+    "\"你想登录哪个账号？\""
+  ],
+  [
+    "`Failed to copy to clipboard: ${de(o)}`",
+    "`复制到剪贴板失败：${de(o)}`"
+  ],
+  [
+    "description:\"Fill multiple form fields\"",
+    "description:\"填写多个表单字段\""
+  ],
+  [
+    "description:\"Human-readable field name\"",
+    "description:\"人类可读的字段名称\""
+  ],
+  [
+    "description:\"Resize the browser window\"",
+    "description:\"调整浏览器窗口大小\""
+  ],
+  [
+    "description:\"delete previous character\"",
+    "description:\"删除上一个字符\""
+  ],
+  [
+    "text:\"Checking for uncommitted changes\"",
+    "text:\"正在检查未提交的更改\""
+  ],
+  [
+    "text:\"No plan exists for this session.\"",
+    "text:\"当前会话还没有计划。\""
+  ],
+  [
+    "text:\"Usage: /mcp delete <server-name>\"",
+    "text:\"用法：/mcp delete <server-name>\""
+  ],
+  [
+    "\"Allowed directories for file access:\"",
+    "\"允许访问文件的目录：\""
+  ],
+  [
+    "`Failed to select agent: ${h.message}`",
+    "`选择代理失败：${h.message}`"
+  ],
+  [
+    "`Workspace Files (${r.length} total):`",
+    "`工作区文件（共 ${r.length} 个）：`"
+  ],
+  [
+    "description:\"navigate command history\"",
+    "description:\"浏览命令历史\""
+  ],
+  [
+    "help:\"Manage MCP server configuration\"",
+    "help:\"管理 MCP 服务器配置\""
+  ],
+  [
+    "help:\"Reset the list of allowed tools\"",
+    "help:\"重置允许使用的工具列表\""
+  ],
+  [
+    "label:\"Learn more about custom agents\"",
+    "label:\"了解更多自定义代理信息\""
+  ],
+  [
+    "text:\"Compacting conversation history\"",
+    "text:\"正在压缩会话历史\""
+  ],
+  [
+    "help:\"Clear the conversation history\"",
+    "help:\"清空会话历史\""
+  ],
+  [
+    "help:\"Provide feedback about the CLI\"",
+    "help:\"提交关于 CLI 的反馈\""
+  ],
+  [
+    "text:\"Loading repository information\"",
+    "text:\"正在加载仓库信息\""
+  ],
+  [
+    "text:\"No assistant response to copy.\"",
+    "text:\"没有可复制的助手回复。\""
+  ],
+  [
+    "text:\"No research report exists yet.\"",
+    "text:\"尚未生成研究报告。\""
+  ],
+  [
+    "text:\"Usage: /lsp test <server-name>\"",
+    "text:\"用法：/lsp test <server-name>\""
+  ],
+  [
+    "text:`Session shared successfully to:",
+    "text:`会话已成功分享至："
+  ],
+  [
+    "\"No custom instruction files found.\"",
+    "\"未找到自定义指令文件。\""
+  ],
+  [
+    "\"additional directories via env var\"",
+    "\"通过环境变量添加的附加目录\""
+  ],
+  [
+    "description:\"Modifier keys to press\"",
+    "description:\"要同时按下的修饰键\""
+  ],
+  [
+    "description:\"The URL to navigate to\"",
+    "description:\"要访问的 URL\""
+  ],
+  [
+    "label:\"Waiting for authorization...\"",
+    "label:\"正在等待授权...\""
+  ],
+  [
+    "placeholder:\"No newlines allowed...\"",
+    "placeholder:\"不允许换行...\""
+  ],
+  [
+    "label:\"Open file edit diffs in IDE\"",
+    "label:\"在 IDE 中打开文件编辑差异\""
+  ],
+  [
+    "title:\"Remember screen reader mode\"",
+    "title:\"记住屏幕阅读器模式\""
+  ],
+  [
+    "description:\"Operation to perform\"",
+    "description:\"要执行的操作\""
+  ],
+  [
+    "description:\"The text to wait for\"",
+    "description:\"要等待出现的文本\""
+  ],
+  [
+    "description:\"delete previous word\"",
+    "description:\"删除上一个单词\""
+  ],
+  [
+    "help:\"Connect to an IDE workspace\"",
+    "help:\"连接到 IDE 工作区\""
+  ],
+  [
+    "label:\"No, pick a different model\"",
+    "label:\"否，选择其他模型\""
+  ],
+  [
+    "label:\"Waiting for device code...\"",
+    "label:\"正在等待设备代码...\""
+  ],
+  [
+    "description:\"Start a new session\"",
+    "description:\"开始一个新会话\""
+  ],
+  [
+    "description:\"move cursor by word\"",
+    "description:\"按单词移动光标\""
+  ],
+  [
+    "label:\"Project (.github/agents/)\"",
+    "label:\"项目（.github/agents/）\""
+  ],
+  [
+    "placeholder:\"Type your answer...\"",
+    "placeholder:\"输入你的回答...\""
+  ],
+  [
+    "text:\"No files in workspace yet.\"",
+    "text:\"工作区中还没有文件。\""
+  ],
+  [
+    "title:\"Checking my documentation\"",
+    "title:\"正在检查我的文档\""
+  ],
+  [
+    "\"No research report exists yet.\"",
+    "\"尚未生成研究报告。\""
+  ],
+  [
+    "label:\"Rebase (save as default)\"",
+    "label:\"变基（保存为默认）\""
+  ],
+  [
+    "label:\"Yes, I accept that risk.\"",
+    "label:\"是，我接受该风险。\""
+  ],
+  [
+    "placeholder:\"Blinking cursor...\"",
+    "placeholder:\"光标闪烁中...\""
+  ],
+  [
+    "text:\"Looking for changes\\u2026\"",
+    "text:\"正在查找变更\\u2026\""
+  ],
+  [
+    "text:\"Switched to default agent\"",
+    "text:\"已切换到默认代理\""
+  ],
+  [
+    "description:\"Fields to fill in\"",
+    "description:\"要填写的字段\""
+  ],
+  [
+    "description:\"Type of the field\"",
+    "description:\"字段类型\""
+  ],
+  [
+    "description:\"exit from the CLI\"",
+    "description:\"退出 CLI\""
+  ],
+  [
+    "label:\"Create manually instead\"",
+    "label:\"改为手动创建\""
+  ],
+  [
+    "label:\"Merge (save as default)\"",
+    "label:\"合并（保存为默认）\""
+  ],
+  [
+    "label:\"Rebase (just this once)\"",
+    "label:\"变基（仅这一次）\""
+  ],
+  [
+    "title:\"Hook permission request\"",
+    "title:\"Hook 权限请求\""
+  ],
+  [
+    "\"Waiting for authorization...\"",
+    "\"正在等待授权...\""
+  ],
+  [
+    "help:\"Manage GitHub user list\"",
+    "help:\"管理 GitHub 用户列表\""
+  ],
+  [
+    "label:\"Merge (just this once)\"",
+    "label:\"合并（仅这一次）\""
+  ],
+  [
+    "label:\"No, never ask me again\"",
+    "label:\"否，不要再问我\""
+  ],
+  [
+    "label:\"Yes, enable this model\"",
+    "label:\"是，启用该模型\""
+  ],
+  [
+    "title:\"Allow directory access\"",
+    "title:\"允许目录访问\""
+  ],
+  [
+    "help:\"Select AI model to use\"",
+    "help:\"选择要使用的 AI 模型\""
+  ],
+  [
+    "help:\"View or set color mode\"",
+    "help:\"查看或设置颜色模式\""
+  ],
+  [
+    "label:\"Go back to model list\"",
+    "label:\"返回模型列表\""
+  ],
+  [
+    "label:\"Save to markdown file\"",
+    "label:\"保存到 Markdown 文件\""
+  ],
+  [
+    "label:\"Select by category...\"",
+    "label:\"按类别选择...\""
+  ],
+  [
+    "text:\"You are not logged in.\"",
+    "text:\"你尚未登录。\""
+  ],
+  [
+    "text:`Created agent at ${rs}`",
+    "text:`已在 ${rs} 创建代理`"
+  ],
+  [
+    "title:\"Enable autopilot mode\"",
+    "title:\"启用自动驾驶模式\""
+  ],
+  [
+    "title:\"List network requests\"",
+    "title:\"列出网络请求\""
+  ],
+  [
+    "title:\"Plan ready for review\"",
+    "title:\"计划已准备好，可供审阅\""
+  ],
+  [
+    "title:\"Resize browser window\"",
+    "title:\"调整浏览器窗口大小\""
+  ],
+  [
+    "\"Waiting for device code...\"",
+    "\"正在等待设备代码...\""
+  ],
+  [
+    "description:\"view/edit plan\"",
+    "description:\"查看/编辑计划\""
+  ],
+  [
+    "help:\"Manage CLI extensions\"",
+    "help:\"管理 CLI 扩展\""
+  ],
+  [
+    "label:\"No, ask me next time\"",
+    "label:\"否，下次再问我\""
+  ],
+  [
+    "text:\"Loading extensions...\"",
+    "text:\"正在加载扩展...\""
+  ],
+  [
+    "text:\"Not a git repository.\"",
+    "text:\"这不是一个 Git 仓库。\""
+  ],
+  [
+    "title:\"Confirm folder trust\"",
+    "title:\"确认文件夹信任\""
+  ],
+  [
+    "title:\"Fetching web content\"",
+    "title:\"正在获取网页内容\""
+  ],
+  [
+    "title:\"Get console messages\"",
+    "title:\"获取控制台消息\""
+  ],
+  [
+    "title:\"Models and subagents\"",
+    "title:\"模型与子代理\""
+  ],
+  [
+    "title:\"Reloading extensions\"",
+    "title:\"正在重新加载扩展\""
+  ],
+  [
+    "\"Switched to default agent\"",
+    "\"已切换到默认代理\""
+  ],
+  [
+    "description:\"view research\"",
+    "description:\"查看研究\""
+  ],
+  [
+    "label:\"Create new agent...\"",
+    "label:\"创建新代理...\""
+  ],
+  [
+    "label:\"Create with Copilot\"",
+    "label:\"使用 Copilot 创建\""
+  ],
+  [
+    "text:\"Compaction Cancelled\"",
+    "text:\"压缩已取消\""
+  ],
+  [
+    "text:\"No changelogs found.\"",
+    "text:\"未找到更新日志。\""
+  ],
+  [
+    "text:\"Uploading debug logs\"",
+    "text:\"正在上传调试日志\""
+  ],
+  [
+    "title:\"Evaluate JavaScript\"",
+    "title:\"执行 JavaScript\""
+  ],
+  [
+    "title:\"Managing extensions\"",
+    "title:\"管理扩展\""
+  ],
+  [
+    "label:\"Create GitHub Gist\"",
+    "label:\"创建 GitHub Gist\""
+  ],
+  [
+    "label:\"Current selection:\"",
+    "label:\"当前选择：\""
+  ],
+  [
+    "label:\"Input: CursorBlink\"",
+    "label:\"输入：光标闪烁\""
+  ],
+  [
+    "text:\"No plan exists yet.\"",
+    "text:\"尚未创建计划。\""
+  ],
+  [
+    "description:\"run command\"",
+    "description:\"运行命令\""
+  ],
+  [
+    "description:\"switch mode\"",
+    "description:\"切换模式\""
+  ],
+  [
+    "description:\"text editor\"",
+    "description:\"文本编辑器\""
+  ],
+  [
+    "help:\"Log out of Copilot\"",
+    "help:\"退出 Copilot 登录\""
+  ],
+  [
+    "label:\"Creating agent...\"",
+    "label:\"正在创建代理...\""
+  ],
+  [
+    "label:\"Current selection\"",
+    "label:\"当前选择\""
+  ],
+  [
+    "label:\"Input: SingleLine\"",
+    "label:\"输入：单行\""
+  ],
+  [
+    "label:\"Working Directory\"",
+    "label:\"工作目录\""
+  ],
+  [
+    "title:\"Agent environment\"",
+    "title:\"Agent 环境\""
+  ],
+  [
+    "title:\"Help and feedback\"",
+    "title:\"帮助与反馈\""
+  ],
+  [
+    "title:\"Navigate to a URL\"",
+    "title:\"访问 URL\""
+  ],
+  [
+    "title:\"Read shell output\"",
+    "title:\"读取 Shell 输出\""
+  ],
+  [
+    "title:\"Take a screenshot\"",
+    "title:\"截取屏幕截图\""
+  ],
+  [
+    "title:\"Write shell input\"",
+    "title:\"写入 Shell 输入\""
+  ],
+  [
+    "\"Error during sign-in: \"",
+    "\"登录时出错：\""
+  ],
+  [
+    "\"Press any key to retry\"",
+    "\"按任意键重试\""
+  ],
+  [
+    "`${m} background /tasks`",
+    "`${m} 后台 /tasks`"
+  ],
+  [
+    "help:\"Log in to Copilot\"",
+    "help:\"登录 Copilot\""
+  ],
+  [
+    "label:\"Input: Multiline\"",
+    "label:\"输入：多行\""
+  ],
+  [
+    "label:\"\\u26A0 autopilot\"",
+    "label:\"\\u26A0 自动驾驶\""
+  ],
+  [
+    "label:\"Create manually\"",
+    "label:\"手动创建\""
+  ],
+  [
+    "label:\"Help categories\"",
+    "label:\"帮助分类\""
+  ],
+  [
+    "text:\"Rejected by you.\"",
+    "text:\"已被你拒绝。\""
+  ],
+  [
+    "title:\"Handle a dialog\"",
+    "title:\"处理对话框\""
+  ],
+  [
+    "\"Compaction Cancelled\"",
+    "\"压缩已取消\""
+  ],
+  [
+    "\"Enter one-time code:\"",
+    "\"输入一次性代码：\""
+  ],
+  [
+    "label:\"File navigator\"",
+    "label:\"文件导航器\""
+  ],
+  [
+    "label:\"Review content\"",
+    "label:\"查看内容\""
+  ],
+  [
+    "placeholder:\"My Agent\"",
+    "placeholder:\"我的代理\""
+  ],
+  [
+    "text:\"Unlimited reqs.\"",
+    "text:\"无限请求。\""
+  ],
+  [
+    "title:\"Other commands\"",
+    "title:\"其他命令\""
+  ],
+  [
+    "\"Custom Instructions\"",
+    "\"自定义指令\""
+  ],
+  [
+    "\"No plan exists yet.\"",
+    "\"尚未创建计划。\""
+  ],
+  [
+    "description:\"enqueue\"",
+    "description:\"加入队列\""
+  ],
+  [
+    "label:\"Copilot Login\"",
+    "label:\"Copilot 登录\""
+  ],
+  [
+    "label:\"Copilot said:\"",
+    "label:\"Copilot 说：\""
+  ],
+  [
+    "label:\"Input: Masked\"",
+    "label:\"输入：掩码\""
+  ],
+  [
+    "label:\"Notification:\"",
+    "label:\"通知：\""
+  ],
+  [
+    "title:\"Close browser\"",
+    "title:\"关闭浏览器\""
+  ],
+  [
+    "title:\"Page snapshot\"",
+    "title:\"页面快照\""
+  ],
+  [
+    "title:\"Select option\"",
+    "title:\"选择选项\""
+  ],
+  [
+    "title:\"Task complete\"",
+    "title:\"任务完成\""
+  ],
+  [
+    "\"Press Esc to close\"",
+    "\"按 Esc 关闭\""
+  ],
+  [
+    "description:\"Cancel\"",
+    "description:\"取消\""
+  ],
+  [
+    "text:\"Restarting...\"",
+    "text:\"正在重启...\""
+  ],
+  [
+    "title:\"Propose Work\"",
+    "title:\"提出方案\""
+  ],
+  [
+    "title:\"Store Memory\"",
+    "title:\"存储记忆\""
+  ],
+  [
+    "title:\"Upload files\"",
+    "title:\"上传文件\""
+  ],
+  [
+    "\"Remaining reqs.: \"",
+    "\"剩余请求数： \""
+  ],
+  [
+    "\"in git root & cwd\"",
+    "\"位于 git 根目录和当前工作目录\""
+  ],
+  [
+    "help:\"Exit the CLI\"",
+    "help:\"退出 CLI\""
+  ],
+  [
+    "label:\"Breakpoints\"",
+    "label:\"断点\""
+  ],
+  [
+    "label:\"In Progress\"",
+    "label:\"进行中\""
+  ],
+  [
+    "label:\"interactive\"",
+    "label:\"交互\""
+  ],
+  [
+    "title:\"Asking user\"",
+    "title:\"正在询问用户\""
+  ],
+  [
+    "title:\"Hover mouse\"",
+    "title:\"悬停鼠标\""
+  ],
+  [
+    "title:\"List shells\"",
+    "title:\"列出 Shell\""
+  ],
+  [
+    "title:\"Manage tabs\"",
+    "title:\"管理标签页\""
+  ],
+  [
+    "title:\"Permissions\"",
+    "title:\"权限\""
+  ],
+  [
+    "title:\"Press a key\"",
+    "title:\"按下按键\""
+  ],
+  [
+    "\"Premium requests\"",
+    "\"高级请求\""
+  ],
+  [
+    "\"What can you do?\"",
+    "\"你能做什么？\""
+  ],
+  [
+    "label:\"Connecting\"",
+    "label:\"正在连接\""
+  ],
+  [
+    "label:\"Edit files\"",
+    "label:\"编辑文件\""
+  ],
+  [
+    "label:\"No, cancel\"",
+    "label:\"否，取消\""
+  ],
+  [
+    "label:\"Read files\"",
+    "label:\"读取文件\""
+  ],
+  [
+    "label:\"Repository\"",
+    "label:\"仓库\""
+  ],
+  [
+    "title:\"Background\"",
+    "title:\"背景\""
+  ],
+  [
+    "title:\"Drag mouse\"",
+    "title:\"拖动鼠标\""
+  ],
+  [
+    "title:\"Stop shell\"",
+    "title:\"停止 Shell\""
+  ],
+  [
+    "\"Login cancelled\"",
+    "\"登录已取消\""
+  ],
+  [
+    "\"Premium request\"",
+    "\"高级请求\""
+  ],
+  [
+    "label:\"All tools\"",
+    "label:\"全部工具\""
+  ],
+  [
+    "label:\"Connected\"",
+    "label:\"已连接\""
+  ],
+  [
+    "label:\"Subagents\"",
+    "label:\"子代理\""
+  ],
+  [
+    "label:\"Try again\"",
+    "label:\"重试\""
+  ],
+  [
+    "label:\"You said:\"",
+    "label:\"你说：\""
+  ],
+  [
+    "label:\"autopilot\"",
+    "label:\"自动驾驶\""
+  ],
+  [
+    "title:\"Edit file\"",
+    "title:\"编辑文件\""
+  ],
+  [
+    "title:\"Fill form\"",
+    "title:\"填写表单\""
+  ],
+  [
+    "title:\"Type text\"",
+    "title:\"输入文本\""
+  ],
+  [
+    "label:\"Ask user\"",
+    "label:\"询问用户\""
+  ],
+  [
+    "label:\"Continue\"",
+    "label:\"继续\""
+  ],
+  [
+    "label:\"Disabled\"",
+    "label:\"已禁用\""
+  ],
+  [
+    "label:\"Rejected\"",
+    "label:\"已拒绝\""
+  ],
+  [
+    "label:\"Warning:\"",
+    "label:\"警告：\""
+  ],
+  [
+    "title:\"Wait for\"",
+    "title:\"等待\""
+  ],
+  [
+    "label:\"Magenta\"",
+    "label:\"洋红\""
+  ],
+  [
+    "label:\"Running\"",
+    "label:\"运行中\""
+  ],
+  [
+    "label:\"Success\"",
+    "label:\"成功\""
+  ],
+  [
+    "text:\"Indexing\"",
+    "text:\"正在索引\""
+  ],
+  [
+    "title:\"Editing\"",
+    "title:\"编辑\""
+  ],
+  [
+    "title:\"Go back\"",
+    "title:\"返回\""
+  ],
+  [
+    "title:\"Session\"",
+    "title:\"会话\""
+  ],
+  [
+    "label:\"Cancel\"",
+    "label:\"取消\""
+  ],
+  [
+    "label:\"Denied\"",
+    "label:\"已拒绝\""
+  ],
+  [
+    "label:\"Error:\"",
+    "label:\"错误：\""
+  ],
+  [
+    "label:\"Failed\"",
+    "label:\"失败\""
+  ],
+  [
+    "label:\"Skills\"",
+    "label:\"技能\""
+  ],
+  [
+    "label:\"Yellow\"",
+    "label:\"黄色\""
+  ],
+  [
+    "title:\"Global\"",
+    "title:\"全局\""
+  ],
+  [
+    "title:\"Status\"",
+    "title:\"状态\""
+  ],
+  [
+    "label:\"Green\"",
+    "label:\"绿色\""
+  ],
+  [
+    "label:\"Info:\"",
+    "label:\"信息：\""
+  ],
+  [
+    "label:\"White\"",
+    "label:\"白色\""
+  ],
+  [
+    "label:\"shell\"",
+    "label:\"Shell\""
+  ],
+  [
+    "title:\"Brand\"",
+    "title:\"品牌\""
+  ],
+  [
+    "\"expand all\"",
+    "\"全部展开\""
+  ],
+  [
+    "label:\"Blue\"",
+    "label:\"蓝色\""
+  ],
+  [
+    "label:\"Cyan\"",
+    "label:\"青色\""
+  ],
+  [
+    "label:\"Quit\"",
+    "label:\"退出\""
+  ],
+  [
+    "label:\"SQL:\"",
+    "label:\"SQL：\""
+  ],
+  [
+    "label:\"User\"",
+    "label:\"用户\""
+  ],
+  [
+    "label:\"plan\"",
+    "label:\"计划\""
+  ],
+  [
+    "title:\"Code\"",
+    "title:\"代码\""
+  ],
+  [
+    "title:\"Diff\"",
+    "title:\"差异\""
+  ],
+  [
+    "title:\"Text\"",
+    "title:\"文本\""
+  ],
+  [
+    "label:\"Red\"",
+    "label:\"红色\""
+  ],
+  [
+    "label:\"Web\"",
+    "label:\"网络\""
+  ],
+  [
+    "label:\"Yes\"",
+    "label:\"是\""
+  ],
+  [
+    "label:\"No\"",
+    "label:\"否\""
+  ],
+  [
+    "title:\"UI\"",
+    "title:\"界面\""
+  ]
+]

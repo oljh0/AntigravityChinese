@@ -16,7 +16,7 @@ pids
 *.pid.lock
 *.vsix
 datafiles/*.js
-datafiles/*.bak
+**/*.bak
 __pycache__/
 **/__pycache__/
 

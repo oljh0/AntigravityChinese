@@ -6,9 +6,9 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 
-// ═══════════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════════════════
 // 路径配置
-// ═══════════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════════════════
 function getAppBase() {
     // Antigravity.app 的 Resources/app 路径
     const candidates = [
@@ -32,11 +32,11 @@ function getTargets(base) {
     };
 }
 
-// ═══════════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════════════════
 // 替换规则定义
-// ═══════════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════════════════
 
-const REPLACEMENTS_DIR = path.join(__dirname, 'translations', 'patches', 'antigravity');
+const REPLACEMENTS_DIR = path.join(__dirname, 'translations', 'patches', 'ide', 'antigravity');
 const REPLACEMENT_FILES = {
     main: 'main.replacements.json',
     chat: 'chat.replacements.json',
@@ -51,10 +51,14 @@ function loadReplacements(name) {
 
     const filename = REPLACEMENT_FILES[name];
     if (!filename) {
-        throw new Error(`未知替换表: ${name}`);
+        throw new Error(`未知替换组: ${name}`);
     }
 
     const filepath = path.join(REPLACEMENTS_DIR, filename);
+    if (!fs.existsSync(filepath)) {
+        throw new Error(`替换文件不存在: ${filepath}`);
+    }
+    
     const data = JSON.parse(fs.readFileSync(filepath, 'utf-8'));
     if (!Array.isArray(data) || data.some(pair => !Array.isArray(pair) || pair.length !== 2 || pair.some(item => typeof item !== 'string'))) {
         throw new Error(`替换表格式无效: ${filepath}`);
@@ -76,9 +80,9 @@ function getWorkbenchReplacements() {
     return loadReplacements('workbench');
 }
 
-// ═══════════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════════════════
 // 补丁引擎
-// ═══════════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════════════════
 
 const PATCH_VERSION = 'v43';
 const PATCH_MARKER = `/* zh-hans-patched-${PATCH_VERSION} */`;
@@ -160,7 +164,7 @@ function updateChecksums(base) {
 
     // Clear checksums entirely to prevent integrity check failures.
     // Antigravity checks these checksums on startup BEFORE extensions load,
-    // so recalculating hashes doesn't help — we must remove them.
+    // so recalculating hashes doesn't help - we must remove them.
     if (product.checksums && Object.keys(product.checksums).length > 0) {
         product.checksums = {};
         fs.writeFileSync(productJsonPath, JSON.stringify(product, null, '\t'), 'utf-8');
@@ -180,9 +184,9 @@ function revertChecksums(base) {
     return false;
 }
 
-// ═══════════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════════════════
 // 自动更新屏蔽
-// ═══════════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════════════════
 
 const BLOCKED_UPDATE_URL = 'https://localhost.invalid/no-update';
 
@@ -247,9 +251,9 @@ function unblockAutoUpdate(base) {
     }
 }
 
-// ═══════════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════════════════
 // 插件激活 / 命令
-// ═══════════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════════════════
 
 function applyAllPatches(silent) {
     const base = getAppBase();

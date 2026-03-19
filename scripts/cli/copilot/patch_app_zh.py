@@ -17,8 +17,8 @@ import sys
 from pathlib import Path
 
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_REPLACEMENTS = REPO_ROOT / "translations" / "patches" / "copilot_cli" / "app.replacements.json"
+REPO_ROOT = Path(__file__).resolve().parents[3]
+DEFAULT_REPLACEMENTS = REPO_ROOT / "translations" / "patches" / "cli" / "copilot" / "app.replacements.json"
 DEFAULT_COPILOT_HOME = Path(os.environ.get("COPILOT_HOME", "~/.copilot")).expanduser()
 
 IDENTIFIER_RE = re.compile(r"^[A-Za-z_$][A-Za-z0-9_$]*$")
