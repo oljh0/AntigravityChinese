@@ -1,69 +1,43 @@
 #!/usr/bin/env python3
-"""
-共享的补丁工具函数。
-"""
-
-from __future__ import annotations
-
-import argparse
-import json
+import sys
+import subprocess
 import os
-import shutil
-from pathlib import Path
 
+def init_terminal():
+    """初始化终端环境，解决 Windows 下的乱码问题"""
+    # 在 Windows 下强制启用简单输出，不使用 Emoji
+    if sys.platform == "win32":
+        os.environ["SIMPLE_OUTPUT"] = "1"
+        
+        # 强制重配置标准流为 UTF-8，确保中文本身不乱码
+        if hasattr(sys.stdout, "reconfigure"):
+            sys.stdout.reconfigure(encoding="utf-8")
+        if hasattr(sys.stderr, "reconfigure"):
+            sys.stderr.reconfigure(encoding="utf-8")
+        
+        # 切换代码页
+        try:
+            subprocess.run(["chcp", "65001"], capture_output=True, shell=True)
+        except Exception:
+            pass
 
-def load_replacements(filepath: Path) -> list[tuple[str, str]]:
-    if not filepath.exists():
-        return []
+def print_status(icon, msg):
+    """带图标的状态打印，自动处理环境降级"""
+    # 强制进行降级处理，因为在 Windows CLI 捕获中 Emoji 极其不稳定
+    icon_map = {
+        "📦": "[STEP]",
+        "✅": "[OK]",
+        "❌": "[ERR]",
+        "⚠️": "[WARN]",
+        "♻️": "[REVERT]",
+        "🎉": "[DONE]",
+        "📌": "[INFO]",
+        "⏭️": "[SKIP]",
+        "⏳": "[WAIT]",
+        "⚙️": "[CONFIG]"
+    }
+    icon = icon_map.get(icon, icon)
+    print(f"{icon} {msg}")
 
-    data = json.loads(filepath.read_text(encoding="utf-8"))
-    if not isinstance(data, list):
-        raise ValueError(f"替换表格式无效: {filepath}")
-
-    replacements: list[tuple[str, str]] = []
-    for pair in data:
-        if (
-            not isinstance(pair, list)
-            or len(pair) != 2
-            or not isinstance(pair[0], str)
-            or not isinstance(pair[1], str)
-        ):
-            raise ValueError(f"替换表格式无效: {filepath}")
-        replacements.append((pair[0], pair[1]))
-    # 按长度降序排列，避免子串先被替换导致匹配失效
-    return sorted(replacements, key=lambda item: (-len(item[0]), item[0]))
-
-
-def patch_file(filepath: Path, replacements: list[tuple[str, str]], dry_run: bool) -> tuple[int, int]:
-    if not replacements:
-        return 0, 0
-
-    if not filepath.exists():
-        return 0, 0
-
-    content = filepath.read_text(encoding="utf-8", errors="replace")
-    updated = content
-    applied = 0
-    already = 0
-
-    for old, new in replacements:
-        if old in updated:
-            updated = updated.replace(old, new)
-            applied += 1
-        elif new in updated:
-            already += 1
-
-    if applied > 0 and not dry_run:
-        # 创建备份
-        backup = filepath.with_name(filepath.name + ".bak")
-        if not backup.exists():
-            shutil.copy2(filepath, backup)
-        filepath.write_text(updated, encoding="utf-8")
-    
-    return applied, already
-
-
-def revert_file(filepath: Path):
-    backup = filepath.with_name(filepath.name + ".bak")
-    if backup.exists():
-        shutil.copy2(backup, filepath)
+def print_step(step_num, total_steps, description):
+    print_status("📦", f"[{step_num}/{total_steps}] {description}")

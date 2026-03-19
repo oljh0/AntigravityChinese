@@ -18,13 +18,19 @@ import shutil
 import sys
 from pathlib import Path
 
+# 添加共享工具路径
+sys.path.append(str(Path(__file__).resolve().parents[2] / "shared"))
+from patch_utils import init_terminal, print_status, print_step
+
+# 初始化终端环境
+init_terminal()
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 TRANSLATIONS_DIR = REPO_ROOT / "translations" / "patches" / "ide" / "antigravity"
 
 local_app_data = os.environ.get("LOCALAPPDATA")
 if not local_app_data:
-    print("  ❌ 无法获取 LOCALAPPDATA 环境变量，请确保在 Windows 环境下运行该脚本。")
+    print_status("❌", "无法获取 LOCALAPPDATA 环境变量，请确保在 Windows 环境下运行该脚本。")
     sys.exit(1)
 
 BASE = Path(local_app_data) / "Programs" / "Antigravity" / "resources" / "app"
@@ -54,15 +60,15 @@ def patch_file(filepath: Path, replacements: list[tuple[str, str]], name: str) -
     backup = filepath.with_name(filepath.name + ".bak")
 
     if not filepath.exists() and not backup.exists():
-        print(f"  ❌ 文件不存在且无备份: {filepath}")
+        print_status("❌", f"文件不存在且无备份: {filepath}")
         return 0
 
     if not backup.exists():
         shutil.copy2(filepath, backup)
-        print(f"  ✅ 已备份英文原始文件: {backup.name}")
+        print_status("✅", f"已备份英文原始文件: {backup.name}")
     else:
         shutil.copy2(backup, filepath)
-        print(f"  ♻️  已从备份恢复英文原始文件，准备直接更新: {filepath.name}")
+        print_status("♻️", f"已从备份恢复英文原始文件，准备直接更新: {filepath.name}")
 
     content = filepath.read_text(encoding="utf-8", errors="replace")
     count = 0
@@ -77,9 +83,9 @@ def patch_file(filepath: Path, replacements: list[tuple[str, str]], name: str) -
 
     filepath.write_text(content, encoding="utf-8")
 
-    print(f"  🎉 {name}: 成功替换 {count}/{len(replacements)} 处")
+    print_status("🎉", f"{name}: 成功替换 {count}/{len(replacements)} 处")
     if failed:
-        print(f"  ⚠️  未匹配 {len(failed)} 处:")
+        print_status("⚠️", f"未匹配 {len(failed)} 处:")
         for failed_snippet in failed:
             print(f"    - {failed_snippet}...")
     return count
@@ -87,7 +93,7 @@ def patch_file(filepath: Path, replacements: list[tuple[str, str]], name: str) -
 
 def update_checksums() -> None:
     if not PRODUCT_JSON.exists():
-        print("  ⚠️  product.json 不存在，跳过 checksum 更新")
+        print_status("⚠️", "product.json 不存在，跳过 checksum 更新")
         return
 
     backup = PRODUCT_JSON.with_name(PRODUCT_JSON.name + ".bak")
@@ -111,31 +117,31 @@ def update_checksums() -> None:
     if updated > 0:
         product["checksums"] = checksums
         PRODUCT_JSON.write_text(json.dumps(product, indent="\t", ensure_ascii=False), encoding="utf-8")
-        print(f"  ✅ 已更新 {updated} 个文件校验值")
+        print_status("✅", f"已更新 {updated} 个文件校验值")
     else:
-        print("  ⏭️  校验值无需更新")
+        print_status("⏭️", "校验值无需更新")
 
 
 def apply_patch() -> None:
     total = 0
 
-    print("📦 [1/4] 汉化 Settings 面板 (jetskiAgent/main.js)...")
+    print_step(1, 4, "汉化 Settings 面板 (jetskiAgent/main.js)...")
     total += patch_file(TARGETS["settings"], load_replacements("main"), "Settings")
 
     print()
-    print("📦 [2/4] 汉化 Agent 聊天面板 (chat.js)...")
+    print_step(2, 4, "汉化 Agent 聊天面板 (chat.js)...")
     total += patch_file(TARGETS["chat"], load_replacements("chat"), "Chat")
 
     print()
-    print("📦 [3/4] 汉化快速设置面板 (workbench.desktop.main.js)...")
+    print_step(3, 4, "汉化快速设置面板 (workbench.desktop.main.js)...")
     total += patch_file(TARGETS["workbench"], load_replacements("workbench"), "Workbench")
 
     print()
-    print('📦 [4/4] 更新文件校验值 (消除"安装损坏"提示)...')
+    print_step(4, 4, '更新文件校验值 (消除"安装损坏"提示)...')
     update_checksums()
 
-    print(f"\n🎉 全部完成！共替换 {total} 处")
-    print("📌 请完全退出 Antigravity (Cmd+Q) 后重新打开即可生效")
+    print_status("🎉", f"全部完成！共替换 {total} 处")
+    print_status("📌", "请完全退出并重新启动 Antigravity 即可生效")
 
 
 def revert_patch() -> None:
@@ -143,16 +149,16 @@ def revert_patch() -> None:
         backup = filepath.with_name(filepath.name + ".bak")
         if backup.exists():
             shutil.copy2(backup, filepath)
-            print(f"  ✅ 已恢复: {name} ({filepath.name})")
+            print_status("✅", f"已恢复: {name} ({filepath.name})")
         else:
-            print(f"  ⏭️  无需恢复 (无备份): {name}")
+            print_status("⏭️", f"无需恢复 (无备份): {name}")
 
     backup = PRODUCT_JSON.with_name(PRODUCT_JSON.name + ".bak")
     if backup.exists():
         shutil.copy2(backup, PRODUCT_JSON)
-        print("  ✅ 已恢复: product.json")
+        print_status("✅", "已恢复: product.json")
 
-    print("📌 请完全退出 Antigravity (Cmd+Q) 后重新打开即可生效")
+    print_status("📌", "请完全退出并重新启动 Antigravity 即可生效")
 
 
 def main() -> int:
