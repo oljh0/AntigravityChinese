@@ -10,5 +10,53 @@
   [
     "Installed extensions:",
     "已安装的扩展："
+  ],
+  [
+    "Manage MCP servers",
+    "管理 MCP 服务器"
+  ],
+  [
+    "Manage Gemini CLI extensions.",
+    "管理 Gemini CLI 扩展。"
+  ],
+  [
+    "Manage agent skills.",
+    "管理代理技能。"
+  ],
+  [
+    "Manage Gemini CLI hooks.",
+    "管理 Gemini CLI 钩子。"
+  ],
+  [
+    "Run in debug mode (open debug console with F12)",
+    "以调试模式运行（按 F12 打开调试控制台）"
+  ],
+  [
+    "Automatically accept all actions (aka YOLO mode",
+    "自动接受所有操作（即 YOLO 模式"
+  ],
+  [
+    "Starts the agent in ACP mode",
+    "以 ACP 模式启动代理"
+  ],
+  [
+    "Show version number",
+    "显示版本号"
+  ],
+  [
+    "Show help",
+    "显示帮助"
+  ],
+  [
+    "Signed in with Google:",
+    "已登录 Google 账号："
+  ],
+  [
+    "Plan: Gemini Code Assist",
+    "套餐：Gemini 代码辅助"
+  ],
+  [
+    "Warning: Windows 10 detected. Some UI features like smooth scrolling may be degraded. Windows 11 is recommended for the best experience.",
+    "警告：检测到 Windows 10。某些 UI 特性（如平滑滚动）可能会受影响。建议使用 Windows 11 以获得最佳体验。"
   ]
 ]

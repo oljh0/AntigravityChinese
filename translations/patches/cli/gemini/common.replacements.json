@@ -70,5 +70,49 @@
   [
     "label: 'No'",
     "label: '否'"
+  ],
+  [
+    "Lists the names of files and subdirectories directly within a specified directory path.",
+    "列出指定目录路径下直接包含的文件和子目录名称。"
+  ],
+  [
+    "Reads and returns the content of a specified file.",
+    "读取并返回指定文件的内容。"
+  ],
+  [
+    "Searches for a regular expression pattern within file contents.",
+    "在文件内容中搜索正则表达式模式。"
+  ],
+  [
+    "Efficiently finds files matching specific glob patterns",
+    "高效查找匹配特定 glob 模式的文件"
+  ],
+  [
+    "Replaces text within a file.",
+    "替换文件内的文本。"
+  ],
+  [
+    "Executes a given shell command",
+    "执行指定的 shell 命令"
+  ],
+  [
+    "The specialized tool for codebase analysis, architectural mapping, and understanding system-wide dependencies.",
+    "用于代码库分析、架构映射和理解系统级依赖关系的专业工具。"
+  ],
+  [
+    "Ask the user one or more questions",
+    "向用户提出一个或多个问题"
+  ],
+  [
+    "Switch to Plan Mode to safely research",
+    "切换到计划模式以安全地进行研究"
+  ],
+  [
+    "A general-purpose AI agent with access to all tools.",
+    "一个可以访问所有工具的通用 AI 代理。"
+  ],
+  [
+    "Specialized in answering questions about how users use you",
+    "专门回答关于用户如何使用你的问题"
   ]
 ]
