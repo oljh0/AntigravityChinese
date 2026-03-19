@@ -58,5 +58,45 @@
   [
     "Warning: Windows 10 detected. Some UI features like smooth scrolling may be degraded. Windows 11 is recommended for the best experience.",
     "警告：检测到 Windows 10。某些 UI 特性（如平滑滚动）可能会受影响。建议使用 Windows 11 以获得最佳体验。"
+  ],
+  [
+    "We're making changes to Gemini CLI that may impact your workflow.",
+    "我们正在对 Gemini CLI 进行更改，这可能会影响您的工作流。"
+  ],
+  [
+    "What's Changing: We are adding more robust detection of policy-violating use cases and changing how we prioritize traffic.",
+    "变更内容：我们正在增加对违反政策用例的更稳健检测，并改变流量优先级。"
+  ],
+  [
+    "How it affects you: This may result in higher capacity-related errors during periods of high traffic.",
+    "对您的影响：这可能会导致在高流量期间出现更高频率的容量相关错误。"
+  ],
+  [
+    "Read more:",
+    "了解更多："
+  ],
+  [
+    "Commands:",
+    "命令："
+  ],
+  [
+    "Options:",
+    "选项："
+  ],
+  [
+    "Positionals:",
+    "位置参数："
+  ],
+  [
+    "aliases:",
+    "别名："
+  ],
+  [
+    "default",
+    "默认"
+  ],
+  [
+    "Initial prompt. Runs in interactive mode by default; use -p/--prompt for non-interactive.",
+    "初始提示词。默认以交互模式运行；使用 -p/--prompt 进入非交互模式。"
   ]
 ]
