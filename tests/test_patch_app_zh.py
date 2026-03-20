@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-MODULE_PATH = REPO_ROOT / "scripts" / "copilot_cli" / "patch_app_zh.py"
+MODULE_PATH = REPO_ROOT / "scripts" / "cli" / "copilot" / "patch_app_zh.py"
 
 
 def load_module():

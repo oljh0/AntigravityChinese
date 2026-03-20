@@ -4,6 +4,10 @@
     "按 Ctrl-S 进入选择模式以复制文本。"
   ],
   [
+    "- Enter selection mode to copy text",
+    "- 进入选择模式以复制文本"
+  ],
+  [
     "Paste Timed out. Possibly due to slow connection.",
     "粘贴超时。可能是由于连接较慢。"
   ],
@@ -28,10 +32,6 @@
     "text:\"提供反馈\""
   ],
   [
-    "text:l?\"Collapse all\":\"Expand all\"",
-    "text:l?\"全部折叠\":\"全部展开\""
-  ],
-  [
     "tooltip:\"Start a new conversation\"",
     "tooltip:\"开始新对话\""
   ],
@@ -40,12 +40,28 @@
     "children:\"思考过程\""
   ],
   [
-    "`Thinking for ${",
-    "`思考中 ${"
+    "children: \"Thinking...\"",
+    "children: \"正在思考...\""
   ],
   [
-    "`Thought for ${",
-    "`思考了 ${"
+    "children: 'Thinking...'",
+    "children: '正在思考...'"
+  ],
+  [
+    "thoughtLabel: inlineThinkingMode === 'full' ? 'Thinking...' : undefined",
+    "thoughtLabel: inlineThinkingMode === 'full' ? '正在思考...' : undefined"
+  ],
+  [
+    "placeholder: '  Type your message or @path/to/file'",
+    "placeholder: '  输入消息或使用 @path/to/file 提及文件'"
+  ],
+  [
+    ": '  Type your message or @path/to/file'",
+    ": '  输入消息或使用 @path/to/file 提及文件'"
+  ],
+  [
+    ": '  Type your shell command'",
+    ": '  输入 Shell 命令'"
   ],
   [
     "placeholder = '  Type your message or @path/to/file'",
@@ -80,8 +96,24 @@
     "\"请再按一次 Ctrl+C 退出。\""
   ],
   [
+    "\"请再按一次 Ctrl+C 退出。\"",
+    "\"请再按一次 Ctrl+C 退出。\""
+  ],
+  [
+    "\"Press Ctrl+C to exit.\"",
+    "\"按 Ctrl+C 退出。\""
+  ],
+  [
     "\"Press Ctrl+D again to exit.\"",
     "\"请再按一次 Ctrl+D 退出。\""
+  ],
+  [
+    "\"请再按一次 Ctrl+D 退出。\"",
+    "\"请再按一次 Ctrl+D 退出。\""
+  ],
+  [
+    "'Authentication cancelled.'",
+    "'身份验证已取消。'"
   ],
   [
     "\"Authentication cancelled.\"",
@@ -154,5 +186,605 @@
   [
     "help:\"Collect debug logs to .tgz file or GitHub gist\"",
     "help:\"将调试日志收集到 .tgz 文件或 GitHub Gist\""
+  ],
+  [
+    "\"Basics:\"",
+    "\"基础:\""
+  ],
+  [
+    "\"Add context\"",
+    "\"添加上下文\""
+  ],
+  [
+    "\"to specify files for context (e.g.,\"",
+    "\"指定上下文文件 (例如,\""
+  ],
+  [
+    "\"to target specific files or folders.\"",
+    "\"针对特定文件或目录。\""
+  ],
+  [
+    "\"Shell mode\"",
+    "\"Shell 模式\""
+  ],
+  [
+    "\"Execute shell commands via\"",
+    "\"通过此方式执行 Shell 命令\""
+  ],
+  [
+    "\"or use natural language (e.g.\"",
+    "\"或使用自然语言 (例如\""
+  ],
+  [
+    "\"Commands:\"",
+    "\"命令:\""
+  ],
+  [
+    "\"Keyboard Shortcuts:\"",
+    "\"键盘快捷键:\""
+  ],
+  [
+    "\"Jump through words in the input\"",
+    "\"在输入中按单词跳转\""
+  ],
+  [
+    "\"Quit application\"",
+    "\"退出应用\""
+  ],
+  [
+    "\"New line\"",
+    "\"换行\""
+  ],
+  [
+    "\"Clear the screen\"",
+    "\"清屏\""
+  ],
+  [
+    "\"Open input in external editor\"",
+    "\"在外部编辑器中打开输入\""
+  ],
+  [
+    "\"Toggle YOLO mode\"",
+    "\"切换 YOLO 模式\""
+  ],
+  [
+    "\"Send message\"",
+    "\"发送消息\""
+  ],
+  [
+    "\"Cancel operation / Clear input (double press)\"",
+    "\"取消操作 / 清除输入 (连按两次)\""
+  ],
+  [
+    "\"Scroll page up/down\"",
+    "\"上下翻页\""
+  ],
+  [
+    "\"Toggle auto-accepting edits\"",
+    "\"切换自动接受编辑\""
+  ],
+  [
+    "\"Cycle through your prompt history\"",
+    "\"循环浏览您的提示词历史\""
+  ],
+  [
+    "\"For a full list of shortcuts, see\"",
+    "\"查看完整的快捷键列表，请参阅\""
+  ],
+  [
+    "\"Press Esc again to \"",
+    "\"再次按 Esc 以 \""
+  ],
+  [
+    "'rewind'",
+    "'回退'"
+  ],
+  [
+    "'clear prompt'",
+    "'清除提示词'"
+  ],
+  [
+    "\"Press Ctrl+O to \"",
+    "\"按 Ctrl+O \""
+  ],
+  [
+    "'show more'",
+    "'显示更多'"
+  ],
+  [
+    "'collapse'",
+    "'折叠'"
+  ],
+  [
+    "\" lines of the last response\"",
+    "\" 最后一条响应的行数\""
+  ],
+  [
+    "\"  Press 'Esc' for NORMAL mode.\"",
+    "\"  按 'Esc' 进入 NORMAL 模式。\""
+  ],
+  [
+    "\"  Press 'i' for INSERT mode.\"",
+    "\"  按 'i' 进入 INSERT 模式。\""
+  ],
+  [
+    "\": Use\"",
+    "\": 使用\""
+  ],
+  [
+    "\" to target specific files or folders.\"",
+    "\" 来针对特定的文件或目录。\""
+  ],
+  [
+    "\": Execute shell commands via\"",
+    "\": 通过此方式执行 Shell 命令\""
+  ],
+  [
+    "\" (e.g.,\"",
+    "\" (例如，\""
+  ],
+  [
+    "\") or use natural language (e.g.\"",
+    "\") 或使用自然语言 (例如\""
+  ],
+  [
+    "\").\"",
+    "\"）。\""
+  ],
+  [
+    "\"- Jump through words in the input\"",
+    "\"- 在输入中按单词跳转\""
+  ],
+  [
+    "\"- Quit application\"",
+    "\"- 退出应用\""
+  ],
+  [
+    "\"- New line\"",
+    "\"- 换行\""
+  ],
+  [
+    "\"- Clear the screen\"",
+    "\"- 清屏\""
+  ],
+  [
+    "\"- Open input in external editor\"",
+    "\"- 在外部编辑器中打开输入\""
+  ],
+  [
+    "\"- Toggle YOLO mode\"",
+    "\"- 切换 YOLO 模式\""
+  ],
+  [
+    "\"- Send message\"",
+    "\"- 发送消息\""
+  ],
+  [
+    "\"- Cancel operation / Clear input (double press)\"",
+    "\"- 取消操作 / 清除输入 (连按两次)\""
+  ],
+  [
+    "\"- Scroll page up/down\"",
+    "\"- 上下翻页\""
+  ],
+  [
+    "\"- Toggle auto-accepting edits\"",
+    "\"- 切换自动接受编辑\""
+  ],
+  [
+    "\"- Cycle through your prompt history\"",
+    "\"- 循环浏览您的提示词历史\""
+  ],
+  [
+    "\"- shell command\"",
+    "\"- shell 命令\""
+  ],
+  [
+    "\" - Model Context Protocol command (from external servers)\"",
+    "\" - 模型上下文协议命令 (来自外部服务器)\""
+  ],
+  [
+    "description: 'Show version info'",
+    "description: '显示版本信息'"
+  ],
+  [
+    "description: 'List available local and remote agents'",
+    "description: '列出可用的本地和远程代理'"
+  ],
+  [
+    "description: 'Enable a disabled agent'",
+    "description: '启用已禁用的代理'"
+  ],
+  [
+    "description: 'Disable an enabled agent'",
+    "description: '禁用已启用的代理'"
+  ],
+  [
+    "description: 'Configure an agent'",
+    "description: '配置代理'"
+  ],
+  [
+    "description: 'Reload the agent registry'",
+    "description: '重新加载代理注册表'"
+  ],
+  [
+    "description: 'Manage agents'",
+    "description: '管理代理'"
+  ],
+  [
+    "description: 'Sign in or change the authentication method'",
+    "description: '登录或更改身份验证方法'"
+  ],
+  [
+    "description: 'Sign out and clear all cached credentials'",
+    "description: '注销并清除所有缓存的凭据'"
+  ],
+  [
+    "description: 'Manage authentication'",
+    "description: '管理身份验证'"
+  ],
+  [
+    "description: 'Submit a bug report'",
+    "description: '提交错误报告'"
+  ],
+  [
+    "description: 'List saved manual conversation checkpoints'",
+    "description: '列出手动保存的对话检查点'"
+  ],
+  [
+    "description: 'Save the current conversation as a checkpoint. Usage: /resume save <tag>'",
+    "description: '将当前对话保存为检查点。用法：/resume save <标签>'"
+  ],
+  [
+    "description: 'Resume a conversation from a checkpoint. Usage: /resume resume <tag>'",
+    "description: '从检查点恢复对话。用法：/resume resume <标签>'"
+  ],
+  [
+    "description: 'Delete a conversation checkpoint. Usage: /resume delete <tag>'",
+    "description: '删除对话检查点。用法：/resume delete <标签>'"
+  ],
+  [
+    "description: 'Share the current conversation to a markdown or json file. Usage: /resume share <file>'",
+    "description: '将当前对话分享为 Markdown 或 JSON 文件。用法：/resume share <文件>'"
+  ],
+  [
+    "description: 'Export the most recent API request as a JSON payload'",
+    "description: '将最近的 API 请求导出为 JSON 负载'"
+  ],
+  [
+    "description: 'Compatibility command for nested checkpoint operations'",
+    "description: '嵌套检查点操作的兼容性命令'"
+  ],
+  [
+    "description: 'Browse auto-saved conversations and manage chat checkpoints'",
+    "description: '浏览自动保存的对话并管理聊天检查点'"
+  ],
+  [
+    "description: 'Clear the screen and conversation history'",
+    "description: '清屏并清除对话历史记录'"
+  ],
+  [
+    "description: 'Manage custom slash commands. Usage: /commands [reload]'",
+    "description: '管理自定义斜杠命令。用法：/commands [reload]'"
+  ],
+  [
+    "description: 'Reload custom command definitions from .toml files. Usage: /commands reload'",
+    "description: '从 .toml 文件重新加载自定义命令定义。用法：/commands reload'"
+  ],
+  [
+    "description: 'Compresses the context by replacing it with a summary'",
+    "description: '通过将其替换为摘要来压缩上下文'"
+  ],
+  [
+    "description: 'Copy the last result or code snippet to clipboard'",
+    "description: '将最后的结果或代码片段复制到剪贴板'"
+  ],
+  [
+    "description: 'Toggles corgi mode'",
+    "description: '切换柯基模式'"
+  ],
+  [
+    "description: 'Manage workspace directories'",
+    "description: '管理工作区目录'"
+  ],
+  [
+    "description: 'Add directories to the workspace. Use comma to separate multiple paths'",
+    "description: '向工作区添加目录。使用逗号分隔多个路径'"
+  ],
+  [
+    "description: 'Show all directories in the workspace'",
+    "description: '显示工作区中的所有目录'"
+  ],
+  [
+    "description: 'Open full Gemini CLI documentation in your browser'",
+    "description: '在浏览器中打开完整的 Gemini CLI 文档'"
+  ],
+  [
+    "description: 'Set external editor preference'",
+    "description: '设置外部编辑器偏好'"
+  ],
+  [
+    "description: 'List active extensions'",
+    "description: '列出激活的扩展'"
+  ],
+  [
+    "description: 'Update extensions. Usage: update <extension-names>|--all'",
+    "description: '更新扩展。用法：update <扩展名>|--all'"
+  ],
+  [
+    "description: 'Disable an extension'",
+    "description: '禁用扩展'"
+  ],
+  [
+    "description: 'Enable an extension'",
+    "description: '启用扩展'"
+  ],
+  [
+    "description: 'Install an extension from a git repo or local path'",
+    "description: '从 git 仓库或本地路径安装扩展'"
+  ],
+  [
+    "description: 'Link an extension from a local path'",
+    "description: '从本地路径链接扩展'"
+  ],
+  [
+    "description: 'Uninstall an extension'",
+    "description: '卸载扩展'"
+  ],
+  [
+    "description: 'Open extensions page in your browser'",
+    "description: '在浏览器中打开扩展页面'"
+  ],
+  [
+    "description: 'Reload all extensions'",
+    "description: '重新加载所有扩展'"
+  ],
+  [
+    "description: 'Configure extension settings'",
+    "description: '配置扩展设置'"
+  ],
+  [
+    "description: 'Manage extensions'",
+    "description: '管理扩展'"
+  ],
+  [
+    "description: 'For help on gemini-cli'",
+    "description: '获取 gemini-cli 的帮助信息'"
+  ],
+  [
+    "description: 'Select AI model to use'",
+    "description: '选择要使用的 AI 模型'"
+  ],
+  [
+    "description: 'Toggle background shell execution'",
+    "description: '切换后台 Shell 执行'"
+  ],
+  [
+    "description: 'Manage configured Model Context Protocol (MCP) servers'",
+    "description: '管理配置的模型上下文协议 (MCP) 服务器'"
+  ],
+  [
+    "description: 'Manage agent skills'",
+    "description: '管理代理技能'"
+  ],
+  [
+    "description: 'Manage Gemini CLI hooks'",
+    "description: '管理 Gemini CLI 钩子'"
+  ],
+  [
+    "description: 'Change the current theme'",
+    "description: '更改当前主题'"
+  ],
+  [
+    "description: 'Toggle Vim keybindings'",
+    "description: '切换 Vim 快捷键'"
+  ],
+  [
+    "description: 'Set up GitHub authentication'",
+    "description: '设置 GitHub 身份验证'"
+  ],
+  [
+    "description: 'Set up terminal environment'",
+    "description: '设置终端环境'"
+  ],
+  [
+    "description: 'Check for and install updates'",
+    "description: '检查并安装更新'"
+  ],
+  [
+    "title: 'Confirm Shell Command'",
+    "title: '确认 Shell 命令'"
+  ],
+  [
+    "title: 'Confirm Web Fetch'",
+    "title: '确认 Web 获取'"
+  ],
+  [
+    "title: 'Confirm Execution'",
+    "title: '确认执行'"
+  ],
+  [
+    "title: 'Confirm Multiple Commands'",
+    "title: '确认多个命令'"
+  ],
+  [
+    "title: 'Confirm Multiline Script'",
+    "title: '确认多行脚本'"
+  ],
+  [
+    "title: 'Confirm Edit'",
+    "title: '确认编辑'"
+  ],
+  [
+    "title: 'Confirm MCP Tool'",
+    "title: '确认 MCP 工具'"
+  ],
+  [
+    "title: `Confirm MCP Tool: ${this.toolName}`",
+    "title: `确认 MCP 工具: ${this.toolName}`"
+  ],
+  [
+    "title: `Confirm Tool: type_text`",
+    "title: `确认工具: type_text`"
+  ],
+  [
+    "label: 'Allow once'",
+    "label: '允许一次'"
+  ],
+  [
+    "label: 'Allow for this session'",
+    "label: '在本会话中允许'"
+  ],
+  [
+    "label: 'Allow for this file in all future sessions'",
+    "label: '在以后所有会话中都允许此文件'"
+  ],
+  [
+    "label: 'Modify with external editor'",
+    "label: '使用外部编辑器修改'"
+  ],
+  [
+    "label: 'No, suggest changes (esc)'",
+    "label: '不，建议更改 (Esc)'"
+  ],
+  [
+    "label: `Allow for this session`",
+    "label: `在本会话中允许`"
+  ],
+  [
+    "label: `Allow this command for all future sessions`",
+    "label: `在以后所有会话中都允许此命令`"
+  ],
+  [
+    "label: 'Allow for all future sessions'",
+    "label: '在以后所有会话中都允许'"
+  ],
+  [
+    "label: 'Allow tool for this session'",
+    "label: '在本会话中允许工具'"
+  ],
+  [
+    "label: 'Allow all server tools for this session'",
+    "label: '在本会话中允许所有服务器工具'"
+  ],
+  [
+    "label: 'Allow tool for all future sessions'",
+    "label: '在以后所有会话中都允许此工具'"
+  ],
+  [
+    "children: \"No matches found.\"",
+    "children: \"未找到匹配项。\""
+  ],
+  [
+    "title: \"Todo\"",
+    "title: \"待办事项\""
+  ],
+  [
+    "label: 'Done'",
+    "label: '完成'"
+  ],
+  [
+    "searchPlaceholder = 'Search to filter'",
+    "searchPlaceholder = '输入搜索内容进行过滤'"
+  ],
+  [
+    "title: \"Settings\"",
+    "title: \"设置\""
+  ],
+  [
+    "children: \"Changes that require a restart have been modified. Press r to exit and apply changes now.\"",
+    "children: \"需要重启的更改已修改。按 r 键退出并立即应用更改。\""
+  ],
+  [
+    "\"Select Theme\"",
+    "\"选择主题\""
+  ],
+  [
+    "children: \"Preview\"",
+    "children: \"预览\""
+  ],
+  [
+    "\"(Use Enter to \"",
+    "\"(按 Enter 键 \""
+  ],
+  [
+    "'select'",
+    "'选择'"
+  ],
+  [
+    "'apply scope'",
+    "'应用作用域'"
+  ],
+  [
+    "\", Tab to\"",
+    "\"，按 Tab 键 \""
+  ],
+  [
+    "'configure scope'",
+    "'配置作用域'"
+  ],
+  [
+    "'select theme'",
+    "'选择主题'"
+  ],
+  [
+    "\", Esc to close)\"",
+    "\"，按 Esc 键关闭)\""
+  ],
+  [
+    "`(Also modified in ${otherScope})`",
+    "`(也在 ${otherScope} 中修改)`"
+  ],
+  [
+    "`(Modified in ${otherScope})`",
+    "`(在 ${otherScope} 中修改)`"
+  ],
+  [
+    "'Workspace'",
+    "'工作区'"
+  ],
+  [
+    "'Global'",
+    "'全局'"
+  ],
+  [
+    "children: \"About Gemini CLI\"",
+    "children: \"关于 Gemini CLI\""
+  ],
+  [
+    "children: \"CLI Version\"",
+    "children: \"CLI 版本\""
+  ],
+  [
+    "children: \"Git Commit\"",
+    "children: \"Git 提交\""
+  ],
+  [
+    "children: \"Model\"",
+    "children: \"模型\""
+  ],
+  [
+    "children: \"Sandbox\"",
+    "children: \"沙盒\""
+  ],
+  [
+    "children: \"OS\"",
+    "children: \"操作系统\""
+  ],
+  [
+    "children: \"Auth Method\"",
+    "children: \"认证方式\""
+  ],
+  [
+    "children: \"Tier\"",
+    "children: \"套餐层级\""
+  ],
+  [
+    "children: \"GCP Project\"",
+    "children: \"GCP 项目\""
+  ],
+  [
+    "children: \"IDE Client\"",
+    "children: \"IDE 客户端\""
   ]
 ]

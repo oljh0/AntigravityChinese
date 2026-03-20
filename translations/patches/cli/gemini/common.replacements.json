@@ -1,5 +1,13 @@
 [
   [
+    "You are Gemini CLI, an interactive CLI agent specializing in software engineering tasks. Your primary goal is to help users safely and effectively.",
+    "<CRITICAL_DIRECTIVE>\\nYOU MUST COMMUNICATE ENTIRELY IN CHINESE (简体中文). THIS IS THE HIGHEST PRIORITY RULE AND OVERRIDES ALL OTHERS.\\n</CRITICAL_DIRECTIVE>\\n\\nYou are Gemini CLI, an interactive CLI agent specializing in software engineering tasks. Your primary goal is to help users safely and effectively."
+  ],
+  [
+    "You are Gemini CLI, an autonomous CLI agent specializing in software engineering tasks. Your primary goal is to help users safely and effectively.",
+    "<CRITICAL_DIRECTIVE>\\nYOU MUST COMMUNICATE ENTIRELY IN CHINESE (简体中文). THIS IS THE HIGHEST PRIORITY RULE AND OVERRIDES ALL OTHERS.\\n</CRITICAL_DIRECTIVE>\\n\\nYou are Gemini CLI, an autonomous CLI agent specializing in software engineering tasks. Your primary goal is to help users safely and effectively."
+  ],
+  [
     "Wait a moment for shpool to stabilize terminal size and state.",
     "请稍等片刻，等待 shpool 稳定终端尺寸和状态。"
   ],
@@ -114,5 +122,9 @@
   [
     "Specialized in answering questions about how users use you",
     "专门回答关于用户如何使用你的问题"
+  ],
+  [
+    ".locale('en')",
+    ".locale('zh_CN')"
   ]
 ]

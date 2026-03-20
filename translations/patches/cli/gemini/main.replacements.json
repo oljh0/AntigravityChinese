@@ -76,27 +76,79 @@
     "了解更多："
   ],
   [
-    "Commands:",
-    "命令："
-  ],
-  [
-    "Options:",
-    "选项："
-  ],
-  [
-    "Positionals:",
-    "位置参数："
-  ],
-  [
-    "aliases:",
-    "别名："
-  ],
-  [
-    "default",
-    "默认"
-  ],
-  [
     "Initial prompt. Runs in interactive mode by default; use -p/--prompt for non-interactive.",
     "初始提示词。默认以交互模式运行；使用 -p/--prompt 进入非交互模式。"
+  ],
+  [
+    "Launch Gemini CLI",
+    "启动 Gemini CLI"
+  ],
+  [
+    "description: `Model`",
+    "description: `模型`"
+  ],
+  [
+    "Run in non-interactive (headless) mode with the given prompt. Appended to input on stdin (if any).",
+    "使用给定的提示词运行在非交互（无头）模式下。附加到 stdin（如果有）的输入。"
+  ],
+  [
+    "Execute the provided prompt and continue in interactive mode",
+    "执行提供的提示词并继续保持交互模式"
+  ],
+  [
+    "Run in sandbox?",
+    "在沙盒中运行？"
+  ],
+  [
+    "Set the approval mode: default (prompt for approval), auto_edit (auto-approve edit tools), yolo (auto-approve all tools), plan (read-only mode)",
+    "设置批准模式: default (提示批准), auto_edit (自动批准编辑工具), yolo (自动批准所有工具), plan (只读模式)"
+  ],
+  [
+    "Additional policy files or directories to load (comma-separated or multiple --policy)",
+    "要加载的附加策略文件或目录（逗号分隔或多个 --policy）"
+  ],
+  [
+    "Allowed MCP server names",
+    "允许的 MCP 服务器名称"
+  ],
+  [
+    "A list of extensions to use. If not provided, all extensions are used.",
+    "要使用的扩展列表。如果不提供，则使用所有扩展。"
+  ],
+  [
+    "List all available extensions and exit.",
+    "列出所有可用扩展并退出。"
+  ],
+  [
+    "Resume a previous session. Use \"latest\" for most recent or index number (e.g. --resume 5)",
+    "恢复之前的会话。使用 \"latest\" 表示最近的会话，或使用索引号（例如 --resume 5）"
+  ],
+  [
+    "List available sessions for the current project and exit.",
+    "列出当前项目的可用会话并退出。"
+  ],
+  [
+    "Delete a session by index number (use --list-sessions to see available sessions).",
+    "根据索引号删除会话（使用 --list-sessions 查看可用会话）。"
+  ],
+  [
+    "Additional directories to include in the workspace (comma-separated or multiple --include-directories)",
+    "工作区中包含的附加目录（逗号分隔或多个 --include-directories）"
+  ],
+  [
+    "Enable screen reader mode for accessibility.",
+    "为无障碍功能启用屏幕阅读器模式。"
+  ],
+  [
+    "The format of the CLI output.",
+    "CLI 输出的格式。"
+  ],
+  [
+    "Disable sanitization of model output (e.g. allow ANSI escape sequences). WARNING: This can be a security risk if the model output is untrusted.",
+    "禁用模型输出的清理（例如允许 ANSI 转义序列）。警告：如果模型输出不可信，这可能会带来安全风险。"
+  ],
+  [
+    "Suppress the security warning when using --raw-output.",
+    "使用 --raw-output 时抑制安全警告。"
   ]
 ]
