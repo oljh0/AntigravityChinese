@@ -38,7 +38,7 @@ def find_gemini_cli_root() -> Path | None:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="为 Gemini CLI 应用分模块中文翻译补丁。")
-    parser.add_argument("--target", type=Path, help="Gemini CLI 根目录或 dist 目录路径；不传时尝试自动发现")
+    parser.add_argument("--target", type=Path, help="Gemini CLI 根目录或 bundle/dist 目录路径；不传时尝试自动发现")
     parser.add_argument("--revert", action="store_true", help="从 .bak 备份恢复原文件")
     parser.add_argument("--dry-run", action="store_true", help="只检查并输出结果，不写入文件")
     return parser.parse_args()
@@ -57,21 +57,24 @@ def main() -> int:
     
     # 定义需要打补丁的目录列表
     targets = []
-    
+
+    # v0.36+ 使用 bundle 目录；旧版使用 dist 目录
+    bundle_dir = root / "bundle"
     dist_dir = root / "dist"
-    if dist_dir.exists():
+    if bundle_dir.exists():
+        targets.append(bundle_dir)
+    elif dist_dir.exists():
         targets.append(dist_dir)
-    elif root.name == "dist":
+    elif root.name in ("dist", "bundle"):
         targets.append(root)
-        dist_dir = root
-    
-    # 尝试寻找 gemini-cli-core
+
+    # 尝试寻找 gemini-cli-core（旧版结构）
     core_dist = root / "node_modules" / "@google" / "gemini-cli-core" / "dist"
     if core_dist.exists():
         targets.append(core_dist)
-        
+
     if not targets:
-        print_status("❌", f"找不到任何 dist 目录: {dist_dir}")
+        print_status("❌", f"找不到 bundle 或 dist 目录: {root}")
         return 1
 
     if args.revert:
@@ -86,37 +89,39 @@ def main() -> int:
     common_repls = load_replacements(TRANSLATIONS_DIR / "common.replacements.json")
     main_repls = load_replacements(TRANSLATIONS_DIR / "main.replacements.json")
     ui_repls = load_replacements(TRANSLATIONS_DIR / "ui.replacements.json")
+    qwen_repls = load_replacements(TRANSLATIONS_DIR / "qwen.replacements.json")
     
     # 合并所有替换表，并按长度降序排序以防嵌套替换问题
-    all_repls = common_repls + main_repls + ui_repls
+    all_repls = common_repls + main_repls + ui_repls + qwen_repls
     all_repls.sort(key=lambda item: (-len(item[0]), item[0]))
 
-    # [已弃用] 子终端编码修复补丁 — 不再需要文件级硬替换。
-    # 原因：
-    #   - 补丁 #1~#3: 通过 PowerShell Profile 设置 `chcp 65001` + `$env:LANG='en_US.UTF-8'`
-    #     即可让 systemEncoding.js 的探测链路自然返回 utf-8，无需替换源码。
-    #   - 补丁 #4: 上游已原生实现 encodingCommand 变量 (shell-utils.js)，替换模式已失效。
-    # 如需恢复，取消以下注释：
+    # 子终端编码修复补丁：
+    # 上游 systeminformation 模块已自带 _psToUTF8 编码设置，但 getShellConfiguration
+    # 返回的 argsPrefix 没有注入编码设置，导致工具执行的子进程输出中文可能乱码。
+    # 通过在 argsPrefix 中追加编码设置参数来修复。
+    # 注意：v0.36+ bundle 使用双引号，旧版 dist 使用单引号，两种都需要覆盖。
     core_encoding_repls = [
-        # ("const encoding = getCachedEncodingForBuffer(data);", "const encoding = 'utf-8';"),
-        # ("handleFlowControl: true,", "handleFlowControl: true, encoding: 'utf8',"),
-        # ("TERM: 'xterm-256color',", "TERM: 'xterm-256color', LANG: 'en_US.UTF-8',"),
-        # ("argsPrefix: ['-NoProfile', '-Command'],", "argsPrefix: ['-NoProfile', '-Command', '[Console]::OutputEncoding = [System.Text.Encoding]::UTF8; [Console]::InputEncoding = [System.Text.Encoding]::UTF8;'],"),
+        (
+            'argsPrefix: ["-NoProfile", "-Command"],',
+            'argsPrefix: ["-NoProfile", "-Command", "[Console]::OutputEncoding = [System.Text.Encoding]::UTF8; [Console]::InputEncoding = [System.Text.Encoding]::UTF8;"],',
+        ),
+        (
+            "argsPrefix: ['-NoProfile', '-Command'],",
+            "argsPrefix: ['-NoProfile', '-Command', '[Console]::OutputEncoding = [System.Text.Encoding]::UTF8; [Console]::InputEncoding = [System.Text.Encoding]::UTF8;'],",
+        ),
     ]
 
     total_applied = 0
     files_patched = 0
 
+    # v0.36+ 合并了 gemini-cli-core 到 bundle，编码修复补丁始终注入
+    if core_encoding_repls:
+        all_repls = all_repls + core_encoding_repls
+        all_repls.sort(key=lambda item: (-len(item[0]), item[0]))
+
     for t in targets:
         print_status("🎯", f"目标目录: {t}")
-        
-        # 如果是 core 目录，过去会注入编码修复补丁（已弃用，见 core_encoding_repls 注释）
-        is_core = "gemini-cli-core" in str(t)
         current_repls = all_repls
-        if is_core and core_encoding_repls:
-            current_repls = all_repls + core_encoding_repls
-            current_repls.sort(key=lambda item: (-len(item[0]), item[0]))
-            print_status("🔧", "检测到 core 目录，已注入编码修复补丁")
 
         print_status("📚", f"加载替换项总数: {len(current_repls)}")
         

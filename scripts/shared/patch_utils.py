@@ -3,6 +3,7 @@ import sys
 import subprocess
 import os
 import json
+import re
 import shutil
 from pathlib import Path
 
@@ -64,35 +65,72 @@ def load_replacements(filepath: Path) -> list[tuple[str, str]]:
         print(f"  ⚠️ 加载替换文件失败 {filepath}: {e}")
         return []
 
-def patch_file(filepath: Path, replacements: list[tuple[str, str]], dry_run: bool = False) -> tuple[int, int]:
-    """应用替换补丁到文件"""
+def patch_file(filepath: Path, replacements: list[tuple[str, str]], dry_run: bool = False, min_length: int = 15, exact_match_threshold: int = 15) -> tuple[int, int]:
+    """应用替换补丁到文件
+    
+    Args:
+        filepath: 文件路径
+        replacements: 替换规则列表
+        dry_run: 是否只检查不写入
+        min_length: 最小替换字符串长度，防止误替换代码关键字（默认5）
+        exact_match_threshold: 小于等于此长度的规则将使用完全匹配逻辑（默认15）
+    """
     if not filepath.exists():
         return 0, 0
-    
+
     try:
         content = filepath.read_text(encoding="utf-8", errors="ignore")
     except Exception:
         return 0, 0
-        
+
     original_content = content
     applied = 0
     already = 0
-    
+
     for old, new in replacements:
-        if new in content and old not in content:
-            already += 1
+        # 跳过过短的替换规则，防止误替换代码关键字
+        if len(old) < min_length:
             continue
         
-        if old in content:
-            content = content.replace(old, new)
-            applied += 1
+        # 对于较短的规则（长度 <= threshold），使用单词边界完全匹配
+        # 避免子字符串匹配导致破坏代码标识符
+        if len(old) <= exact_match_threshold:
+            # 使用正则表达式进行完全匹配
+            # \b 表示单词边界，确保只匹配完整的单词
+            # 转义特殊正则字符
+            escaped_old = re.escape(old)
+            # 对于包含非单词字符的模式（如标点符号），不使用 \b
+            if re.search(r'[^\w\s]', old):
+                pattern = escaped_old
+            else:
+                pattern = r'\b' + escaped_old + r'\b'
             
+            # 检查是否已经替换过
+            if new in content and not re.search(pattern, content):
+                already += 1
+                continue
+            
+            # 执行替换
+            new_content = re.sub(pattern, new, content)
+            if new_content != content:
+                content = new_content
+                applied += 1
+        else:
+            # 对于较长的规则，使用普通的子字符串替换
+            if new in content and old not in content:
+                already += 1
+                continue
+
+            if old in content:
+                content = content.replace(old, new)
+                applied += 1
+
     if applied > 0 and not dry_run:
         bak_path = filepath.with_suffix(filepath.suffix + ".bak")
         if not bak_path.exists():
             shutil.copy2(filepath, bak_path)
         filepath.write_text(content, encoding="utf-8")
-        
+
     return applied, already
 
 def revert_file(filepath: Path) -> bool:
