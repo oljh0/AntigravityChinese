@@ -1,0 +1,122 @@
+[
+  [
+    "Press Enter to continue",
+    "按回车键继续     "
+  ],
+  [
+    "Press any key to retry",
+    "按任意键重试    "
+  ],
+  [
+    "Connecting to server...",
+    "正在连接服务器  "
+  ],
+  [
+    "Connection established",
+    "连接已建立       "
+  ],
+  [
+    "Connection failed",
+    "连接失败     "
+  ],
+  [
+    "Authentication required",
+    "需要身份验证     "
+  ],
+  [
+    "Authentication successful",
+    "身份验证成功       "
+  ],
+  [
+    "Authentication failed",
+    "身份验证失败   "
+  ],
+  [
+    "Loading configuration",
+    "正在加载配置   "
+  ],
+  [
+    "Configuration loaded",
+    "配置已加载     "
+  ],
+  [
+    "Saving configuration",
+    "正在保存配置  "
+  ],
+  [
+    "Configuration saved",
+    "配置已保存    "
+  ],
+  [
+    "Processing request",
+    "正在处理请求"
+  ],
+  [
+    "Request completed",
+    "请求已完成  "
+  ],
+  [
+    "Request failed",
+    "请求失败  "
+  ],
+  [
+    "Generating response",
+    "正在生成响应 "
+  ],
+  [
+    "Waiting for input",
+    "等待输入     "
+  ],
+  [
+    "Command executed",
+    "命令已执行 "
+  ],
+  [
+    "Command failed",
+    "命令失败  "
+  ],
+  [
+    "System initialized",
+    "系统已初始化"
+  ],
+  [
+    "Shutting down",
+    "正在关闭 "
+  ],
+  [
+    "Shutdown complete",
+    "关闭完成     "
+  ],
+  [
+    "Checking for updates...",
+    "正在检查更新     "
+  ],
+  [
+    "Not connected",
+    "未连接    "
+  ],
+  [
+    "Show command history",
+    "显示命令历史  "
+  ],
+  [
+    "Waiting in queue...",
+    "排队等待中    "
+  ],
+  [
+    "Connection timed out",
+    "连接超时        "
+  ],
+  [
+    "Unknown command",
+    "未知命令   "
+  ],
+  [
+    "Something went wrong!",
+    "出现错误!        "
+  ],
+  [
+    "Disk quota exceeded",
+    "磁盘配额超出 "
+  ]
+]

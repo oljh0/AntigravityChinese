@@ -1,0 +1,130 @@
+[
+  [
+    "What should we work on?",
+    "我们来做些什么? "
+  ],
+  [
+    "Ask me anything!",
+    "请随便问我!"
+  ],
+  [
+    "What would you like to do?",
+    "您想做些什么?       "
+  ],
+  [
+    "Ready when you are!",
+    "准备就绪!      "
+  ],
+  [
+    "How can I help?",
+    "需要帮助?  "
+  ],
+  [
+    "Press Ctrl+C to exit",
+    "按 Ctrl+C 退出   "
+  ],
+  [
+    "Quit the application",
+    "退出应用程序  "
+  ],
+  [
+    "No active subagents",
+    "无活跃子代理 "
+  ],
+  [
+    "approval needed",
+    "需要审批   "
+  ],
+  [
+    "Conversation cleared",
+    "对话已清除     "
+  ],
+  [
+    "Please restart the application",
+    "请重新启动应用程序   "
+  ],
+  [
+    "Press Escape to return to inline mode",
+    "按 Escape 返回内联模式        "
+  ],
+  [
+    "Press Ctrl+O to return to chat",
+    "按 Ctrl+O 返回聊天       "
+  ],
+  [
+    "Press Ctrl+C or Ctrl+D again to exit",
+    "再次按 Ctrl+C 或 Ctrl+D 退出  "
+  ],
+  [
+    "Press q or ^g to return to chat",
+    "按 q 或 ^g 返回聊天      "
+  ],
+  [
+    "Operation cancelled by user",
+    "操作已被用户取消   "
+  ],
+  [
+    "No changes made in editor, not submitting.",
+    "编辑器中无更改，不提交。      "
+  ],
+  [
+    "An error occurred. Please try again.",
+    "发生错误，请重试。         "
+  ],
+  [
+    "Rate limit exceeded. Please wait a moment before trying again.",
+    "速率限制已超出，请稍后再试。                    "
+  ],
+  [
+    "Network error occurred. Please check your connection and try again.",
+    "网络错误，请检查连接后重试。                         "
+  ],
+  [
+    "Connection timed out. Please check your network connection and try again.",
+    "连接超时，请检查网络连接后重试。                         "
+  ],
+  [
+    "Connection refused. Please ensure the service is running and try again.",
+    "连接被拒绝，请确认服务运行正常后重试。              "
+  ],
+  [
+    "A tool execution error occurred. The conversation can continue.",
+    "工具执行出错，对话可以继续。                     "
+  ],
+  [
+    "Session data is corrupted. Please try starting a new session.",
+    "会话数据已损坏，请尝试启动新会话。          "
+  ],
+  [
+    "Could not resolve host. Please check your network connection.",
+    "无法解析主机名，请检查网络连接。             "
+  ],
+  [
+    "Permission denied. Please check file permissions or run with appropriate privileges.",
+    "权限被拒绝，请检查文件权限或使用适当权限运行。               "
+  ],
+  [
+    "An MCP server error occurred. Check your MCP configuration.",
+    "MCP 服务器出错，请检查 MCP 配置。              "
+  ],
+  [
+    "This application is not authorized. Please contact support.",
+    "此应用未经授权，请联系支持团队。           "
+  ],
+  [
+    "Permission error. Please check your access rights.",
+    "权限错误，请检查访问权限。           "
+  ],
+  [
+    "Session not found. A new session will be created.",
+    "未找到会话，将创建新会话。          "
+  ],
+  [
+    "A session error occurred. Please try again.",
+    "会话错误，请重试。                "
+  ],
+  [
+    "Failed to access session data. Please check file permissions and try again.",
+    "无法访问会话数据，请检查文件权限后重试。               "
+  ]
+]

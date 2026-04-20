@@ -1,0 +1,98 @@
+[
+  [
+    "Loading...",
+    "加载中 "
+  ],
+  [
+    "Working...",
+    "处理中 "
+  ],
+  [
+    "Saving...",
+    "保存中"
+  ],
+  [
+    "Waiting...",
+    "等待中 "
+  ],
+  [
+    "Fetching...",
+    "获取中  "
+  ],
+  [
+    "Scanning...",
+    "扫描中  "
+  ],
+  [
+    "Thinking...",
+    "思考中  "
+  ],
+  [
+    "Building...",
+    "构建中  "
+  ],
+  [
+    "Checking...",
+    "检查中  "
+  ],
+  [
+    "Generating",
+    "生成中 "
+  ],
+  [
+    "Connecting",
+    "连接中 "
+  ],
+  [
+    "Installing",
+    "安装中 "
+  ],
+  [
+    "Processing",
+    "处理中 "
+  ],
+  [
+    "Restarting",
+    "重启中 "
+  ],
+  [
+    "Refreshing",
+    "刷新中 "
+  ],
+  [
+    "Validating",
+    "验证中 "
+  ],
+  [
+    "Optimizing",
+    "优化中 "
+  ],
+  [
+    "Formatting",
+    "格式化 "
+  ],
+  [
+    "Downloading",
+    "下载中  "
+  ],
+  [
+    "Configuring",
+    "配置中  "
+  ],
+  [
+    "Initializing",
+    "初始化中"
+  ],
+  [
+    "Synchronizing",
+    "同步中    "
+  ],
+  [
+    "Authenticating",
+    "认证中     "
+  ],
+  [
+    "Running...",
+    "运行中 "
+  ]
+]
