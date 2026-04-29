@@ -1,0 +1,358 @@
+[
+  [
+    "describe:\"Add a server from a JSON config string\"",
+    "describe:\"从JSON配置字符串添加服务器\""
+  ],
+  [
+    "describe:\"Remove a server\"",
+    "describe:\"移除服务器\""
+  ],
+  [
+    "describe:\"Enable an MCP server\"",
+    "describe:\"启用MCP服务器\""
+  ],
+  [
+    "describe:\"Disable an MCP server\"",
+    "describe:\"禁用MCP服务器\""
+  ],
+  [
+    "describe:\"Configure and manage MCP servers\"",
+    "describe:\"配置和管理MCP服务器\""
+  ],
+  [
+    "describe:\"Manage agent skills.\"",
+    "describe:\"管理Agent技能。\""
+  ],
+  [
+    "describe:\"Manage subagents.\"",
+    "describe:\"管理子Agent。\""
+  ],
+  [
+    "describe:\"Manage Qoder CLI plugins.\"",
+    "describe:\"管理Qoder CLI插件。\""
+  ],
+  [
+    "describe:\"Installs an agent skill from a git repository URL or a local path.\"",
+    "describe:\"从Git仓库URL或本地路径安装Agent技能。\""
+  ],
+  [
+    "describe:\"Uninstalls an agent skill by name.\"",
+    "describe:\"按名称卸载Agent技能。\""
+  ],
+  [
+    "describe:\"Links an agent skill from a local path. Updates to the source will be reflected immediately.\"",
+    "describe:\"从本地路径链接Agent技能。对源代码的更新将立即生效。\""
+  ],
+  [
+    "describe:\"Disables an agent skill.\"",
+    "describe:\"禁用Agent技能。\""
+  ],
+  [
+    "describe:\"Enables an agent skill.\"",
+    "describe:\"启用Agent技能。\""
+  ],
+  [
+    "describe:\"Install a plugin from a local directory.\"",
+    "describe:\"从本地目录安装插件。\""
+  ],
+  [
+    "describe:\"Uninstall a plugin.\"",
+    "describe:\"卸载插件。\""
+  ],
+  [
+    "describe:\"Validates a plugin from a local directory.\"",
+    "describe:\"验证本地目录中的插件。\""
+  ],
+  [
+    "describe:\"Submit feedback or bug report with diagnostic bundle (headless equivalent of /feedback).\"",
+    "describe:\"提交反馈或错误报告（附带诊断包，等同于/feedback命令）。\""
+  ],
+  [
+    "describe:\"Name of the server\"",
+    "describe:\"服务器名称\""
+  ],
+  [
+    "describe:\"Command (stdio) or URL (sse, http)\"",
+    "describe:\"命令(stdio)或URL(sse, http)\""
+  ],
+  [
+    "describe:\"Configuration scope (user, local, or project)\"",
+    "describe:\"配置范围(user, local或project)\""
+  ],
+  [
+    "describe:\"Transport type (stdio, sse, http, ws). Defaults to stdio if not specified.\"",
+    "describe:\"传输类型(stdio, sse, http, ws)。未指定时默认为stdio。\""
+  ],
+  [
+    "describe:\"Set environment variables (e.g. -e KEY=value)\"",
+    "describe:\"设置环境变量(例如 -e KEY=value)\""
+  ],
+  [
+    "describe:\"Set the description for the server\"",
+    "describe:\"设置服务器的描述信息\""
+  ],
+  [
+    "describe:\"Set connection timeout in milliseconds\"",
+    "describe:\"设置连接超时时间(毫秒)\""
+  ],
+  [
+    "describe:\"Trust the server (bypass all tool call confirmation prompts)\"",
+    "describe:\"信任该服务器(跳过所有工具调用确认提示)\""
+  ],
+  [
+    "describe:\"Print the raw stored config for the server as JSON instead of the summary view\"",
+    "describe:\"以JSON格式输出服务器的原始存储配置，而不是摘要视图\""
+  ],
+  [
+    "describe:\"Reset all approved and rejected project-scoped (.mcp.json) servers within this project\"",
+    "describe:\"重置此项目中所有已批准和已拒绝的项目级(.mcp.json)服务器\""
+  ],
+  [
+    "describe:\"Disable for current session only\"",
+    "describe:\"仅在当前会话中禁用\""
+  ],
+  [
+    "describe:\"The git repository URL or local path of the skill to install.\"",
+    "describe:\"要安装的技能的Git仓库URL或本地路径。\""
+  ],
+  [
+    "describe:\"The local path of the skill to link.\"",
+    "describe:\"要链接的技能的本地路径。\""
+  ],
+  [
+    "describe:\"The name of the skill to uninstall.\"",
+    "describe:\"要卸载的技能名称。\""
+  ],
+  [
+    "describe:\"The name of the skill to enable.\"",
+    "describe:\"要启用的技能名称。\""
+  ],
+  [
+    "describe:\"The name of the skill to disable.\"",
+    "describe:\"要禁用的技能名称。\""
+  ],
+  [
+    "describe:\"The scope to disable the skill in (user or workspace).\"",
+    "describe:\"禁用技能的范围(user或workspace)。\""
+  ],
+  [
+    "describe:\"Acknowledge the security risks of installing a skill and skip the confirmation prompt.\"",
+    "describe:\"确认安装技能的安全风险并跳过确认提示。\""
+  ],
+  [
+    "describe:\"Acknowledge the security risks of linking a skill and skip the confirmation prompt.\"",
+    "describe:\"确认链接技能的安全风险并跳过确认提示。\""
+  ],
+  [
+    "describe:\"Sub-path within the repository to install from (only used for git repository sources).\"",
+    "describe:\"仓库内的子路径(仅用于Git仓库来源)。\""
+  ],
+  [
+    "describe:\"Additional plugin directories to scan.\"",
+    "describe:\"要扫描的附加插件目录。\""
+  ],
+  [
+    "describe:\"Path to the plugin directory.\"",
+    "describe:\"插件目录路径。\""
+  ],
+  [
+    "describe:\"Also delete plugin data directory.\"",
+    "describe:\"同时删除插件数据目录。\""
+  ],
+  [
+    "describe:\"The path to the plugin directory (checks convention directory structure).\"",
+    "describe:\"插件目录路径(检查约定的目录结构)。\""
+  ],
+  [
+    "describe:\"The format of the CLI output.\"",
+    "describe:\"CLI输出的格式。\""
+  ],
+  [
+    "describe:\"JSON configuration string\"",
+    "describe:\"JSON配置字符串\""
+  ],
+  [
+    "describe:\"Migrate from Claude Code hooks\"",
+    "describe:\"从Claude Code迁移hooks\""
+  ],
+  [
+    "describe:\"Comma-separated list of tool names to auto-approve (no confirmation prompt)\"",
+    "describe:\"逗号分隔的工具名称列表，自动批准(无需确认)\""
+  ],
+  [
+    "describe:\"OAuth client ID for HTTP/SSE servers\"",
+    "describe:\"HTTP/SSE服务器的OAuth客户端ID\""
+  ],
+  [
+    "describe:\"Fixed port for OAuth callback (for servers requiring pre-registered redirect URIs)\"",
+    "describe:\"OAuth回调的固定端口(用于需要预注册重定向URI的服务器)\""
+  ],
+  [
+    "describe:\"List all configured MCP servers\"",
+    "describe:\"列出所有已配置的MCP服务器\""
+  ],
+  [
+    "describe:\"Get details about an MCP server\"",
+    "describe:\"获取MCP服务器的详细信息\""
+  ],
+  [
+    "describe:\"Lists discovered agent skills.\"",
+    "describe:\"列出已发现的Agent技能。\""
+  ],
+  [
+    "describe:\"Lists discovered agents.\"",
+    "describe:\"列出已发现的Agent。\""
+  ],
+  [
+    "describe:`Manage ${R$} hooks.`",
+    "describe:`管理${R$}钩子。`"
+  ],
+  [
+    "describe:`Sign in to your ${z$} account through the browser`",
+    "describe:`通过浏览器登录您的${z$}账户`"
+  ],
+  [
+    "describe:`Update ${R$} to the latest version`",
+    "describe:`将${R$}更新到最新版本`"
+  ],
+  [
+    "`Launch ${R$}`",
+    "`启动${R$}`"
+  ],
+  [
+    "describe:\"Add a server\"",
+    "describe:\"添加服务器\""
+  ],
+  [
+    "description:\"Initial prompt. Runs in interactive mode by default; use -p/--print for non-interactive output.\"",
+    "description:\"初始提示。默认以交互模式运行；使用 -p/--print 进行非交互式输出。\""
+  ],
+  [
+    "description:\"Run in debug mode (open debug console with F12)\"",
+    "description:\"在调试模式下运行(按F12打开调试控制台)\""
+  ],
+  [
+    "description:\"Load MCP servers from JSON file(s)\"",
+    "description:\"从JSON文件加载MCP服务器\""
+  ],
+  [
+    "description:\"Only use MCP servers from --mcp-config, ignoring other sources\"",
+    "description:\"仅使用--mcp-config中的MCP服务器，忽略其他来源\""
+  ],
+  [
+    "description:\"Comma-separated list of setting sources to load for agents (user, project, extension)\"",
+    "description:\"逗号分隔的代理设置来源列表(user, project, extension)\""
+  ],
+  [
+    "description:\"Load additional settings from a JSON file path or inline JSON string (highest precedence)\"",
+    "description:\"从JSON文件路径或内联JSON字符串加载附加设置(最高优先级)\""
+  ],
+  [
+    "description:\"Execute the provided prompt and continue in interactive mode\"",
+    "description:\"执行提供的提示并继续交互模式\""
+  ],
+  [
+    "description:\"Change working directory before startup\"",
+    "description:\"在启动前更改工作目录\""
+  ],
+  [
+    "description:\"Change working directory before startup.\"",
+    "description:\"在启动前更改工作目录。\""
+  ],
+  [
+    "description:\"Set the permission mode: default (prompt for approval), accept_edits (auto-approve edit tools), bypass_permissions (auto-approve all tools), plan (read-only mode).\"",
+    "description:\"设置权限模式：default(提示审批)、accept_edits(自动批准编辑工具)、bypass_permissions(自动批准所有工具)、plan(只读模式)。\""
+  ],
+  [
+    "description:\"Bypass all permission checks. Alias for --permission-mode=bypass_permissions.\"",
+    "description:\"绕过所有权限检查。等同于--permission-mode=bypass_permissions。\""
+  ],
+  [
+    "description:\"The format of the CLI output.\"",
+    "description:\"CLI输出的格式。\""
+  ],
+  [
+    "description:\"Starts the agent in ACP mode\"",
+    "description:\"以ACP模式启动代理\""
+  ],
+  [
+    "description:\"Starts the agent in ACP mode.\"",
+    "description:\"以ACP模式启动代理。\""
+  ],
+  [
+    "description:\"Allowed MCP server names\"",
+    "description:\"允许的MCP服务器名称\""
+  ],
+  [
+    "description:\"Comma or space-separated list of tools to allow (e.g. \\\"Bash(git:*) Edit\\\").\"",
+    "description:\"逗号或空格分隔的允许工具列表(例如 \\\"Bash(git:*) Edit\\\")。\""
+  ],
+  [
+    "description:\"Comma or space-separated list of tools to deny (e.g. \\\"Bash(git:*) Edit\\\").\"",
+    "description:\"逗号或空格分隔的拒绝工具列表(例如 \\\"Bash(git:*) Edit\\\")。\""
+  ],
+  [
+    "description:\"Attach files to the initial prompt.\"",
+    "description:\"将文件附加到初始提示。\""
+  ],
+  [
+    "description:\"Plugin directories to load. Each directory must contain a .qoder-plugin/plugin.json manifest.\"",
+    "description:\"要加载的插件目录。每个目录必须包含 .qoder-plugin/plugin.json 清单。\""
+  ],
+  [
+    "description:\"Continue the most recent session for the current project.\"",
+    "description:\"继续当前项目的最近一次会话。\""
+  ],
+  [
+    "description:\"Create a new session from a resumed conversation instead of reusing the original session.\"",
+    "description:\"从恢复的对话中创建新会话，而不是复用原会话。\""
+  ],
+  [
+    "description:\"Resume a previous session by identifier, or open the session browser in interactive mode.\"",
+    "description:\"通过标识符恢复上一个会话，或在交互模式下打开会话浏览器。\""
+  ],
+  [
+    "description:\"Set a display name for this session (shown in /resume and terminal title).\"",
+    "description:\"设置此会话的显示名称（显示在 /resume 和终端标题中）。\""
+  ],
+  [
+    "description:\"Use a specific session ID for the conversation. With --resume or --continue, this requires --fork-session.\"",
+    "description:\"为对话使用特定的会话ID。与 --resume 或 --continue 一起使用时，需要 --fork-session。\""
+  ],
+  [
+    "description:\"List available sessions for the current project and exit.\"",
+    "description:\"列出当前项目的可用会话并退出。\""
+  ],
+  [
+    "description:\"Delete a session by index number (use --list-sessions to see available sessions).\"",
+    "description:\"按索引号删除会话（使用 --list-sessions 查看可用会话）。\""
+  ],
+  [
+    "description:\"Additional directories to include in the workspace (comma-separated or multiple --add-dir)\"",
+    "description:\"要包含在工作区中的附加目录（逗号分隔或多个 --add-dir）\""
+  ],
+  [
+    "description:\"The format of the CLI input. When set to stream-json, the CLI reads NDJSON messages from stdin instead of plain-text prompts.\"",
+    "description:\"CLI输入的格式。设置为 stream-json 时，CLI 从 stdin 读取 NDJSON 消息而非纯文本提示。\""
+  ],
+  [
+    "description:\"Set the maximum model output tokens.\"",
+    "description:\"设置模型最大输出令牌数。\""
+  ],
+  [
+    "description:\"Print response and exit (useful for pipes). Note: The workspace trust dialog is skipped in -p mode. Only use this flag in directories you trust.\"",
+    "description:\"打印响应并退出（适用于管道）。注意：-p 模式下会跳过工作区信任对话框。请仅在您信任的目录中使用此标志。\""
+  ],
+  [
+    "description:\"Agent for the current session. Overrides the \\\"agent\\\" setting.\"",
+    "description:\"当前会话使用的代理。覆盖 \\\"agent\\\" 设置。\""
+  ],
+  [
+    "description:\"Append a system prompt to the default system prompt.\"",
+    "description:\"将系统提示附加到默认系统提示之后。\""
+  ],
+  [
+    "description:\"System prompt to use for the session.\"",
+    "description:\"用于本次会话的系统提示。\""
+  ]
+]
