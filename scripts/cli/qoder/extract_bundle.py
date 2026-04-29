@@ -225,10 +225,12 @@ function qodercli {{
     $extractedJs = "$env:USERPROFILE\\.qoder\\extracted\\index.js"
     $bunExe = "$env:LOCALAPPDATA\\Kiro-Cli\\bun.exe"
     if ((Test-Path $extractedJs) -and (Test-Path $bunExe)) {{
-        $prevCP = [Console]::OutputEncoding
+        $prevCP = [Console]::OutputEncoding.CodePage
+        chcp 65001 | Out-Null
         [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
         & $bunExe run $extractedJs @args
-        [Console]::OutputEncoding = $prevCP
+        [Console]::OutputEncoding = [System.Text.Encoding]::GetEncoding($prevCP)
+        chcp $prevCP | Out-Null
     }} else {{
         & "$env:ProgramFiles\\nodejs\\node_modules\\@qoder-ai\\qodercli\\bin\\qodercli.exe" @args
     }}
