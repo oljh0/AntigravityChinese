@@ -348,6 +348,14 @@
     "description:\"当前会话使用的代理。覆盖 \\\"agent\\\" 设置。\""
   ],
   [
+    "description:'Agent for the current session. Overrides the \"agent\" setting.'",
+    "description:'当前会话使用的代理。覆盖 \"agent\" 设置。'"
+  ],
+  [
+    "description:`JSON object defining custom agents (e.g. '{\"reviewer\": {\"description\": \"Reviews code\", \"prompt\": \"You are a code reviewer\"}}').`",
+    "description:`自定义代理的JSON对象（例如 '{\"reviewer\": {\"description\": \"Reviews code\", \"prompt\": \"You are a code reviewer\"}}')。`"
+  ],
+  [
     "description:\"Append a system prompt to the default system prompt.\"",
     "description:\"将系统提示附加到默认系统提示之后。\""
   ],

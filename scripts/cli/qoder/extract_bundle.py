@@ -225,8 +225,10 @@ function qodercli {{
     $extractedJs = "$env:USERPROFILE\\.qoder\\extracted\\index.js"
     $bunExe = "$env:LOCALAPPDATA\\Kiro-Cli\\bun.exe"
     if ((Test-Path $extractedJs) -and (Test-Path $bunExe)) {{
+        $prevCP = [Console]::OutputEncoding
         [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
         & $bunExe run $extractedJs @args
+        [Console]::OutputEncoding = $prevCP
     }} else {{
         & "$env:ProgramFiles\\nodejs\\node_modules\\@qoder-ai\\qodercli\\bin\\qodercli.exe" @args
     }}
@@ -296,7 +298,12 @@ def _ensure_bun_exe() -> None:
 
 
 def _is_shim_outdated(content: str) -> bool:
-    """检查已安装的 shim 是否是旧版本（bun 路径缺少 .exe 扩展名，或缺少 UTF-8 编码设置）。
+    """检查已安装的 shim 是否是旧版本。
+    
+    检测条件：
+    - bun 路径缺少 .exe 扩展名（旧版）
+    - 缺少 UTF-8 编码设置（第一版）
+    - 缺少 prevCP 编码恢复逻辑（第二版）
     
     文件中的 shim 内容含单反斜杠路径，如 Kiro-Cli\\bun"（Python: 'Kiro-Cli\\bun"'）。
     """
@@ -304,7 +311,8 @@ def _is_shim_outdated(content: str) -> bool:
         return False
     old_bun = r'Kiro-Cli\bun"' in content and 'bun.exe' not in content
     missing_utf8 = 'OutputEncoding' not in content
-    return old_bun or missing_utf8
+    missing_restore = 'prevCP' not in content
+    return old_bun or missing_utf8 or missing_restore
 
 
 def install_shim() -> None:
