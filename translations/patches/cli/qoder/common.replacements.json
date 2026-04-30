@@ -1,0 +1,150 @@
+[
+  [
+    "message:\"Answer questions?\"",
+    "message:\"回答问题？\""
+  ],
+  [
+    "message:\"Failed to load data\"",
+    "message:\"加载数据失败\""
+  ],
+  [
+    "message:\"Failed to load sessions\"",
+    "message:\"加载会话失败\""
+  ],
+  [
+    "message:\"Failed to load plugins\"",
+    "message:\"加载插件失败\""
+  ],
+  [
+    "message:\"Failed to load marketplace\"",
+    "message:\"加载市场失败\""
+  ],
+  [
+    "message:\"Failed to load full session content\"",
+    "message:\"加载完整会话内容失败\""
+  ],
+  [
+    "message:\"Failed to open browser\"",
+    "message:\"打开浏览器失败\""
+  ],
+  [
+    "message:\"Failed to parse search response\"",
+    "message:\"解析搜索响应失败\""
+  ],
+  [
+    "message:\"Failed to update privacy setting\"",
+    "message:\"更新隐私设置失败\""
+  ],
+  [
+    "message:\"Model not found\"",
+    "message:\"未找到模型\""
+  ],
+  [
+    "message:\"Method not found\"",
+    "message:\"未找到方法\""
+  ],
+  [
+    "message:\"Loop detected, stopping execution\"",
+    "message:\"检测到循环，停止执行\""
+  ],
+  [
+    "message:\"Invalid stream received from model\"",
+    "message:\"从模型收到无效的流\""
+  ],
+  [
+    "message:\"Model context window exceeded (finish_reason)\"",
+    "message:\"模型上下文窗口已超出(finish_reason)\""
+  ],
+  [
+    "message:\"Authentication succeeded but tool discovery failed\"",
+    "message:\"认证成功但工具发现失败\""
+  ],
+  [
+    "message:\"No local Git branches found for review.\"",
+    "message:\"未找到可审查的本地Git分支。\""
+  ],
+  [
+    "message:\"No description provided.\"",
+    "message:\"未提供描述。\""
+  ],
+  [
+    "message:\"No frontmatter block found. Add YAML frontmatter between --- delimiters.\"",
+    "message:\"未找到frontmatter块。请在---分隔符之间添加YAML。\""
+  ],
+  [
+    "message:\"PDF file is corrupted or invalid.\"",
+    "message:\"PDF文件已损坏或无效。\""
+  ],
+  [
+    "message:\"Marketplace name cannot contain spaces\"",
+    "message:\"市场名称不能包含空格\""
+  ],
+  [
+    "message:\"Path must not contain path traversal\"",
+    "message:\"路径不能包含路径遍历\""
+  ],
+  [
+    "message:\"Could not detect terminal type. Supported terminals: VS Code, Cursor, Windsurf, and Antigravity.\"",
+    "message:\"无法检测终端类型。支持的终端：VS Code、Cursor、Windsurf和Antigravity。\""
+  ],
+  [
+    "message:\"Cannot edit UNC paths (network paths starting with \\\\\\\\ or //). These paths could access network resources and leak credentials.\"",
+    "message:\"无法编辑UNC路径(以\\\\\\\\或//开头的网络路径)。这些路径可能会访问网络资源并泄露凭据。\""
+  ],
+  [
+    "message:\"Allow web search?\"",
+    "message:\"允许网络搜索？\""
+  ],
+  [
+    "message:\"Enter plan mode?\"",
+    "message:\"进入计划模式？\""
+  ],
+  [
+    "message:\"Exit plan mode?\"",
+    "message:\"退出计划模式？\""
+  ],
+  [
+    "message:\"Connection refused\"",
+    "message:\"连接被拒绝\""
+  ],
+  [
+    "message:\"Connection timed out\"",
+    "message:\"连接超时\""
+  ],
+  [
+    "message:\"Permission denied\"",
+    "message:\"权限被拒绝\""
+  ],
+  [
+    "message:\"Session expired\"",
+    "message:\"会话已过期\""
+  ],
+  [
+    "message:\"Rate limit exceeded\"",
+    "message:\"超出速率限制\""
+  ],
+  [
+    "message:\"Server error\"",
+    "message:\"服务器错误\""
+  ],
+  [
+    "message:\"Invalid response\"",
+    "message:\"无效响应\""
+  ],
+  [
+    "message:\"Network error\"",
+    "message:\"网络错误\""
+  ],
+  [
+    "message:\"Operation cancelled\"",
+    "message:\"操作已取消\""
+  ],
+  [
+    "message:\"File not found\"",
+    "message:\"文件未找到\""
+  ],
+  [
+    "message:\"Invalid configuration\"",
+    "message:\"无效配置\""
+  ]
+]

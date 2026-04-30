@@ -1,0 +1,902 @@
+[
+  [
+    "label:\"Accept Edits\"",
+    "label:\"接受编辑\""
+  ],
+  [
+    "label:\"Cancel\"",
+    "label:\"取消\""
+  ],
+  [
+    "label:\"Submit\"",
+    "label:\"提交\""
+  ],
+  [
+    "label:\"Select\"",
+    "label:\"选择\""
+  ],
+  [
+    "label:\"Reject\"",
+    "label:\"拒绝\""
+  ],
+  [
+    "label:\"Installed\"",
+    "label:\"已安装\""
+  ],
+  [
+    "label:\"Acknowledged\"",
+    "label:\"已确认\""
+  ],
+  [
+    "label:\"Agents\"",
+    "label:\"代理\""
+  ],
+  [
+    "label:\"Skills\"",
+    "label:\"技能\""
+  ],
+  [
+    "label:\"Plugins\"",
+    "label:\"插件\""
+  ],
+  [
+    "label:\"Actions\"",
+    "label:\"操作\""
+  ],
+  [
+    "label:\"General\"",
+    "label:\"通用\""
+  ],
+  [
+    "label:\"Advanced\"",
+    "label:\"高级\""
+  ],
+  [
+    "label:\"Security\"",
+    "label:\"安全\""
+  ],
+  [
+    "label:\"Privacy\"",
+    "label:\"隐私\""
+  ],
+  [
+    "label:\"Billing\"",
+    "label:\"计费\""
+  ],
+  [
+    "label:\"Experimental\"",
+    "label:\"实验性\""
+  ],
+  [
+    "label:\"Extensions\"",
+    "label:\"扩展\""
+  ],
+  [
+    "label:\"Permissions\"",
+    "label:\"权限\""
+  ],
+  [
+    "label:\"Authentication\"",
+    "label:\"身份验证\""
+  ],
+  [
+    "label:\"Accessibility\"",
+    "label:\"辅助功能\""
+  ],
+  [
+    "label:\"Marketplace\"",
+    "label:\"市场\""
+  ],
+  [
+    "label:\"Status\"",
+    "label:\"状态\""
+  ],
+  [
+    "label:\"Source\"",
+    "label:\"来源\""
+  ],
+  [
+    "label:\"Author\"",
+    "label:\"作者\""
+  ],
+  [
+    "label:\"Category\"",
+    "label:\"分类\""
+  ],
+  [
+    "label:\"Description\"",
+    "label:\"描述\""
+  ],
+  [
+    "label:\"Content\"",
+    "label:\"内容\""
+  ],
+  [
+    "label:\"Output\"",
+    "label:\"输出\""
+  ],
+  [
+    "label:\"Command\"",
+    "label:\"命令\""
+  ],
+  [
+    "label:\"Commands\"",
+    "label:\"命令\""
+  ],
+  [
+    "label:\"Language\"",
+    "label:\"语言\""
+  ],
+  [
+    "label:\"Footer\"",
+    "label:\"页脚\""
+  ],
+  [
+    "label:\"Timeout\"",
+    "label:\"超时\""
+  ],
+  [
+    "label:\"Homepage\"",
+    "label:\"主页\""
+  ],
+  [
+    "label:\"Branch\"",
+    "label:\"分支\""
+  ],
+  [
+    "label:\"Errors\"",
+    "label:\"错误\""
+  ],
+  [
+    "label:\"Sandbox\"",
+    "label:\"沙箱\""
+  ],
+  [
+    "label:\"Workspace\"",
+    "label:\"工作区\""
+  ],
+  [
+    "label:\"Repository\"",
+    "label:\"仓库\""
+  ],
+  [
+    "label:\"Temperature\"",
+    "label:\"温度\""
+  ],
+  [
+    "label:\"Default\"",
+    "label:\"默认\""
+  ],
+  [
+    "label:\"Sequential\"",
+    "label:\"顺序\""
+  ],
+  [
+    "label:\"Interactive\"",
+    "label:\"交互式\""
+  ],
+  [
+    "label:\"Uninstall\"",
+    "label:\"卸载\""
+  ],
+  [
+    "label:\"Compression\"",
+    "label:\"压缩\""
+  ],
+  [
+    "label:\"Accept Edits\"",
+    "label:\"接受编辑\""
+  ],
+  [
+    "label:\"Always Allow\"",
+    "label:\"始终允许\""
+  ],
+  [
+    "label:\"Always allow for this project\"",
+    "label:\"始终允许此项目\""
+  ],
+  [
+    "label:\"Approve this server\"",
+    "label:\"批准此服务器\""
+  ],
+  [
+    "label:\"Reject this server\"",
+    "label:\"拒绝此服务器\""
+  ],
+  [
+    "label:\"Delete Agent\"",
+    "label:\"删除代理\""
+  ],
+  [
+    "label:\"Delete Skill\"",
+    "label:\"删除技能\""
+  ],
+  [
+    "label:\"Authenticate\"",
+    "label:\"认证\""
+  ],
+  [
+    "label:\"Commit\"",
+    "label:\"提交\""
+  ],
+  [
+    "label:\"Current changes\"",
+    "label:\"当前更改\""
+  ],
+  [
+    "label:\"Modify with external editor\"",
+    "label:\"使用外部编辑器修改\""
+  ],
+  [
+    "label:\"Sign in to continue\"",
+    "label:\"登录以继续\""
+  ],
+  [
+    "label:\"Exit the application\"",
+    "label:\"退出应用程序\""
+  ],
+  [
+    "label:\"Type Something\"",
+    "label:\"输入内容\""
+  ],
+  [
+    "label:\"Verify your account\"",
+    "label:\"验证您的账户\""
+  ],
+  [
+    "label:\"Change authentication\"",
+    "label:\"更改认证方式\""
+  ],
+  [
+    "label:\"Acknowledge and Enable\"",
+    "label:\"确认并启用\""
+  ],
+  [
+    "label:\"CLI Version\"",
+    "label:\"CLI版本\""
+  ],
+  [
+    "label:\"Auto Compact\"",
+    "label:\"自动压缩\""
+  ],
+  [
+    "label:\"Output Format\"",
+    "label:\"输出格式\""
+  ],
+  [
+    "label:\"Output Style\"",
+    "label:\"输出样式\""
+  ],
+  [
+    "label:\"Default Agent\"",
+    "label:\"默认代理\""
+  ],
+  [
+    "label:\"Session Memory\"",
+    "label:\"会话记忆\""
+  ],
+  [
+    "label:\"Session Retention\"",
+    "label:\"会话保留\""
+  ],
+  [
+    "label:\"Loading Phrases\"",
+    "label:\"加载短语\""
+  ],
+  [
+    "label:\"Inline Thinking\"",
+    "label:\"内联思考\""
+  ],
+  [
+    "label:\"Agent Overrides\"",
+    "label:\"代理覆盖\""
+  ],
+  [
+    "label:\"Model Configs\"",
+    "label:\"模型配置\""
+  ],
+  [
+    "label:\"Context Management\"",
+    "label:\"上下文管理\""
+  ],
+  [
+    "label:\"File Filtering\"",
+    "label:\"文件过滤\""
+  ],
+  [
+    "label:\"File Checkpointing\"",
+    "label:\"文件检查点\""
+  ],
+  [
+    "label:\"Trusted Directories\"",
+    "label:\"受信任的目录\""
+  ],
+  [
+    "label:\"Tool Sandboxing\"",
+    "label:\"工具沙箱\""
+  ],
+  [
+    "label:\"Tool Distillation\"",
+    "label:\"工具蒸馏\""
+  ],
+  [
+    "label:\"Bring Your Own Key\"",
+    "label:\"自带密钥\""
+  ],
+  [
+    "label:\"Privacy Settings\"",
+    "label:\"隐私设置\""
+  ],
+  [
+    "label:\"Default Permission Mode\"",
+    "label:\"默认权限模式\""
+  ],
+  [
+    "label:\"Preferred Editor\"",
+    "label:\"首选编辑器\""
+  ],
+  [
+    "label:\"Status Line\"",
+    "label:\"状态栏\""
+  ],
+  [
+    "label:\"Incremental Rendering\"",
+    "label:\"增量渲染\""
+  ],
+  [
+    "label:\"Dynamic Window Title\"",
+    "label:\"动态窗口标题\""
+  ],
+  [
+    "label:\"DNS Resolution Order\"",
+    "label:\"DNS解析顺序\""
+  ],
+  [
+    "label:\"Auto Theme Switching\"",
+    "label:\"自动主题切换\""
+  ],
+  [
+    "label:\"Enable Hooks\"",
+    "label:\"启用钩子\""
+  ],
+  [
+    "label:\"Enable Agents\"",
+    "label:\"启用代理\""
+  ],
+  [
+    "label:\"Enable Agent Skills\"",
+    "label:\"启用代理技能\""
+  ],
+  [
+    "label:\"Enable Auto Update\"",
+    "label:\"启用自动更新\""
+  ],
+  [
+    "label:\"Enable Notifications\"",
+    "label:\"启用通知\""
+  ],
+  [
+    "label:\"Enable Context Management\"",
+    "label:\"启用上下文管理\""
+  ],
+  [
+    "label:\"Enable Session Memory\"",
+    "label:\"启用会话记忆\""
+  ],
+  [
+    "label:\"Enable Session Cleanup\"",
+    "label:\"启用会话清理\""
+  ],
+  [
+    "label:\"Enable File Checkpointing\"",
+    "label:\"启用文件检查点\""
+  ],
+  [
+    "label:\"Enable Fuzzy Search\"",
+    "label:\"启用模糊搜索\""
+  ],
+  [
+    "label:\"Enable Git Worktrees\"",
+    "label:\"启用Git工作树\""
+  ],
+  [
+    "label:\"Enable Loading Phrases\"",
+    "label:\"启用加载短语\""
+  ],
+  [
+    "label:\"Enable Recursive File Search\"",
+    "label:\"启用递归文件搜索\""
+  ],
+  [
+    "label:\"Show Citations\"",
+    "label:\"显示引用\""
+  ],
+  [
+    "label:\"Show Line Numbers\"",
+    "label:\"显示行号\""
+  ],
+  [
+    "label:\"Show User Identity\"",
+    "label:\"显示用户身份\""
+  ],
+  [
+    "label:\"Show Footer Labels\"",
+    "label:\"显示页脚标签\""
+  ],
+  [
+    "label:\"Disable Loop Detection\"",
+    "label:\"禁用循环检测\""
+  ],
+  [
+    "label:\"Disable Bypass Permissions Mode\"",
+    "label:\"禁用绕过权限模式\""
+  ],
+  [
+    "label:\"Approve this tool call for the current request only.\"",
+    "label:\"仅为当前请求批准此工具调用。\""
+  ],
+  [
+    "label:\"Approve this tool without asking for the rest of the session.\"",
+    "label:\"在本次会话中不再询问，直接批准此工具。\""
+  ],
+  [
+    "label:\"Approve this file edit for the current request only.\"",
+    "label:\"仅为当前请求批准此文件编辑。\""
+  ],
+  [
+    "label:\"Approve this MCP tool call for the current request only.\"",
+    "label:\"仅为当前请求批准此MCP工具调用。\""
+  ],
+  [
+    "label:\"Grant this expanded permission for the current request only.\"",
+    "label:\"仅为当前请求授予此扩展权限。\""
+  ],
+  [
+    "label:\"Grant this expanded permission for the rest of the session.\"",
+    "label:\"在本次会话中授予此扩展权限。\""
+  ],
+  [
+    "label:\"Deny and send a message back to the model.\"",
+    "label:\"拒绝并向模型发送反馈消息。\""
+  ],
+  [
+    "label:\"Deny this edit without providing feedback.\"",
+    "label:\"拒绝此编辑，不提供反馈。\""
+  ],
+  [
+    "label:\"Deny this permission request without feedback.\"",
+    "label:\"拒绝此权限请求，不提供反馈。\""
+  ],
+  [
+    "label:\"Reject this edit and provide feedback to the model.\"",
+    "label:\"拒绝此编辑并向模型提供反馈。\""
+  ],
+  [
+    "label:\"Reject this plan and provide feedback to the model.\"",
+    "label:\"拒绝此计划并向模型提供反馈。\""
+  ],
+  [
+    "label:\"Reject this plan without providing feedback.\"",
+    "label:\"拒绝此计划，不提供反馈。\""
+  ],
+  [
+    "label:\"Reject permission\"",
+    "label:\"拒绝权限\""
+  ],
+  [
+    "label:\"Refuse and say something\"",
+    "label:\"拒绝并说明原因\""
+  ],
+  [
+    "label:\"Run this command for the current request only.\"",
+    "label:\"仅为当前请求运行此命令。\""
+  ],
+  [
+    "label:\"Don't trust and exit\"",
+    "label:\"不信任并退出\""
+  ],
+  [
+    "label:\"Don't trust\"",
+    "label:\"不信任\""
+  ],
+  [
+    "label:\"Trust (remember across sessions)\"",
+    "label:\"信任(跨会话记住)\""
+  ],
+  [
+    "label:\"Trust (this session only)\"",
+    "label:\"信任(仅本次会话)\""
+  ],
+  [
+    "label:\"Code review and assistant\"",
+    "label:\"代码审查和助手\""
+  ],
+  [
+    "label:\"Submit your review instructions directly.\"",
+    "label:\"直接提交您的审查指令。\""
+  ],
+  [
+    "label:\"Chinese\"",
+    "label:\"中文\""
+  ],
+  [
+    "label:\"English\"",
+    "label:\"英文\""
+  ],
+  [
+    "label:\"Full response\"",
+    "label:\"完整回复\""
+  ],
+  [
+    "label:\"Custom instructions\"",
+    "label:\"自定义指令\""
+  ],
+  [
+    "label:\"Project memory\"",
+    "label:\"项目记忆\""
+  ],
+  [
+    "label:\"Always use credits\"",
+    "label:\"始终使用积分\""
+  ],
+  [
+    "label:\"Ask each time\"",
+    "label:\"每次询问\""
+  ],
+  [
+    "label:\"Always copy full response\"",
+    "label:\"始终复制完整回复\""
+  ],
+  [
+    "label:\"Always Copy Full Response\"",
+    "label:\"始终复制完整回复\""
+  ],
+  [
+    "label:\"Manage - View balance and purchase more credits\"",
+    "label:\"管理 - 查看余额并购买更多积分\""
+  ],
+  [
+    "label:\"Use AI Credits - Continue this request (Overage)\"",
+    "label:\"使用AI积分 - 继续此请求(超额)\""
+  ],
+  [
+    "label:\"Copy the conversation transcript to the system clipboard\"",
+    "label:\"将会话记录复制到系统剪贴板\""
+  ],
+  [
+    "label:\"Write the conversation transcript to a file\"",
+    "label:\"将会话记录写入文件\""
+  ],
+  [
+    "label:\"Disable loop detection for this session\"",
+    "label:\"在本次会话中禁用循环检测\""
+  ],
+  [
+    "label:\"Open the proposed changes in your editor to review or adjust.\"",
+    "label:\"在编辑器中打开建议的更改以审查或调整。\""
+  ],
+  [
+    "label:\"All of the above\"",
+    "label:\"以上全部\""
+  ],
+  [
+    "label:\"Skip this picker in the future\"",
+    "label:\"将来跳过此选择器\""
+  ],
+  [
+    "label:\"No, don't ask again\"",
+    "label:\"不，不再询问\""
+  ],
+  [
+    "label:\"Do not enable (Ask again next time)\"",
+    "label:\"不启用(下次再询问)\""
+  ],
+  [
+    "label:\"Yes, and bypass permissions\"",
+    "label:\"是的，并绕过权限\""
+  ],
+  [
+    "label:\"Yes, manually approve edits\"",
+    "label:\"是的，手动批准编辑\""
+  ],
+  [
+    "label:\"\\u2190 Back to list\"",
+    "label:\"\\u2190 返回列表\""
+  ],
+  [
+    "label:\"\\u21BB Refresh\"",
+    "label:\"\\u21BB 刷新\""
+  ],
+  [
+    "label:\"\\u2717 Remove\"",
+    "label:\"\\u2717 移除\""
+  ],
+  [
+    "label:\"\\u27F3 Toggle Auto-Update\"",
+    "label:\"\\u27F3 切换自动更新\""
+  ],
+  [
+    "label:\"Automatically analyze the codebase and generate AGENTS.md \\u2014 no questions asked.\"",
+    "label:\"自动分析代码库并生成AGENTS.md \\u2014 无需提问。\""
+  ],
+  [
+    "label:\"Use the generalist profile to manage agent contexts.\"",
+    "label:\"使用通用配置文件来管理代理上下文。\""
+  ],
+  [
+    "label:\"Create both qoder-auto-review.yml and qoder-assistant.yml\"",
+    "label:\"同时创建qoder-auto-review.yml和qoder-assistant.yml\""
+  ],
+  [
+    "label:\"Create qoder-assistant.yml\"",
+    "label:\"创建qoder-assistant.yml\""
+  ],
+  [
+    "label:\"Create qoder-auto-review.yml\"",
+    "label:\"创建qoder-auto-review.yml\""
+  ],
+  [
+    "label:\"Add to workspace context and save to settings.local.json so it is remembered across sessions.\"",
+    "label:\"添加到工作区上下文并保存至settings.local.json，以便跨会话记住。\""
+  ],
+  [
+    "label:\"Session Start Hooks\"",
+    "label:\"会话开始钩子\""
+  ],
+  [
+    "label:\"Notification Hooks\"",
+    "label:\"通知钩子\""
+  ],
+  [
+    "label:\"User Prompt Submit Hooks\"",
+    "label:\"用户提交提示钩子\""
+  ],
+  [
+    "label:\"Permission Request Hooks\"",
+    "label:\"权限请求钩子\""
+  ],
+  [
+    "label:\"Permission Denied Hooks\"",
+    "label:\"权限拒绝钩子\""
+  ],
+  [
+    "label:\"File Changed Hooks\"",
+    "label:\"文件更改钩子\""
+  ],
+  [
+    "label:\"Task Created Hooks\"",
+    "label:\"任务创建钩子\""
+  ],
+  [
+    "label:\"Task Completed Hooks\"",
+    "label:\"任务完成钩子\""
+  ],
+  [
+    "label:\"Allow\"",
+    "label:\"允许\""
+  ],
+  [
+    "label:\"Deny\"",
+    "label:\"拒绝\""
+  ],
+  [
+    "label:\"Apply\"",
+    "label:\"应用\""
+  ],
+  [
+    "label:\"Close\"",
+    "label:\"关闭\""
+  ],
+  [
+    "label:\"Exit\"",
+    "label:\"退出\""
+  ],
+  [
+    "label:\"Stop\"",
+    "label:\"停止\""
+  ],
+  [
+    "label:\"Trust\"",
+    "label:\"信任\""
+  ],
+  [
+    "label:\"Model\"",
+    "label:\"模型\""
+  ],
+  [
+    "label:\"Tools\"",
+    "label:\"工具\""
+  ],
+  [
+    "label:\"Allow once\"",
+    "label:\"允许一次\""
+  ],
+  [
+    "label:\"Allow for this session\"",
+    "label:\"在本次会话中允许\""
+  ],
+  [
+    "label:\"Settings\"",
+    "label:\"设置\""
+  ],
+  [
+    "label:\"Enable Plan Mode\"",
+    "label:\"启用计划模式\""
+  ],
+  [
+    "label:\"Hooks\"",
+    "label:\"钩子\""
+  ],
+  [
+    "label:\"Saved\"",
+    "label:\"已保存\""
+  ],
+  [
+    "label:\"Linked\"",
+    "label:\"已链接\""
+  ],
+  [
+    "label:\"Enabled\"",
+    "label:\"已启用\""
+  ],
+  [
+    "label:\"Disabled\"",
+    "label:\"已禁用\""
+  ],
+  [
+    "label:\"Connected\"",
+    "label:\"已连接\""
+  ],
+  [
+    "label:\"Disconnected\"",
+    "label:\"已断开\""
+  ],
+  [
+    "label:\"Approved\"",
+    "label:\"已批准\""
+  ],
+  [
+    "label:\"Rejected\"",
+    "label:\"已拒绝\""
+  ],
+  [
+    "label:\"Pending\"",
+    "label:\"待处理\""
+  ],
+  [
+    "label:\"Running\"",
+    "label:\"运行中\""
+  ],
+  [
+    "label:\"Completed\"",
+    "label:\"已完成\""
+  ],
+  [
+    "label:\"Failed\"",
+    "label:\"失败\""
+  ],
+  [
+    "label:\"Cancelled\"",
+    "label:\"已取消\""
+  ],
+  [
+    "label:\"Loading\"",
+    "label:\"加载中\""
+  ],
+  [
+    "label:\"Searching\"",
+    "label:\"搜索中\""
+  ],
+  [
+    "label:\"Plan Mode\"",
+    "label:\"计划模式\""
+  ],
+  [
+    "label:\"Edit Mode\"",
+    "label:\"编辑模式\""
+  ],
+  [
+    "label:\"All MCP\"",
+    "label:\"所有MCP\""
+  ],
+  [
+    "label:\"Approve all listed servers\"",
+    "label:\"批准所有列出的服务器\""
+  ],
+  [
+    "label:\"Always approve all project MCP servers\"",
+    "label:\"始终批准所有项目MCP服务器\""
+  ],
+  [
+    "label:\"Approve all file edits without asking until you exit.\"",
+    "label:\"批准所有文件编辑，退出前不再询问。\""
+  ],
+  [
+    "label:\"Add to workspace context in memory only — not saved to disk.\"",
+    "label:\"仅在内存中添加到工作区上下文 — 不保存到磁盘。\""
+  ],
+  [
+    "label:\"Additional Directories\"",
+    "label:\"附加目录\""
+  ],
+  [
+    "label:\"Allowed Environment Variables\"",
+    "label:\"允许的环境变量\""
+  ],
+  [
+    "label:\"Approved External Import Projects\"",
+    "label:\"已批准的外部导入项目\""
+  ],
+  [
+    "label:\"Block Git Extensions\"",
+    "label:\"阻止Git扩展\""
+  ],
+  [
+    "label:\"Folder Trust\"",
+    "label:\"文件夹信任\""
+  ],
+  [
+    "label:\"Max Session Turns\"",
+    "label:\"最大会话轮数\""
+  ],
+  [
+    "label:\"Max Thinking Tokens\"",
+    "label:\"最大思考Token数\""
+  ],
+  [
+    "label:\"Screen Reader\"",
+    "label:\"屏幕阅读器\""
+  ],
+  [
+    "label:\"Show Memory Usage\"",
+    "label:\"显示内存使用量\""
+  ],
+  [
+    "label:\"Terminal Buffer\"",
+    "label:\"终端缓冲区\""
+  ],
+  [
+    "label:\"Use Background Color\"",
+    "label:\"使用背景色\""
+  ],
+  [
+    "label:\"Vim Keybindings\"",
+    "label:\"Vim键绑定\""
+  ],
+  [
+    "label:\"Usage Statistics\"",
+    "label:\"使用统计\""
+  ],
+  [
+    "label:\"Environment Variable Redaction\"",
+    "label:\"环境变量脱敏\""
+  ],
+  [
+    "label:\"Extension Registry URI\"",
+    "label:\"扩展注册表URI\""
+  ],
+  [
+    "label:\"Instructions Loaded Hooks\"",
+    "label:\"指令加载钩子\""
+  ],
+  [
+    "label:\"Pre Tool Use Hooks\"",
+    "label:\"工具使用前钩子\""
+  ],
+  [
+    "label:\"Post Tool Use Hooks\"",
+    "label:\"工具使用后钩子\""
+  ],
+  [
+    "label:\"Stop Hooks\"",
+    "label:\"停止钩子\""
+  ],
+  [
+    "label:\"Sub Agent Started Hooks\"",
+    "label:\"子代理启动钩子\""
+  ],
+  [
+    "label:\"Sub Agent Completed Hooks\"",
+    "label:\"子代理完成钩子\""
+  ]
+]
