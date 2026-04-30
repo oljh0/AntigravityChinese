@@ -22,7 +22,7 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(REPO_ROOT))
 
 from scripts.shared.patch_utils import load_replacements, patch_file, revert_file, init_terminal, print_status
-from scripts.cli.qoder.extract_bundle import discover_target, DEFAULT_OUTPUT
+from scripts.cli.qoder.extract_bundle import discover_target, DEFAULT_OUTPUT, ensure_runtime_resources, install_shim
 
 TRANSLATIONS_DIR = REPO_ROOT / "translations" / "patches" / "cli" / "qoder"
 
@@ -69,6 +69,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--target", type=Path, help="已提取的 JS bundle 目录；不传时使用默认路径")
     parser.add_argument("--revert", action="store_true", help="从 .bak 备份恢复原文件")
     parser.add_argument("--dry-run", action="store_true", help="只检查并输出结果，不写入文件")
+    parser.add_argument("--no-shim", action="store_true", help="只补丁 JS bundle，不安装或升级终端启动劫持")
     return parser.parse_args()
 
 
@@ -89,8 +90,17 @@ def main() -> int:
         print_status("✅", "恢复完成")
         return 0
 
-    # 确保 bundle 已提取
-    extracted_dir = ensure_extracted(output_dir)
+    if args.dry_run:
+        extracted_dir = discover_extracted(output_dir)
+        if not extracted_dir:
+            print_status("❌", f"dry-run 模式不会自动提取；未找到已提取的 JS bundle: {output_dir}")
+            return 1
+    else:
+        # 确保 bundle 已提取
+        extracted_dir = ensure_extracted(output_dir)
+        runtime_files = ensure_runtime_resources(extracted_dir)
+        if runtime_files:
+            print_status("✅", f"已补齐 Qoder 运行时资源: {len(runtime_files)} 项")
     print_status("📌", f"JS bundle 目录: {extracted_dir}")
 
     # 加载所有替换表
@@ -118,6 +128,11 @@ def main() -> int:
     if args.dry_run:
         print_status("⏳", "dry-run 模式：未写入任何文件")
     else:
+        if args.no_shim:
+            print_status("⏭️", "已跳过启动劫持安装/升级")
+        else:
+            print_status("📌", "安装/升级终端启动劫持...")
+            install_shim()
         print_status("🎉", "翻译补丁已应用")
 
     return 0

@@ -898,5 +898,953 @@
   [
     "label:\"Sub Agent Completed Hooks\"",
     "label:\"子代理完成钩子\""
+  ],
+  [
+    "\"  Type your shell command\"",
+    "\"  输入 Shell 命令\""
+  ],
+  [
+    "\"  Type your message or @path/to/file\"",
+    "\"  输入消息或 @path/to/file\""
+  ],
+  [
+    "`  Press '${tA.ESC_NORMAL_MODE}'.`",
+    "`  按 '${tA.ESC_NORMAL_MODE}'。`"
+  ],
+  [
+    "`  Press '${tA.I_INSERT_MODE}'.`",
+    "`  按 '${tA.I_INSERT_MODE}'。`"
+  ],
+  [
+    "\"You are now signed out\"",
+    "\"您已退出登录\""
+  ],
+  [
+    "`Welcome to ${R$}`",
+    "`欢迎使用 ${R$}`"
+  ],
+  [
+    "\"Sign in to get started, or exit the application.\"",
+    "\"登录后开始使用，或退出应用。\""
+  ],
+  [
+    "`Sign in again to continue using ${R$}, or exit the application.`",
+    "`重新登录后继续使用 ${R$}，或退出应用。`"
+  ],
+  [
+    "\"Starting browser login...\"",
+    "\"正在启动浏览器登录...\""
+  ],
+  [
+    "Please open the following URL in your browser to sign in:",
+    "请在浏览器中打开以下 URL 以登录："
+  ],
+  [
+    "\"Waiting for browser authorization...\"",
+    "\"正在等待浏览器授权...\""
+  ],
+  [
+    "Login successful! Welcome, ",
+    "登录成功！欢迎，"
+  ],
+  [
+    "Login failed: ",
+    "登录失败："
+  ],
+  [
+    "\"Authentication cancelled.\"",
+    "\"身份验证已取消。\""
+  ],
+  [
+    "\"Authentication is required.\"",
+    "\"需要身份验证。\""
+  ],
+  [
+    "title:\"Do you trust the files in this folder?\"",
+    "title:\"是否信任此文件夹中的文件？\""
+  ],
+  [
+    "title:\"Ready to start implementation?\"",
+    "title:\"准备开始实现了吗？\""
+  ],
+  [
+    "title:\"Agent powering down. Goodbye!\"",
+    "title:\"代理正在关闭。再见！\""
+  ],
+  [
+    "title:\"Usage Limit\"",
+    "title:\"使用限制\""
+  ],
+  [
+    "title:\"Loop Detected\"",
+    "title:\"检测到循环\""
+  ],
+  [
+    "title:\"Background Tasks\"",
+    "title:\"后台任务\""
+  ],
+  [
+    "title:\"Confirm Shell Expansion\"",
+    "title:\"确认 Shell 展开\""
+  ],
+  [
+    "title:\"Sandbox Expansion Request\"",
+    "title:\"沙箱权限扩展请求\""
+  ],
+  [
+    "title:\"Answer Questions\"",
+    "title:\"回答问题\""
+  ],
+  [
+    "title:\"Asking User\"",
+    "title:\"正在询问用户\""
+  ],
+  [
+    "title:\"Authenticating\"",
+    "title:\"正在认证\""
+  ],
+  [
+    "title:\"Verification\"",
+    "title:\"验证\""
+  ],
+  [
+    "title:\"Consent\"",
+    "title:\"授权确认\""
+  ],
+  [
+    "title:\"Shortcuts\"",
+    "title:\"快捷键\""
+  ],
+  [
+    "title:\" Help\"",
+    "title:\" 帮助\""
+  ],
+  [
+    "title:\"Login\"",
+    "title:\"登录\""
+  ],
+  [
+    "title:\"Login > Browser Login\"",
+    "title:\"登录 > 浏览器登录\""
+  ],
+  [
+    "title:\"MCP Servers\"",
+    "title:\"MCP 服务器\""
+  ],
+  [
+    "title:\"Memory\"",
+    "title:\"记忆\""
+  ],
+  [
+    "title:\"Theme\"",
+    "title:\"主题\""
+  ],
+  [
+    "title:\"Todo\"",
+    "title:\"待办\""
+  ],
+  [
+    "title:\"Review\"",
+    "title:\"代码审查\""
+  ],
+  [
+    "title:\"Review > Base branch\"",
+    "title:\"代码审查 > 基准分支\""
+  ],
+  [
+    "title:\"Review > Commit\"",
+    "title:\"代码审查 > 提交\""
+  ],
+  [
+    "title:\"Project settings\"",
+    "title:\"项目设置\""
+  ],
+  [
+    "title:\"Project settings (local)\"",
+    "title:\"项目设置（本地）\""
+  ],
+  [
+    "title:\"User settings\"",
+    "title:\"用户设置\""
+  ],
+  [
+    "title:\"Modify Trust Level\"",
+    "title:\"修改信任级别\""
+  ],
+  [
+    "title:\"Trust Folders\"",
+    "title:\"信任文件夹\""
+  ],
+  [
+    "title:\"Workspace Trust Changed\"",
+    "title:\"工作区信任已更改\""
+  ],
+  [
+    "title:\"Copy\"",
+    "title:\"复制\""
+  ],
+  [
+    "title:\"Export\"",
+    "title:\"导出\""
+  ],
+  [
+    "title:\"Feedback\"",
+    "title:\"反馈\""
+  ],
+  [
+    "title:\"Init\"",
+    "title:\"初始化\""
+  ],
+  [
+    "title:\"Rewind\"",
+    "title:\"回退\""
+  ],
+  [
+    "title:\"Upgrade\"",
+    "title:\"升级\""
+  ],
+  [
+    "placeholder:\"Enter permission rule…\"",
+    "placeholder:\"输入权限规则…\""
+  ],
+  [
+    "placeholder:\"Enter your feedback here...\"",
+    "placeholder:\"在此输入反馈...\""
+  ],
+  [
+    "placeholder:\"Enter your query...\"",
+    "placeholder:\"输入查询...\""
+  ],
+  [
+    "placeholder:\"Enter your response\"",
+    "placeholder:\"输入回复\""
+  ],
+  [
+    "placeholder:\"Filter rules…\"",
+    "placeholder:\"筛选规则…\""
+  ],
+  [
+    "placeholder:\"Paste your PAT here\"",
+    "placeholder:\"在此粘贴 PAT\""
+  ],
+  [
+    "placeholder:\"e.g. A code reviewer that checks for security issues...\"",
+    "placeholder:\"例如：检查安全问题的代码审查器...\""
+  ],
+  [
+    "placeholder:\"e.g. A data analysis skill that processes CSV files...\"",
+    "placeholder:\"例如：处理 CSV 文件的数据分析技能...\""
+  ],
+  [
+    "placeholder:\"e.g. Auto-format TypeScript files after every edit...\"",
+    "placeholder:\"例如：每次编辑后自动格式化 TypeScript 文件...\""
+  ],
+  [
+    "placeholder:\"e.g. Review changes against main.\"",
+    "placeholder:\"例如：基于 main 审查变更。\""
+  ],
+  [
+    "placeholder:\"e.g. Use a different approach.\"",
+    "placeholder:\"例如：使用不同方法。\""
+  ],
+  [
+    "label:\"All\"",
+    "label:\"全部\""
+  ],
+  [
+    "label:\"Ask\"",
+    "label:\"询问\""
+  ],
+  [
+    "label:\"Plan\"",
+    "label:\"计划\""
+  ],
+  [
+    "label:\"Shell\"",
+    "label:\"Shell\""
+  ],
+  [
+    "label:\"File\"",
+    "label:\"文件\""
+  ],
+  [
+    "label:\"Tool\"",
+    "label:\"工具\""
+  ],
+  [
+    "label:\"User\"",
+    "label:\"用户\""
+  ],
+  [
+    "label:\"Text\"",
+    "label:\"文本\""
+  ],
+  [
+    "label:\"Request\"",
+    "label:\"请求\""
+  ],
+  [
+    "label:\"Server\"",
+    "label:\"服务器\""
+  ],
+  [
+    "label:\"Path\"",
+    "label:\"路径\""
+  ],
+  [
+    "label:\"Name\"",
+    "label:\"名称\""
+  ],
+  [
+    "label:\"Type\"",
+    "label:\"类型\""
+  ],
+  [
+    "label:\"Scope\"",
+    "label:\"范围\""
+  ],
+  [
+    "label:\"Usage\"",
+    "label:\"用量\""
+  ],
+  [
+    "label:\"Theme\"",
+    "label:\"主题\""
+  ],
+  [
+    "label:\"MCP Servers\"",
+    "label:\"MCP 服务器\""
+  ],
+  [
+    "label:\"MCP Tool\"",
+    "label:\"MCP 工具\""
+  ],
+  [
+    "label:\"Local Agent\"",
+    "label:\"本地代理\""
+  ],
+  [
+    "label:\"Remote Agent\"",
+    "label:\"远程代理\""
+  ],
+  [
+    "label:\"Run Agent\"",
+    "label:\"运行代理\""
+  ],
+  [
+    "label:\"Code review\"",
+    "label:\"代码审查\""
+  ],
+  [
+    "label:\"Base branch\"",
+    "label:\"基准分支\""
+  ],
+  [
+    "label:\"Git Commit\"",
+    "label:\"Git 提交\""
+  ],
+  [
+    "label:\"Current changes\"",
+    "label:\"当前更改\""
+  ],
+  [
+    "label:\"Review staged, unstaged, and untracked files.\"",
+    "label:\"审查已暂存、未暂存和未跟踪的文件。\""
+  ],
+  [
+    "label:\"Review one recent commit.\"",
+    "label:\"审查最近的一个提交。\""
+  ],
+  [
+    "label:\"Review this branch against a selected local branch.\"",
+    "label:\"基于选定本地分支审查当前分支。\""
+  ],
+  [
+    "label:\"Keep trying\"",
+    "label:\"继续尝试\""
+  ],
+  [
+    "label:\"Never use credits\"",
+    "label:\"永不使用积分\""
+  ],
+  [
+    "label:\"Upgrade for higher limits\"",
+    "label:\"升级以获得更高限制\""
+  ],
+  [
+    "label:\"Get AI Credits - Open browser to purchase credits\"",
+    "label:\"获取 AI 积分 - 打开浏览器购买积分\""
+  ],
+  [
+    "label:\"Open upgrade page in browser\"",
+    "label:\"在浏览器中打开升级页面\""
+  ],
+  [
+    "label:\"Keep chat history\"",
+    "label:\"保留聊天历史\""
+  ],
+  [
+    "label:\"Save to file\"",
+    "label:\"保存到文件\""
+  ],
+  [
+    "label:\"Copy to clipboard\"",
+    "label:\"复制到剪贴板\""
+  ],
+  [
+    "label:\"View tools\"",
+    "label:\"查看工具\""
+  ],
+  [
+    "label:\"Type to search\"",
+    "label:\"输入以搜索\""
+  ],
+  [
+    "label:\"Next →\"",
+    "label:\"下一步 →\""
+  ],
+  [
+    "label:\"Yes\"",
+    "label:\"是\""
+  ],
+  [
+    "label:\"No\"",
+    "label:\"否\""
+  ],
+  [
+    "label:\"No, keep it\"",
+    "label:\"否，保留\""
+  ],
+  [
+    "label:\"Yes, delete it\"",
+    "label:\"是，删除\""
+  ],
+  [
+    "label:\"Reject plan\"",
+    "label:\"拒绝计划\""
+  ],
+  [
+    "label:\"Reject all listed servers\"",
+    "label:\"拒绝列出的所有服务器\""
+  ],
+  [
+    "label:\"Allow MCP Servers\"",
+    "label:\"允许 MCP 服务器\""
+  ],
+  [
+    "label:\"Enable All Project MCP Servers\"",
+    "label:\"启用所有项目 MCP 服务器\""
+  ],
+  [
+    "label:\"Delete server\"",
+    "label:\"删除服务器\""
+  ],
+  [
+    "label:\"Trust folder\"",
+    "label:\"信任文件夹\""
+  ],
+  [
+    "label:\"Free space:\"",
+    "label:\"可用空间：\""
+  ],
+  [
+    "label:\"Messages:\"",
+    "label:\"消息：\""
+  ],
+  [
+    "label:\"Prompts:\"",
+    "label:\"提示：\""
+  ],
+  [
+    "label:\"Tool calls:\"",
+    "label:\"工具调用：\""
+  ],
+  [
+    "label:\"System prompt:\"",
+    "label:\"系统提示：\""
+  ],
+  [
+    "label:\"System tools:\"",
+    "label:\"系统工具：\""
+  ],
+  [
+    "label:\"Skills:\"",
+    "label:\"技能：\""
+  ],
+  [
+    "label:\"Low\"",
+    "label:\"低\""
+  ],
+  [
+    "label:\"Full\"",
+    "label:\"完整\""
+  ],
+  [
+    "label:\"Quick\"",
+    "label:\"快速\""
+  ],
+  [
+    "label:\"Off\"",
+    "label:\"关闭\""
+  ],
+  [
+    "label:\"Other:\"",
+    "label:\"其他：\""
+  ],
+  [
+    "label:\"Email\"",
+    "label:\"邮箱\""
+  ],
+  [
+    "label:\"Error Verbosity\"",
+    "label:\"错误详细程度\""
+  ],
+  [
+    "label:\"Vim Mode\"",
+    "label:\"Vim 模式\""
+  ],
+  [
+    "label:\"Auto-Update\"",
+    "label:\"自动更新\""
+  ],
+  [
+    "label:\"Disable All Hooks\"",
+    "label:\"禁用所有钩子\""
+  ],
+  [
+    "label:\"Hide Banner\"",
+    "label:\"隐藏横幅\""
+  ],
+  [
+    "label:\"Hide Footer\"",
+    "label:\"隐藏页脚\""
+  ],
+  [
+    "label:\"Hide Tips\"",
+    "label:\"隐藏提示\""
+  ],
+  [
+    "label:\"Show Shortcuts Hint\"",
+    "label:\"显示快捷键提示\""
+  ],
+  [
+    "message:\"Resuming session...\"",
+    "message:\"正在恢复会话...\""
+  ],
+  [
+    "message:\"No Git commits found for review.\"",
+    "message:\"未找到可审查的 Git 提交。\""
+  ],
+  [
+    "message:\"Unable to list local Git branches. Run /review from a Git repository.\"",
+    "message:\"无法列出本地 Git 分支。请在 Git 仓库中运行 /review。\""
+  ],
+  [
+    "message:\"Unable to list recent Git commits. Run /review from a Git repository with commits.\"",
+    "message:\"无法列出最近的 Git 提交。请在有提交记录的 Git 仓库中运行 /review。\""
+  ],
+  [
+    "message:\"Preparing GitHub setup\"",
+    "message:\"正在准备 GitHub 设置\""
+  ],
+  [
+    "message:\"Update successful\"",
+    "message:\"更新成功\""
+  ],
+  [
+    "message:\"Update successful! The new version will be used on your next run.\"",
+    "message:\"更新成功！新版本将在下次运行时使用。\""
+  ],
+  [
+    "message:\"Unknown error\"",
+    "message:\"未知错误\""
+  ],
+  [
+    "message:\"Unknown Error\"",
+    "message:\"未知错误\""
+  ],
+  [
+    "message:\"Unknown error occurred\"",
+    "message:\"发生未知错误\""
+  ],
+  [
+    "message:\"Permission denied by SDK\"",
+    "message:\"SDK 拒绝了权限\""
+  ],
+  [
+    "message:\"Skill execution blocked by permission rules\"",
+    "message:\"技能执行已被权限规则阻止\""
+  ],
+  [
+    "message:\"Your terminal is already configured for an optimal experience with multiline input (Shift+Enter and Ctrl+Enter).\"",
+    "message:\"您的终端已完成配置，可获得最佳多行输入体验（Shift+Enter 和 Ctrl+Enter）。\""
+  ],
+  [
+    "text:\"Add directory cancelled.\"",
+    "text:\"添加目录已取消。\""
+  ],
+  [
+    "text:\"Agent context is not available.\"",
+    "text:\"代理上下文不可用。\""
+  ],
+  [
+    "text:\"Configuration is not available.\"",
+    "text:\"配置不可用。\""
+  ],
+  [
+    "text:\"Could not retrieve configuration.\"",
+    "text:\"无法获取配置。\""
+  ],
+  [
+    "text:\"Could not retrieve tool registry.\"",
+    "text:\"无法获取工具注册表。\""
+  ],
+  [
+    "text:\"No active config.\"",
+    "text:\"没有活动配置。\""
+  ],
+  [
+    "text:\"No background tasks are currently active.\"",
+    "text:\"当前没有活动的后台任务。\""
+  ],
+  [
+    "text:\"No messages to compact.\"",
+    "text:\"没有可压缩的消息。\""
+  ],
+  [
+    "text:\"Operation cancelled.\"",
+    "text:\"操作已取消。\""
+  ],
+  [
+    "text:\"Recent conversation history:\"",
+    "text:\"最近的对话历史：\""
+  ],
+  [
+    "text:\"Refreshing hierarchical memory (AGENTS.md or other context files)...\"",
+    "text:\"正在刷新层级记忆（AGENTS.md 或其他上下文文件）...\""
+  ],
+  [
+    "text:\"Reloading MCP servers...\"",
+    "text:\"正在重新加载 MCP 服务器...\""
+  ],
+  [
+    "text:\"Reloading agent skills...\"",
+    "text:\"正在重新加载代理技能...\""
+  ],
+  [
+    "text:\"Reloading agents...\"",
+    "text:\"正在重新加载代理...\""
+  ],
+  [
+    "text:\"Reloading memory from source files...\"",
+    "text:\"正在从源文件重新加载记忆...\""
+  ],
+  [
+    "text:\"Reloading plugins...\"",
+    "text:\"正在重新加载插件...\""
+  ],
+  [
+    "text:\"Request cancelled.\"",
+    "text:\"请求已取消。\""
+  ],
+  [
+    "text:\"Session context not available.\"",
+    "text:\"会话上下文不可用。\""
+  ],
+  [
+    "text:\"Slash command shell execution declined.\"",
+    "text:\"已拒绝执行斜杠命令中的 Shell。\""
+  ],
+  [
+    "text:\"Theme configuration unavailable due to NO_COLOR env variable.\"",
+    "text:\"由于 NO_COLOR 环境变量，主题配置不可用。\""
+  ],
+  [
+    "text:\"Usage: /add-dir <directory>\"",
+    "text:\"用法: /add-dir <目录>\""
+  ],
+  [
+    "text:\"Usage: /skills link <path> [--scope user|workspace]\"",
+    "text:\"用法: /skills link <路径> [--scope user|workspace]\""
+  ],
+  [
+    "text:\"You cannot enter bypass permissions mode since it is disabled in your settings.\"",
+    "text:\"无法进入绕过权限模式，因为它已在设置中禁用。\""
+  ],
+  [
+    "description:\"Show available commands\"",
+    "description:\"显示可用命令\""
+  ],
+  [
+    "description:\"Manage agents\"",
+    "description:\"管理代理\""
+  ],
+  [
+    "description:\"Sign in or change the authentication method\"",
+    "description:\"登录或更改身份验证方式\""
+  ],
+  [
+    "description:\"Sign out and clear all cached credentials\"",
+    "description:\"退出登录并清除所有缓存凭据\""
+  ],
+  [
+    "description:\"Submit feedback or report a bug with diagnostic information\"",
+    "description:\"提交反馈或带诊断信息的错误报告\""
+  ],
+  [
+    "description:\"Clear the screen and start a new conversation\"",
+    "description:\"清屏并开始新对话\""
+  ],
+  [
+    "description:\"Create a new session branch from the current conversation\"",
+    "description:\"从当前对话创建新的会话分支\""
+  ],
+  [
+    "description:\"Reload and list all available slash commands\"",
+    "description:\"重新加载并列出所有可用斜杠命令\""
+  ],
+  [
+    "description:\"Compresses the context by replacing it with a summary\"",
+    "description:\"用摘要替换上下文以压缩对话\""
+  ],
+  [
+    "description:\"Copy the last assistant response to clipboard, or /copy N for the Nth-latest\"",
+    "description:\"复制最近一次助手回复到剪贴板，或使用 /copy N 复制倒数第 N 条\""
+  ],
+  [
+    "description:\"Show application help and keyboard shortcuts\"",
+    "description:\"显示应用帮助和键盘快捷键\""
+  ],
+  [
+    "description:\"Review code changes and find actionable issues\"",
+    "description:\"审查代码变更并找出可操作的问题\""
+  ],
+  [
+    "description:\"Analyzes the project and creates a tailored context file\"",
+    "description:\"分析项目并创建定制的上下文文件\""
+  ],
+  [
+    "description:\"Manage configured Model Context Protocol (MCP) servers\"",
+    "description:\"管理已配置的模型上下文协议（MCP）服务器\""
+  ],
+  [
+    "description:\"Commands for interacting with memory\"",
+    "description:\"与记忆交互的命令\""
+  ],
+  [
+    "description:\"Open interactive TUI for managing auto-memory files\"",
+    "description:\"打开交互式 TUI 管理自动记忆文件\""
+  ],
+  [
+    "description:\"Set or manage model configuration\"",
+    "description:\"设置或管理模型配置\""
+  ],
+  [
+    "description:\"Switch to Plan Mode and view current plan\"",
+    "description:\"切换到计划模式并查看当前计划\""
+  ],
+  [
+    "description:\"Copy the currently approved plan to your clipboard\"",
+    "description:\"将当前已批准计划复制到剪贴板\""
+  ],
+  [
+    "description:\"Open the current plan file in $EDITOR\"",
+    "description:\"在 $EDITOR 中打开当前计划文件\""
+  ],
+  [
+    "description:\"Exit the application\"",
+    "description:\"退出应用\""
+  ],
+  [
+    "description:\"Continue the most recent session for the current project\"",
+    "description:\"继续当前项目最近的会话\""
+  ],
+  [
+    "description:\"Set a custom title for the current session\"",
+    "description:\"为当前会话设置自定义标题\""
+  ],
+  [
+    "description:\"Resume a session by identifier, or open the session browser\"",
+    "description:\"通过标识符恢复会话，或打开会话浏览器\""
+  ],
+  [
+    "description:\"Show account and session status\"",
+    "description:\"显示账户和会话状态\""
+  ],
+  [
+    "description:\"Change the theme\"",
+    "description:\"更改主题\""
+  ],
+  [
+    "description:\"Manage agent skills\"",
+    "description:\"管理代理技能\""
+  ],
+  [
+    "description:\"Link an agent skill from a local path. Usage: /skills link <path> [--scope user|workspace]\"",
+    "description:\"从本地路径链接代理技能。用法: /skills link <路径> [--scope user|workspace]\""
+  ],
+  [
+    "description:\"Reload the list of discovered skills. Usage: /skills reload\"",
+    "description:\"重新加载已发现的技能列表。用法: /skills reload\""
+  ],
+  [
+    "description:\"View and edit application settings\"",
+    "description:\"查看和编辑应用设置\""
+  ],
+  [
+    "description:\"Manage plugins\"",
+    "description:\"管理插件\""
+  ],
+  [
+    "description:\"Reload all plugins. Usage: /plugins reload\"",
+    "description:\"重新加载所有插件。用法: /plugins reload\""
+  ],
+  [
+    "description:\"Set up a custom status line. Uses a sub-agent to read your shell config and create a statusline script that's updated after each response.\"",
+    "description:\"设置自定义状态栏。使用子代理读取 Shell 配置并创建每次回复后更新的状态栏脚本。\""
+  ],
+  [
+    "description:\"Show background tasks panel\"",
+    "description:\"显示后台任务面板\""
+  ],
+  [
+    "description:\"Toggle vim mode on/off\"",
+    "description:\"开关 Vim 模式\""
+  ],
+  [
+    "description:\"Show all keyboard contexts and their active/inactive state\"",
+    "description:\"显示所有键盘上下文及其活动状态\""
+  ],
+  [
+    "description:\"Show keyboard context routing debug info (contexts, handlers, bindings)\"",
+    "description:\"显示键盘上下文路由调试信息（上下文、处理器、绑定）\""
+  ],
+  [
+    "description:\"Connect the current session to a remote endpoint\"",
+    "description:\"将当前会话连接到远程端点\""
+  ],
+  [
+    "description:\"Show the current remote session status\"",
+    "description:\"显示当前远程会话状态\""
+  ],
+  [
+    "description:\"Disconnect the current remote session\"",
+    "description:\"断开当前远程会话\""
+  ],
+  [
+    "description:\"Print a scannable QR for the current remote session\"",
+    "description:\"为当前远程会话打印可扫描的二维码\""
+  ],
+  [
+    "description:\"Manage remote control connection\"",
+    "description:\"管理远程控制连接\""
+  ],
+  [
+    "description:\"Show help for this prompt\"",
+    "description:\"显示此提示的帮助\""
+  ],
+  [
+    "description:\"Read-only mode\"",
+    "description:\"只读模式\""
+  ],
+  [
+    "description:\"Auto-approves edit tools\"",
+    "description:\"自动批准编辑工具\""
+  ],
+  [
+    "description:\"Prompts for approval\"",
+    "description:\"请求批准\""
+  ],
+  [
+    "description:\"YOLO mode\"",
+    "description:\"YOLO 模式\""
+  ],
+  [
+    "description:\"Show usage statistics for the current billing period\"",
+    "description:\"显示当前计费周期的使用统计\""
+  ],
+  [
+    "`${R$} Help:`",
+    "`${R$} 帮助：`"
+  ],
+  [
+    "\"### Basics\"",
+    "\"### 基础\""
+  ],
+  [
+    "\"- **Add context**: Use `@` to specify files for context (e.g., `@src/myFile.ts`) to target specific files or folders.\"",
+    "\"- **添加上下文**：使用 `@` 指定上下文文件（例如 `@src/myFile.ts`），以定位特定文件或文件夹。\""
+  ],
+  [
+    "\"- **Commands**: Type `/commands` to view all available slash commands.\"",
+    "\"- **命令**：输入 `/commands` 查看所有可用斜杠命令。\""
+  ],
+  [
+    "\"No previous sessions found for this project.\"",
+    "\"未找到当前项目的历史会话。\""
+  ],
+  [
+    "Available sessions for this project",
+    "当前项目可用会话"
+  ],
+  [
+    "let L=D.isCurrentSession?\", current\":\"\"",
+    "let L=D.isCurrentSession?\", 当前\":\"\""
+  ],
+  [
+    "No sessions found matching '",
+    "未找到匹配的会话 '"
+  ],
+  [
+    "content:\"Usage: /rename <title>\"",
+    "content:\"用法: /rename <标题>\""
+  ],
+  [
+    "Session renamed to: ",
+    "会话已重命名为："
+  ],
+  [
+    "Branched conversation. You are now in the branch. To resume the original: /resume ",
+    "已创建对话分支。您现在位于该分支中。要恢复原会话，请运行：/resume "
+  ],
+  [
+    "Failed to branch conversation: ",
+    "创建对话分支失败："
+  ],
+  [
+    "This folder contains:",
+    "此文件夹包含："
+  ],
+  [
+    "\"The current folder is not trusted. Exiting.\"",
+    "\"当前文件夹未受信任，正在退出。\""
+  ],
+  [
+    "\"No background tasks running.\"",
+    "\"没有正在运行的后台任务。\""
+  ],
+  [
+    "children:\"Command\"",
+    "children:\"命令\""
+  ],
+  [
+    "children:\"Status\"",
+    "children:\"状态\""
+  ],
+  [
+    "\"This can happen due to repetitive tool calls or other model behavior. Do you want to keep loop detection enabled or disable it for this session?\"",
+    "\"这可能由重复工具调用或其他模型行为导致。要继续启用循环检测，还是在本次会话中禁用？\""
+  ],
+  [
+    "`Keep loop detection enabled (${tA.CLOSE})`",
+    "`保持启用循环检测 (${tA.CLOSE})`"
+  ],
+  [
+    "\"Please open this URL in a browser: ",
+    "\"请在浏览器中打开此 URL："
+  ],
+  [
+    "\"Failed to open verification link. Please try again or change authentication.\"",
+    "\"无法打开验证链接。请重试或更改认证方式。\""
   ]
 ]

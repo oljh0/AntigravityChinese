@@ -79,7 +79,9 @@ python scripts/cli/kiro/extract_strings.py --diff
 python scripts/cli/qoder/extract_bundle.py
 python scripts/cli/qoder/patch_app_zh.py
 ```
-`extract_bundle.py` 会自动发现 `qodercli.exe`，提取 Bun `.bun` 节区中的 JS bundle 到 `%USERPROFILE%\.qoder\extracted`，并配置终端启动劫持，让 `qodercli` 指向汉化后的 `index.js`。`patch_app_zh.py` 会对已提取的 JS 文件应用文本替换；若尚未提取，会先自动提取，但不会单独配置启动劫持。
+`extract_bundle.py` 会自动发现 `qodercli.exe`，提取 Bun `.bun` 节区中的 JS bundle 到 `%USERPROFILE%\.qoder\extracted`，并配置终端启动劫持，让 `qodercli` 指向汉化后的 `index.js`。Qoder CLI 的 `--help` 文本来自这个已提取的 JS bundle，不来自 `datafiles/`。`patch_app_zh.py` 会对已提取的 JS 文件应用文本替换；正式补丁成功后默认安装/升级终端启动劫持，使用 `--no-shim` 可只补丁 bundle。`--dry-run` 仅检查现有提取目录，不会提取、写入 JS 或修改 profile。
+
+如果 PowerShell/Windows Terminal 中 `qodercli --help` 或交互界面仍然乱码，先确认 `Get-Command qodercli` 解析到 `Function`，而不是 npm 安装的 `qodercli.ps1`。新版 shim 会临时切换 active code page 到 65001 并设置 Console 输入/输出编码；Qoder bundle 还会补丁 stdout/stderr 写入入口，对交互模式和 `--list-sessions` 这类非帮助输出做 UTF-8 mojibake 纠偏。未生效时重新运行 `python scripts/cli/qoder/patch_app_zh.py` 以升级 profile 配置并重写 bundle。
 
 辅助维护词条时可扫描已提取的 bundle：
 ```bash

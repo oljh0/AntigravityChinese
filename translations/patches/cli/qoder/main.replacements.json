@@ -1,5 +1,85 @@
 [
   [
+    "Usage: ${hD} [options] [command]\n\n${R$} - Defaults to interactive mode. Use -p/--print for non-interactive output.",
+    "用法: ${hD} [选项] [命令]\n\n${R$} - 默认进入交互模式。使用 -p/--print 进行非交互式输出。"
+  ],
+  [
+    "deferY18nLookup(\"Show help\")",
+    "deferY18nLookup(\"显示帮助\")"
+  ],
+  [
+    "deferY18nLookup(\"Show version number\")",
+    "deferY18nLookup(\"显示版本号\")"
+  ],
+  [
+    "f(\"Positionals:\")",
+    "f(\"位置参数:\")"
+  ],
+  [
+    "f(\"Commands:\")",
+    "f(\"命令:\")"
+  ],
+  [
+    "f(\"Options:\")",
+    "f(\"选项:\")"
+  ],
+  [
+    "f(\"Examples:\")",
+    "f(\"示例:\")"
+  ],
+  [
+    "f(\"command\")",
+    "f(\"命令\")"
+  ],
+  [
+    "f(\"default\")",
+    "f(\"默认\")"
+  ],
+  [
+    "f(\"default:\")",
+    "f(\"默认:\")"
+  ],
+  [
+    "f(\"aliases:\")",
+    "f(\"别名:\")"
+  ],
+  [
+    "f(\"choices:\")",
+    "f(\"可选值:\")"
+  ],
+  [
+    "f(\"required\")",
+    "f(\"必需\")"
+  ],
+  [
+    "f(\"deprecated\")",
+    "f(\"已弃用\")"
+  ],
+  [
+    "\"deprecated: %s\"",
+    "\"已弃用: %s\""
+  ],
+  [
+    "CH=`[${f(\"boolean\")}]`",
+    "CH=`[${f(\"布尔\")}]`"
+  ],
+  [
+    "CH=`[${f(\"count\")}]`",
+    "CH=`[${f(\"计数\")}]`"
+  ],
+  [
+    "if(AH.string.includes(HH))CH=`[${f(\"string\")}]`;if(AH.normalize.includes(HH))CH=`[${f(\"string\")}]`",
+    "if(AH.string.includes(HH))CH=`[${f(\"字符串\")}]`;if(AH.normalize.includes(HH))CH=`[${f(\"字符串\")}]`"
+  ],
+  [
+    "CH=`[${f(\"array\")}]`",
+    "CH=`[${f(\"数组\")}]`"
+  ],
+  [
+    "CH=`[${f(\"number\")}]`",
+    "CH=`[${f(\"数字\")}]`"
+  ],
+  [
     "describe:\"Add a server from a JSON config string\"",
     "describe:\"从JSON配置字符串添加服务器\""
   ],
@@ -362,5 +442,9 @@
   [
     "description:\"System prompt to use for the session.\"",
     "description:\"用于本次会话的系统提示。\""
+  ],
+  [
+    "function HI(...H){return ZEI(...H)}function NL(...H){return zEI(...H)}",
+    "function __qoderZhFix(H){if(typeof H!==\"string\"||!/[\\u0080-\\u009f\\u00c0-\\u00ff]/.test(H))return H;try{let A=[],f=new TextEncoder;for(let D of H){let L=D.charCodeAt(0);if(L<=255)A.push(L);else A.push(...f.encode(D))}let I=new TextDecoder(\"utf-8\").decode(new Uint8Array(A));return /[\\u4e00-\\u9fff]/.test(I)?I:H}catch{return H}}function HI(...H){return ZEI(...H.map(__qoderZhFix))}function NL(...H){return zEI(...H.map(__qoderZhFix))}"
   ]
 ]

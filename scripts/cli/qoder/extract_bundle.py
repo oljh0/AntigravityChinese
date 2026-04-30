@@ -31,7 +31,10 @@ sys.path.insert(0, str(REPO_ROOT))
 from scripts.shared.patch_utils import init_terminal, print_status
 
 SHIM_MARKER = "# Qoder CLI 汉化版 - 由 AntigravityChinese 自动配置"
+SHIM_VERSION_MARKER = "# Qoder CLI 汉化版 - shim v5 utf8-help-decode"
 DEFAULT_OUTPUT = Path.home() / ".qoder" / "extracted"
+VIRTUAL_ROOT_PREFIX = "B:/~BUN/root/"
+VIRTUAL_ROOT_DIR = Path("bunfs") / "~BUN" / "root"
 
 # ---------------------------------------------------------------------------
 # exe 路径发现（与 patch_app_zh.py 共享逻辑）
@@ -100,6 +103,109 @@ def find_bun_section(sections: list[dict]) -> dict | None:
     return None
 
 
+def _clean_bun_filename(raw_path: str) -> str:
+    basename = raw_path.rsplit('/', 1)[-1] if '/' in raw_path else raw_path
+    name_match = re.match(r'^(.+?)-[a-z0-9]{8}(\.\w+)$', basename)
+    if name_match:
+        return name_match.group(1) + name_match.group(2)
+    return basename
+
+
+def _write_extracted_file(output_dir: Path, raw_path: str, content: bytes, overwrite: bool = True) -> list[str]:
+    written: list[str] = []
+    basename = raw_path.rsplit('/', 1)[-1] if '/' in raw_path else raw_path
+    clean_name = _clean_bun_filename(raw_path)
+
+    if raw_path.startswith(VIRTUAL_ROOT_PREFIX):
+        virtual_path = output_dir / VIRTUAL_ROOT_DIR / basename
+        virtual_path.parent.mkdir(parents=True, exist_ok=True)
+        if overwrite or not virtual_path.exists():
+            virtual_path.write_bytes(content)
+        written.append(str(VIRTUAL_ROOT_DIR / basename))
+
+    out_path = output_dir / clean_name
+    if overwrite or not out_path.exists():
+        out_path.write_bytes(content)
+    written.append(clean_name)
+    return written
+
+
+def _iter_embedded_file_records(data: bytes, bun_sec: dict) -> list[tuple[str, bytes]]:
+    bun_off = bun_sec['raw_offset']
+    data_size = struct.unpack_from('<Q', data, bun_off)[0]
+    data_start = bun_off + 8
+    data_end = data_start + data_size
+
+    needle = VIRTUAL_ROOT_PREFIX.encode("utf-8")
+    starts: list[tuple[int, int, str]] = []
+    pos = data_start
+    while True:
+        path_start = data.find(needle, pos, data_end)
+        if path_start == -1:
+            break
+        pos = path_start + 1
+        if path_start <= data_start or data[path_start - 1] != 0:
+            continue
+        path_end = data.find(b"\x00", path_start, min(path_start + 300, data_end))
+        if path_end == -1:
+            continue
+        try:
+            raw_path = data[path_start:path_end].decode("utf-8")
+        except UnicodeDecodeError:
+            continue
+        starts.append((path_start, path_end, raw_path))
+
+    records: list[tuple[str, bytes]] = []
+    for index, (path_start, path_end, raw_path) in enumerate(starts):
+        content_start = path_end + 1
+        content_end = starts[index + 1][0] - 1 if index + 1 < len(starts) else data_end
+        if content_start < content_end:
+            records.append((raw_path, data[content_start:content_end]))
+    return records
+
+
+def rewrite_virtual_paths(output_dir: Path) -> bool:
+    index_js = output_dir / "index.js"
+    if not index_js.exists():
+        return False
+    text = index_js.read_text(encoding="utf-8", errors="ignore")
+    virtual_root = (output_dir / VIRTUAL_ROOT_DIR).resolve().as_posix()
+    updated = text.replace(VIRTUAL_ROOT_PREFIX, f"{virtual_root}/")
+    if updated == text:
+        return False
+    index_js.write_text(updated, encoding="utf-8")
+    return True
+
+
+def ensure_runtime_resources(output_dir: Path, target: Path | None = None) -> list[str]:
+    """补齐 JS bundle 运行时需要的 Bun 虚拟文件资源。"""
+    target_path = (target or discover_target()).expanduser().resolve()
+    if not target_path.exists():
+        print_status("⚠️", f"无法补齐运行时资源，未找到 qodercli.exe: {target_path}")
+        return []
+
+    data = target_path.read_bytes()
+    bun_sec = find_bun_section(parse_pe_sections(data))
+    if bun_sec is None:
+        print_status("⚠️", "无法补齐运行时资源，未找到 .bun 节区")
+        return []
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+    written: list[str] = []
+    for raw_path, content in _iter_embedded_file_records(data, bun_sec):
+        basename = raw_path.rsplit('/', 1)[-1]
+        if basename == "index.js":
+            continue
+        virtual_path = output_dir / VIRTUAL_ROOT_DIR / basename
+        if virtual_path.exists():
+            continue
+        written.extend(_write_extracted_file(output_dir, raw_path, content, overwrite=False))
+
+    if rewrite_virtual_paths(output_dir):
+        written.append("index.js")
+    return written
+
+
 def extract_modules(data: bytes, bun_sec: dict, output_dir: Path) -> list[str]:
     """从 .bun 节区提取所有嵌入模块。
 
@@ -163,26 +269,32 @@ def extract_modules(data: bytes, bun_sec: dict, output_dir: Path) -> list[str]:
         abs_path_off = data_start + path_off
         raw_path = data[abs_path_off : abs_path_off + path_len].decode('utf-8', errors='replace').rstrip('\x00')
 
-        # 从 B:/~BUN/root/filename-hash.ext 中提取文件名
-        basename = raw_path.rsplit('/', 1)[-1] if '/' in raw_path else raw_path
-        # 去掉 hash 后缀: filename-hash.ext → filename.ext
-        name_match = re.match(r'^(.+?)-[a-z0-9]{8}(\.\w+)$', basename)
-        if name_match:
-            clean_name = name_match.group(1) + name_match.group(2)
-        else:
-            clean_name = basename
-
         # 读取内容
         abs_code_off = data_start + code_off
         content = data[abs_code_off : abs_code_off + code_len]
 
         # 写入文件
-        out_path = output_dir / clean_name
-        out_path.write_bytes(content)
-        extracted.append(clean_name)
+        written = _write_extracted_file(output_dir, raw_path, content)
+        clean_name = _clean_bun_filename(raw_path)
+        extracted.extend(written)
 
         size_str = f"{code_len:,}" if code_len < 1024 * 1024 else f"{code_len / 1024 / 1024:.1f} MB"
         print_status("✅", f"  {clean_name} ({size_str})")
+
+    embedded_records = _iter_embedded_file_records(data, bun_sec)
+    extra_count = 0
+    for raw_path, content in embedded_records:
+        if raw_path.endswith("/index.js"):
+            continue
+        written = _write_extracted_file(output_dir, raw_path, content)
+        extracted.extend(written)
+        extra_count += 1
+
+    if rewrite_virtual_paths(output_dir):
+        print_status("✅", "  index.js (已重写 Bun 虚拟资源路径)")
+
+    if extra_count:
+        print_status("✅", f"  已补齐 Bun 虚拟资源 {extra_count} 个")
 
     return extracted
 
@@ -193,12 +305,20 @@ def extract_modules(data: bytes, bun_sec: dict, output_dir: Path) -> list[str]:
 
 def _get_ps_profile_paths() -> list[tuple[str, Path]]:
     """获取所有 PowerShell $PROFILE 路径（Windows PowerShell + PowerShell 7）。"""
+    profiles: list[tuple[str, Path]] = []
+    seen: set[str] = set()
+
+    def add_profile(label: str, path: Path) -> None:
+        expanded = path.expanduser()
+        key = str(expanded).lower()
+        if key not in seen:
+            seen.add(key)
+            profiles.append((label, expanded))
+
     shells = [
         ("Windows PowerShell", r"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"),
         ("PowerShell 7", "pwsh.exe"),
     ]
-    profiles: list[tuple[str, Path]] = []
-    seen: set[str] = set()
     for label, exe in shells:
         try:
             result = subprocess.run(
@@ -206,13 +326,24 @@ def _get_ps_profile_paths() -> list[tuple[str, Path]]:
                 capture_output=True, text=True, timeout=10
             )
             if result.returncode == 0 and result.stdout.strip():
-                p = Path(result.stdout.strip())
-                key = str(p).lower()
-                if key not in seen:
-                    seen.add(key)
-                    profiles.append((label, p))
+                add_profile(label, Path(result.stdout.strip()))
         except Exception:
             pass
+
+    # Some launched shells report a redirected Documents path that differs from
+    # the interactive shell currently running this script. Also cover the
+    # conventional current-user profile locations so qodercli resolves to the
+    # shim after a normal terminal restart.
+    homes: list[Path] = []
+    for value in (os.environ.get("USERPROFILE"), os.environ.get("HOME"), str(Path.home())):
+        if value:
+            home = Path(value).expanduser()
+            if home not in homes:
+                homes.append(home)
+    for home in homes:
+        add_profile("PowerShell 7 current-user fallback", home / "Documents" / "PowerShell" / "Microsoft.PowerShell_profile.ps1")
+        add_profile("Windows PowerShell current-user fallback", home / "Documents" / "WindowsPowerShell" / "Microsoft.PowerShell_profile.ps1")
+
     return profiles
 
 
@@ -221,16 +352,93 @@ def _get_bashrc_path() -> Path:
 
 
 PS_SHIM = f"""\n{SHIM_MARKER}
+{SHIM_VERSION_MARKER}
 function qodercli {{
     $extractedJs = "$env:USERPROFILE\\.qoder\\extracted\\index.js"
     $bunExe = "$env:LOCALAPPDATA\\Kiro-Cli\\bun.exe"
     if ((Test-Path $extractedJs) -and (Test-Path $bunExe)) {{
-        $prevCP = [Console]::OutputEncoding.CodePage
-        chcp 65001 | Out-Null
-        [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
-        & $bunExe run $extractedJs @args
-        [Console]::OutputEncoding = [System.Text.Encoding]::GetEncoding($prevCP)
-        chcp $prevCP | Out-Null
+        function ConvertFrom-QoderUtf8Mojibake([string]$text) {{
+            if ([string]::IsNullOrEmpty($text)) {{
+                return $text
+            }}
+            $bytes = [System.Collections.Generic.List[byte]]::new()
+            foreach ($char in $text.ToCharArray()) {{
+                $code = [int][char]$char
+                if ($code -le 255) {{
+                    $bytes.Add([byte]$code)
+                }} else {{
+                    $bytes.AddRange([System.Text.Encoding]::UTF8.GetBytes([string]$char))
+                }}
+            }}
+            return [System.Text.Encoding]::UTF8.GetString($bytes.ToArray())
+        }}
+
+        $prevOutputEncoding = [Console]::OutputEncoding
+        $prevInputEncoding = [Console]::InputEncoding
+        $prevLang = $env:LANG
+        $prevLcAll = $env:LC_ALL
+        $prevPythonIoEncoding = $env:PYTHONIOENCODING
+        $prevCodePage = $null
+        $chcpOutput = & cmd /c chcp 2>$null
+        if ($chcpOutput -match ':\\s*([0-9]+)') {{
+            $prevCodePage = $Matches[1]
+        }}
+        $qoderExitCode = $null
+        try {{
+            chcp 65001 | Out-Null
+            [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false)
+            [Console]::InputEncoding = [System.Text.UTF8Encoding]::new($false)
+            $env:LANG = "en_US.UTF-8"
+            $env:LC_ALL = "en_US.UTF-8"
+            $env:PYTHONIOENCODING = "utf-8"
+            $qoderArgs = @($args)
+            $shouldDecodeHelpOutput = $false
+            foreach ($arg in $qoderArgs) {{
+                if (@("--help", "-h", "help", "--version", "-v", "version") -contains [string]$arg) {{
+                    $shouldDecodeHelpOutput = $true
+                    break
+                }}
+            }}
+            if ($shouldDecodeHelpOutput) {{
+                $startInfo = [System.Diagnostics.ProcessStartInfo]::new()
+                $startInfo.FileName = $bunExe
+                $startInfo.UseShellExecute = $false
+                $startInfo.RedirectStandardOutput = $true
+                $startInfo.RedirectStandardError = $true
+                $startInfo.StandardOutputEncoding = [System.Text.UTF8Encoding]::new($false)
+                $startInfo.StandardErrorEncoding = [System.Text.UTF8Encoding]::new($false)
+                [void]$startInfo.ArgumentList.Add("run")
+                [void]$startInfo.ArgumentList.Add($extractedJs)
+                foreach ($arg in $qoderArgs) {{
+                    [void]$startInfo.ArgumentList.Add([string]$arg)
+                }}
+                $process = [System.Diagnostics.Process]::Start($startInfo)
+                $stdout = $process.StandardOutput.ReadToEnd()
+                $stderr = $process.StandardError.ReadToEnd()
+                $process.WaitForExit()
+                $decodedStdout = ConvertFrom-QoderUtf8Mojibake $stdout
+                if ($decodedStdout.Length -gt 0) {{
+                    Write-Output -NoEnumerate $decodedStdout
+                }}
+                [Console]::Error.Write((ConvertFrom-QoderUtf8Mojibake $stderr))
+                $qoderExitCode = $process.ExitCode
+            }} else {{
+                & $bunExe run $extractedJs @args
+                $qoderExitCode = $LASTEXITCODE
+            }}
+        }} finally {{
+            [Console]::OutputEncoding = $prevOutputEncoding
+            [Console]::InputEncoding = $prevInputEncoding
+            if ($null -eq $prevLang) {{ Remove-Item Env:LANG -ErrorAction SilentlyContinue }} else {{ $env:LANG = $prevLang }}
+            if ($null -eq $prevLcAll) {{ Remove-Item Env:LC_ALL -ErrorAction SilentlyContinue }} else {{ $env:LC_ALL = $prevLcAll }}
+            if ($null -eq $prevPythonIoEncoding) {{ Remove-Item Env:PYTHONIOENCODING -ErrorAction SilentlyContinue }} else {{ $env:PYTHONIOENCODING = $prevPythonIoEncoding }}
+            if ($prevCodePage) {{
+                chcp $prevCodePage | Out-Null
+            }}
+        }}
+        if ($null -ne $qoderExitCode) {{
+            $global:LASTEXITCODE = $qoderExitCode
+        }}
     }} else {{
         & "$env:ProgramFiles\\nodejs\\node_modules\\@qoder-ai\\qodercli\\bin\\qodercli.exe" @args
     }}
@@ -305,7 +513,9 @@ def _is_shim_outdated(content: str) -> bool:
     检测条件：
     - bun 路径缺少 .exe 扩展名（旧版）
     - 缺少 UTF-8 编码设置（第一版）
-    - 缺少 prevCP 编码恢复逻辑（第二版）
+    - 缺少编码恢复逻辑（第二版）
+    - 缺少输入编码、LC_ALL、try/finally 或当前版本标记（第三版）
+    - 缺少 help/version 输出纠偏逻辑（第四版）
     
     文件中的 shim 内容含单反斜杠路径，如 Kiro-Cli\\bun"（Python: 'Kiro-Cli\\bun"'）。
     """
@@ -313,8 +523,12 @@ def _is_shim_outdated(content: str) -> bool:
         return False
     old_bun = r'Kiro-Cli\bun"' in content and 'bun.exe' not in content
     missing_utf8 = 'OutputEncoding' not in content
-    missing_restore = 'prevCP' not in content
-    return old_bun or missing_utf8 or missing_restore
+    missing_input_encoding = 'InputEncoding' not in content
+    missing_lc_all = 'LC_ALL' not in content
+    missing_try_finally = 'try {' not in content or 'finally {' not in content
+    missing_help_decode = 'ConvertFrom-QoderUtf8Mojibake' not in content or 'ProcessStartInfo' not in content
+    missing_version = SHIM_VERSION_MARKER not in content
+    return old_bun or missing_utf8 or missing_input_encoding or missing_lc_all or missing_try_finally or missing_help_decode or missing_version
 
 
 def install_shim() -> None:
