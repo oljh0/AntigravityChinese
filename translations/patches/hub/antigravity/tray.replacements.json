@@ -1,0 +1,6 @@
+[
+  [
+    "countItem.label =\n                (count > 0 ? `${count}` : 'No') +\n                    ' agent' +\n                    (count === 1 ? '' : 's') +\n                    ' running';",
+    "countItem.label = count > 0 ? `${count} 个 Agent 运行中` : '没有运行中的 Agent';"
+  ]
+]

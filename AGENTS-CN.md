@@ -2,7 +2,9 @@
 
 ## 项目结构与模块组织
 
-本仓库为 Antigravity IDE 以及 Copilot、Gemini、Kiro、Qoder CLI 提供简体中文语言包和补丁工具。`extension.js` 是 VS Code/Antigravity 扩展入口。翻译资源位于 `translations/`：`extensions/` 保存官方 i18n JSON，`patches/` 按产品保存硬编码字符串替换表，例如 `ide/antigravity` 和 `cli/qoder`。Python 补丁和提取工具位于 `scripts/`，按 `ide/`、`cli/` 拆分，共享工具在 `scripts/shared/`。测试位于 `tests/`，根目录还保留少量历史测试文件。`datafiles/` 保存用于生成替换表的原始对照数据。
+本仓库为 Antigravity IDE、Antigravity 主程序（Hub 桌面应用）以及 Copilot、Gemini、Kiro、Qoder CLI 提供简体中文语言包和补丁工具。`extension.js` 是 VS Code/Antigravity 扩展入口。翻译资源位于 `translations/`：`extensions/` 保存官方 i18n JSON，`patches/` 按产品保存硬编码字符串替换表，例如 `ide/antigravity`、`hub/antigravity` 和 `cli/qoder`。Python 补丁和提取工具位于 `scripts/`，按 `ide/`、`hub/`、`cli/` 拆分，共享工具在 `scripts/shared/`。测试位于 `tests/`，根目录还保留少量历史测试文件。`datafiles/` 保存用于生成替换表的原始对照数据。
+
+注意：Antigravity 2.x 起，Hub 主程序（`Programs/Antigravity`，Electron 外壳，主界面由 `resources/bin/language_server.exe` 内嵌网页提供）与 IDE 内核（`Programs/Antigravity IDE`）是两个独立安装。Hub 补丁会解包 `resources/app.asar` 为 `app/` 目录、汉化原生 UI 字符串，并在 `resources/zh-patch/` 安装网页词典翻译组件。
 
 ## 构建、测试与开发命令
 
@@ -10,6 +12,7 @@
 - `python -m pytest tests test_chinese_output.py test_gbk_output.py`：运行自动化测试。
 - `python scripts/shared/generate_replacements.py`：从 `datafiles/` 重新生成替换 JSON。
 - `python scripts/ide/antigravity/patch_zh.py --dry-run`：预览 IDE 补丁匹配情况，不修改安装文件。
+- `python scripts/hub/antigravity/patch_hub_zh.py --dry-run`：预览 Hub 主程序 asar 解包与原生补丁匹配情况。
 - `python scripts/cli/gemini/patch_app_zh.py --dry-run`：预览 Gemini CLI 汉化。
 - `python scripts/cli/kiro/patch_app_zh.py --dry-run`：预览 Kiro 二进制等长替换。
 - `python scripts/cli/qoder/extract_bundle.py`：提取 Qoder 的 Bun bundle 并配置终端 shim。

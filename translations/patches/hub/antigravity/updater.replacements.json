@@ -1,0 +1,10 @@
+[
+  [
+    "MenuUpdateStep[\"CheckForUpdates\"] = \"Check for Updates\";\n    MenuUpdateStep[\"CheckingForUpdates\"] = \"Checking for Updates...\";\n    MenuUpdateStep[\"DownloadingUpdate\"] = \"Downloading Update...\";\n    MenuUpdateStep[\"RestartToUpdate\"] = \"Restart to Update\";",
+    "MenuUpdateStep[\"CheckForUpdates\"] = \"检查更新\";\n    MenuUpdateStep[\"CheckingForUpdates\"] = \"正在检查更新...\";\n    MenuUpdateStep[\"DownloadingUpdate\"] = \"正在下载更新...\";\n    MenuUpdateStep[\"RestartToUpdate\"] = \"重启以安装更新\";"
+  ],
+  [
+    "title: 'Check for Updates',\n                message: 'No updates available',\n                buttons: ['OK'],",
+    "title: '检查更新',\n                message: '当前已是最新版本',\n                buttons: ['确定'],"
+  ]
+]

@@ -5,6 +5,7 @@ const vscode = require('vscode');
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const child_process = require('child_process');
 
 // ══════════════════════════════════════════════════════════════════════
 // 路径配置
@@ -252,6 +253,237 @@ function unblockAutoUpdate(base) {
 }
 
 // ══════════════════════════════════════════════════════════════════════
+// Antigravity 主程序 (Hub) 汉化补丁
+// ══════════════════════════════════════════════════════════════════════
+// Antigravity 2.x 起 Hub 与 IDE 是两个独立应用：
+// Hub = %LOCALAPPDATA%/Programs/Antigravity，Electron 外壳为 resources/app.asar，
+// 主界面由 resources/bin/language_server.exe 内嵌网页提供。
+// 补丁策略：解包 asar → app 目录（Electron 优先加载目录），原生 UI 直接改中文，
+// 网页 UI 安装词典翻译组件 (resources/zh-patch) 由主进程注入。
+
+const HUB_TRANSLATIONS_DIR = path.join(__dirname, 'translations', 'patches', 'hub', 'antigravity');
+const HUB_ASSET_ZH_I18N = path.join(__dirname, 'scripts', 'hub', 'antigravity', 'assets', 'zh-i18n.js');
+
+const HUB_NATIVE_TARGETS = {
+    'utils.replacements.json': path.join('dist', 'utils.js'),
+    'menu.replacements.json': path.join('dist', 'menu.js'),
+    'main.replacements.json': path.join('dist', 'main.js'),
+    'tray.replacements.json': path.join('dist', 'tray.js'),
+    'updater.replacements.json': path.join('dist', 'updater.js'),
+    'ipchandlers.replacements.json': path.join('dist', 'ipcHandlers.js'),
+    'wizard.replacements.json': path.join('dist', 'ideInstall', 'wizardHtml.js'),
+};
+
+function getHubResourcesDir() {
+    if (process.platform === 'win32') {
+        const localAppData = process.env.LOCALAPPDATA;
+        if (!localAppData) return null;
+        return path.join(localAppData, 'Programs', 'Antigravity', 'resources');
+    }
+    if (process.platform === 'darwin') {
+        const candidates = [
+            '/Applications/Antigravity.app/Contents/Resources',
+            path.join(process.env.HOME || '', 'Applications/Antigravity.app/Contents/Resources'),
+        ];
+        for (const c of candidates) {
+            if (fs.existsSync(c)) return c;
+        }
+        return candidates[0];
+    }
+    return null;
+}
+
+function isHubProcessRunning() {
+    if (process.platform !== 'win32') return false;
+    try {
+        const output = child_process.execFileSync(
+            'tasklist', ['/FI', 'IMAGENAME eq Antigravity.exe'],
+            { encoding: 'utf-8', timeout: 10000 }
+        );
+        return output.toLowerCase().includes('antigravity.exe');
+    } catch {
+        return false;
+    }
+}
+
+function isHubPatched(resourcesDir) {
+    if (!resourcesDir) return false;
+    return fs.existsSync(path.join(resourcesDir, 'app.asar.orig'))
+        && fs.existsSync(path.join(resourcesDir, 'app'))
+        && fs.existsSync(path.join(resourcesDir, 'zh-patch', 'zh-i18n.js'))
+        && fs.existsSync(path.join(resourcesDir, 'zh-patch', 'cockpit-zh.json'));
+}
+
+function readAsarHeader(asarPath) {
+    const fd = fs.openSync(asarPath, 'r');
+    try {
+        const pre = Buffer.alloc(16);
+        fs.readSync(fd, pre, 0, 16, 0);
+        const pickleLen = pre.readUInt32LE(4);
+        const jsonLen = pre.readUInt32LE(12);
+        const jsonBuf = Buffer.alloc(jsonLen);
+        fs.readSync(fd, jsonBuf, 0, jsonLen, 16);
+        return { header: JSON.parse(jsonBuf.toString('utf-8')), dataBase: 8 + pickleLen, fd };
+    } catch (e) {
+        fs.closeSync(fd);
+        throw e;
+    }
+}
+
+function unpackHubAsar(asarPath, outDir, unpackedRoot) {
+    const { header, dataBase, fd } = readAsarHeader(asarPath);
+    let fromAsar = 0, fromUnpacked = 0;
+    try {
+        const walk = (node, rel) => {
+            for (const [name, meta] of Object.entries(node.files || {})) {
+                const relPath = rel ? `${rel}/${name}` : name;
+                const outPath = path.join(outDir, relPath);
+                if (meta.files) {
+                    fs.mkdirSync(outPath, { recursive: true });
+                    walk(meta, relPath);
+                } else if (meta.unpacked) {
+                    if (unpackedRoot) {
+                        fs.mkdirSync(path.dirname(outPath), { recursive: true });
+                        fs.copyFileSync(path.join(unpackedRoot, relPath), outPath);
+                        fromUnpacked++;
+                    }
+                } else {
+                    const buf = Buffer.alloc(meta.size);
+                    fs.readSync(fd, buf, 0, meta.size, dataBase + parseInt(meta.offset, 10));
+                    fs.mkdirSync(path.dirname(outPath), { recursive: true });
+                    fs.writeFileSync(outPath, buf);
+                    fromAsar++;
+                }
+            }
+        };
+        fs.mkdirSync(outDir, { recursive: true });
+        walk(header, '');
+    } finally {
+        fs.closeSync(fd);
+    }
+    return { fromAsar, fromUnpacked };
+}
+
+function patchHubNativeFile(filepath, replacements) {
+    let content = fs.readFileSync(filepath, 'utf-8');
+    let applied = 0;
+    const failed = [];
+    for (const [oldStr, newStr] of replacements) {
+        if (content.includes(oldStr)) {
+            content = content.split(oldStr).join(newStr);
+            applied++;
+        } else if (!content.includes(newStr)) {
+            failed.push(oldStr.substring(0, 60).replace(/\n/g, '\\n'));
+        }
+    }
+    fs.writeFileSync(filepath, content, 'utf-8');
+    return { applied, failed, total: replacements.length };
+}
+
+function resetHubState(resourcesDir) {
+    const asarPath = path.join(resourcesDir, 'app.asar');
+    const asarOrig = path.join(resourcesDir, 'app.asar.orig');
+    const appDir = path.join(resourcesDir, 'app');
+    const kitDir = path.join(resourcesDir, 'zh-patch');
+    let changed = false;
+    if (fs.existsSync(asarOrig)) {
+        if (fs.existsSync(asarPath)) fs.unlinkSync(asarPath);
+        fs.renameSync(asarOrig, asarPath);
+        changed = true;
+    }
+    if (fs.existsSync(appDir)) {
+        fs.rmSync(appDir, { recursive: true, force: true });
+        changed = true;
+    }
+    if (fs.existsSync(kitDir)) {
+        fs.rmSync(kitDir, { recursive: true, force: true });
+        changed = true;
+    }
+    return changed;
+}
+
+function applyHubPatch(silent) {
+    const resourcesDir = getHubResourcesDir();
+    if (!resourcesDir) {
+        if (!silent) vscode.window.showErrorMessage('当前平台不支持自动发现 Antigravity 主程序安装目录');
+        return false;
+    }
+    const asarPath = path.join(resourcesDir, 'app.asar');
+
+    if (isHubPatched(resourcesDir)) {
+        if (!silent) vscode.window.showInformationMessage('Antigravity 主程序汉化补丁已是最新状态');
+        return true;
+    }
+    if (isHubProcessRunning()) {
+        vscode.window.showErrorMessage('检测到 Antigravity 主程序正在运行，请先完全退出（含托盘图标）后重试。');
+        return false;
+    }
+    if (resetHubState(resourcesDir)) {
+        console.log('[antigravity-zh] 检测到旧的 Hub 汉化状态，已重置为英文原版');
+    }
+    if (!fs.existsSync(asarPath)) {
+        vscode.window.showErrorMessage(`未找到 ${asarPath}`);
+        return false;
+    }
+
+    // 1. 解包 asar
+    const appDir = path.join(resourcesDir, 'app');
+    const { fromAsar, fromUnpacked } = unpackHubAsar(
+        asarPath, appDir, path.join(resourcesDir, 'app.asar.unpacked'));
+
+    // 2. 应用原生 UI 补丁
+    const results = [];
+    for (const [tableFile, relPath] of Object.entries(HUB_NATIVE_TARGETS)) {
+        const target = path.join(appDir, relPath);
+        if (!fs.existsSync(target)) continue;
+        const replacements = JSON.parse(
+            fs.readFileSync(path.join(HUB_TRANSLATIONS_DIR, tableFile), 'utf-8'));
+        results.push({ name: tableFile.replace('.replacements.json', ''), ...patchHubNativeFile(target, replacements) });
+    }
+
+    // 3. 安装网页 UI 翻译组件
+    const kitDir = path.join(resourcesDir, 'zh-patch');
+    fs.mkdirSync(kitDir, { recursive: true });
+    fs.copyFileSync(HUB_ASSET_ZH_I18N, path.join(kitDir, 'zh-i18n.js'));
+    fs.copyFileSync(
+        path.join(HUB_TRANSLATIONS_DIR, 'webui.dictionary.json'),
+        path.join(kitDir, 'cockpit-zh.json'));
+
+    // 4. 停用原 asar
+    fs.renameSync(asarPath, path.join(resourcesDir, 'app.asar.orig'));
+
+    const totalSuccess = results.reduce((s, r) => s + r.applied, 0);
+    const totalAll = results.reduce((s, r) => s + r.total, 0);
+    const failedCount = results.reduce((s, r) => s + r.failed.length, 0);
+    console.log(`[antigravity-zh] Hub 补丁: 解包 ${fromAsar}+${fromUnpacked} 文件, 原生替换 ${totalSuccess}/${totalAll}, 未匹配 ${failedCount}`);
+
+    if (!silent) {
+        const detail = results.map(r => `${r.name}: ${r.applied}/${r.total}`).join(' | ');
+        vscode.window.showInformationMessage(
+            `Antigravity 主程序汉化完成！(${detail})。词典位于 resources/zh-patch/cockpit-zh.json，修改后在应用内 Ctrl+R 生效。`
+        );
+    }
+    return true;
+}
+
+function revertHubPatch() {
+    const resourcesDir = getHubResourcesDir();
+    if (!resourcesDir) {
+        vscode.window.showErrorMessage('当前平台不支持自动发现 Antigravity 主程序安装目录');
+        return;
+    }
+    if (isHubProcessRunning()) {
+        vscode.window.showErrorMessage('检测到 Antigravity 主程序正在运行，请先完全退出（含托盘图标）后重试。');
+        return;
+    }
+    if (resetHubState(resourcesDir)) {
+        vscode.window.showInformationMessage('Antigravity 主程序已恢复英文原版，请重新启动它生效。');
+    } else {
+        vscode.window.showInformationMessage('未检测到 Antigravity 主程序汉化痕迹，无需恢复。');
+    }
+}
+
+// ══════════════════════════════════════════════════════════════════════
 // 插件激活 / 命令
 // ══════════════════════════════════════════════════════════════════════
 
@@ -365,6 +597,23 @@ function activate(context) {
     context.subscriptions.push(updateBlockStatusBar);
 
     // ── 注册命令 ──
+    vscode.commands.registerCommand('antigravity-zh.applyHubPatch', () => {
+        vscode.window.showWarningMessage(
+            '将对 Antigravity 主程序（Hub）应用汉化补丁：解包 app.asar 并修改其安装文件。继续？',
+            '应用补丁', '取消'
+        ).then(choice => {
+            if (choice === '应用补丁') {
+                try {
+                    applyHubPatch(false);
+                } catch (e) {
+                    vscode.window.showErrorMessage(`Hub 汉化失败: ${e.message}`);
+                }
+            }
+        });
+    });
+    vscode.commands.registerCommand('antigravity-zh.revertHubPatch', () => {
+        revertHubPatch();
+    });
     context.subscriptions.push(
         vscode.commands.registerCommand('antigravity-zh.applyPatch', () => applyAllPatches(false)),
         vscode.commands.registerCommand('antigravity-zh.revertPatch', () => revertAllPatches()),
@@ -442,6 +691,22 @@ function activate(context) {
             applyAllPatches(true);
         } catch (e) {
             console.error('[antigravity-zh] 自动补丁失败:', e);
+        }
+
+        // 可选：同时自动汉化 Antigravity 主程序 (Hub)，默认关闭。
+        // Hub 是另一个独立应用且可能正在运行，因此仅在实际可行时静默尝试。
+        const patchHub = vscode.workspace.getConfiguration('antigravity-zh').get('patchHubApp', false);
+        if (patchHub) {
+            const hubDir = getHubResourcesDir();
+            if (hubDir && !isHubPatched(hubDir) && !isHubProcessRunning()) {
+                try {
+                    applyHubPatch(true);
+                    vscode.window.showInformationMessage(
+                        'Antigravity 主程序 (Hub) 已自动完成汉化，重启 Hub 后生效。');
+                } catch (e) {
+                    console.error('[antigravity-zh] Hub 自动补丁失败:', e);
+                }
+            }
         }
     }, 3000);
 }

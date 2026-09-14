@@ -29,11 +29,32 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 TRANSLATIONS_DIR = REPO_ROOT / "translations" / "patches" / "ide" / "antigravity"
 
 local_app_data = os.environ.get("LOCALAPPDATA")
-if not local_app_data:
-    print_status("❌", "无法获取 LOCALAPPDATA 环境变量，请确保在 Windows 环境下运行该脚本。")
-    sys.exit(1)
 
-BASE = Path(local_app_data) / "Programs" / "Antigravity" / "resources" / "app"
+
+def discover_base() -> Path:
+    """发现 IDE 内核安装目录。
+
+    Antigravity 2.x 起 IDE 独立安装在 "Antigravity IDE"；
+    旧版布局与 IDE 位于 "Antigravity" 下（现被 Hub 主程序占用）。
+    """
+    candidates = []
+    if local_app_data:
+        programs = Path(local_app_data) / "Programs"
+        candidates.append(programs / "Antigravity IDE" / "resources" / "app")
+        candidates.append(programs / "Antigravity" / "resources" / "app")
+    candidates.append(Path("/Applications/Antigravity IDE.app/Contents/Resources/app"))
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate
+    return candidates[0] if candidates else Path("resources/app")
+
+
+TARGET_OVERRIDE = None
+for i, arg in enumerate(sys.argv):
+    if arg == "--target" and i + 1 < len(sys.argv):
+        TARGET_OVERRIDE = Path(sys.argv[i + 1])
+
+BASE = TARGET_OVERRIDE if TARGET_OVERRIDE else discover_base()
 TARGETS = {
     "settings": BASE / "out" / "jetskiAgent" / "main.js",
     "chat": BASE / "extensions" / "antigravity" / "out" / "media" / "chat.js",

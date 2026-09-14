@@ -1,0 +1,22 @@
+[
+  [
+    "<title>Welcome to Antigravity</title>",
+    "<title>欢迎使用 Antigravity</title>"
+  ],
+  [
+    ">Setting up…</div>",
+    ">正在准备…</div>"
+  ],
+  [
+    "<h1>Welcome to the new Antigravity!</h1>\n      <p>Antigravity has been redesigned to put agents first with new capabilities. If you'd still like a code editor, you can download it as a separate app named <b>Antigravity IDE</b>.</p>",
+    "<h1>欢迎体验全新 Antigravity！</h1>\n      <p>Antigravity 已全面重构，以 Agent 为核心并带来多项新能力。如果你仍需要代码编辑器，可以下载独立应用 <b>Antigravity IDE</b>。</p>"
+  ],
+  [
+    "<span>Download the Antigravity IDE</span>",
+    "<span>下载 Antigravity IDE</span>"
+  ],
+  [
+    "<button class=\"btn-primary\" id=\"btn-skip\">Explore the new Antigravity</button>",
+    "<button class=\"btn-primary\" id=\"btn-skip\">开始使用全新 Antigravity</button>"
+  ]
+]

@@ -1,0 +1,18 @@
+[
+  [
+    "const updater_1 = require(\"./updater\");",
+    "const updater_1 = require(\"./updater\");\nconst zhI18n = require(\"../../zh-patch/zh-i18n\");"
+  ],
+  [
+    "label: 'New Window',\n        accelerator: 'CmdOrCtrl+Shift+N',",
+    "label: '新建窗口',\n        accelerator: 'CmdOrCtrl+Shift+N',"
+  ],
+  [
+    "label: 'Docs',",
+    "label: '文档',"
+  ],
+  [
+    "hideDevTools(menu);\n    // Re-apply the menu so the change takes effect.",
+    "hideDevTools(menu);\n    // 汉化：递归翻译所有菜单项标签（保留 role 与快捷键）\n    zhI18n.translateMenu(menu);\n    // Re-apply the menu so the change takes effect."
+  ]
+]

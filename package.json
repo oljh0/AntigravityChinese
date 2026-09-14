@@ -46,6 +46,16 @@
 				"command": "antigravity-zh.toggleBlockUpdate",
 				"title": "切换屏蔽 Antigravity 自动更新",
 				"category": "Antigravity 中文"
+			},
+			{
+				"command": "antigravity-zh.applyHubPatch",
+				"title": "汉化 Antigravity 主程序 (Hub)",
+				"category": "Antigravity 中文"
+			},
+			{
+				"command": "antigravity-zh.revertHubPatch",
+				"title": "恢复 Antigravity 主程序英文原版",
+				"category": "Antigravity 中文"
 			}
 		],
 		"configuration": {
@@ -55,6 +65,11 @@
 					"type": "boolean",
 					"default": false,
 					"description": "屏蔽 Antigravity 自动更新检测。开启后将阻止 IDE 检查和下载新版本。"
+				},
+				"antigravity-zh.patchHubApp": {
+					"type": "boolean",
+					"default": false,
+					"description": "启动时自动汉化 Antigravity 主程序 (Hub)。Hub 是独立于 IDE 的应用，需在其未运行时才能打补丁。"
 				}
 			}
 		},

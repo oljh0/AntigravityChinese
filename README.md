@@ -3,14 +3,15 @@
 [![Version](https://img.shields.io/badge/version-1.0.3-green.svg)](package.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-本项目致力于为 **Antigravity IDE** 提供全方位的简体中文本地化支持。它不仅包含官方扩展的翻译，还通过自动补丁技术汉化了 IDE 核心中硬编码的字符串。同时，本项目也为 **GitHub Copilot CLI**、**Google Gemini CLI**、**Kiro CLI** 和 **Qoder CLI** 提供汉化支持。
+本项目致力于为 **Antigravity** 提供全方位的简体中文本地化支持。它不仅包含官方扩展的翻译，还通过自动补丁技术汉化了 IDE 核心中硬编码的字符串。自 Antigravity 2.x 起，**「Antigravity 主程序（Hub）」与「Antigravity IDE」是两个独立应用**，本项目对两者均提供汉化。同时，本项目也为 **GitHub Copilot CLI**、**Google Gemini CLI**、**Kiro CLI** 和 **Qoder CLI** 提供汉化支持。
 
 ## 🌟 核心特性
 
-- **全方位汉化**：涵盖 IDE 菜单、设置、聊天界面及核心工作台。
+- **全方位汉化**：涵盖 IDE 菜单、设置、聊天界面及核心工作台；Hub 主程序的原生菜单/托盘/对话框与网页主界面。
 - **自动化补丁**：内置扩展插件自动识别安装路径，一键应用补丁。
+- **Hub 网页词典翻译**：Hub 主界面内嵌于 `language_server.exe`，通过安装词典翻译组件（DOM 文本 + placeholder/aria 等属性 + 动态内容监听）实现汉化，词典热更新（改完 `Ctrl+R` 即生效）。
 - **自动更新屏蔽**：可选屏蔽 IDE 自动更新，防止汉化失效。
-- **多产品支持**：除了 IDE，还支持 Copilot、Gemini、Kiro 和 Qoder CLI 的汉化。
+- **多产品支持**：除了 Antigravity IDE/Hub，还支持 Copilot、Gemini、Kiro 和 Qoder CLI 的汉化。
 - **安全可靠**：自动备份原始文件，支持随时还原。
 - **跨平台**：支持 Windows、macOS 和 Linux。
 
@@ -39,6 +40,13 @@
 - `Antigravity 中文: 恢复英文原始文件`
 - `Antigravity 中文: 切换屏蔽 Antigravity 自动更新`
 
+### 3. 汉化 Antigravity 主程序 (Hub)
+Hub 是独立于 IDE 的智能体桌面应用（Electron 外壳 `%LOCALAPPDATA%\Programs\Antigravity`，主界面由内嵌网页提供）。扩展提供两个命令：
+- `Antigravity 中文: 汉化 Antigravity 主程序 (Hub)`
+- `Antigravity 中文: 恢复 Antigravity 主程序英文原版`
+
+补丁原理：将 `resources/app.asar` 解包为 `app/` 目录（Electron 优先加载目录，原包保留为 `app.asar.orig`），汉化原生菜单/托盘/对话框，并在 `resources/zh-patch/` 安装网页词典翻译组件。词典文件 `cockpit-zh.json` 支持热更新，修改后在 Hub 内 `Ctrl+R` 重载窗口即生效。注意：打补丁前需完全退出 Hub（含托盘图标）；Hub 自动更新后补丁会失效，重新执行即可。也可开启设置项 `antigravity-zh.patchHubApp` 让扩展在启动时自动补丁（Hub 未运行时）。
+
 ---
 
 ## 🛠️ 高级工具：CLI 汉化脚本
@@ -49,7 +57,13 @@
 ```bash
 python scripts/ide/antigravity/patch_zh.py
 ```
-*该脚本会自动备份原文件并在更新时安全地重新应用补丁。*
+*该脚本会自动备份原文件并在更新时安全地重新应用补丁。自动发现新版 `Programs/Antigravity IDE` 与旧版 `Programs/Antigravity` 布局，也可用 `--target` 手动指定。*
+
+### Antigravity 主程序 (Hub) 汉化
+```bash
+python scripts/hub/antigravity/patch_hub_zh.py
+```
+解包 `resources/app.asar` → 汉化原生 UI → 安装网页词典翻译组件。支持 `--dry-run`（预览）、`--revert`（恢复英文）、`--target <resources 目录>`（覆盖自动发现）、`--force`（跳过运行中检查）。原生替换表位于 `translations/patches/hub/antigravity/*.replacements.json`，网页词典为 `webui.dictionary.json`（dict 精确匹配 + rules 动态正则）。
 
 ### Copilot CLI 汉化
 ```bash
@@ -116,7 +130,7 @@ chcp 65001 > $null
 
 ```
 AntigravityChinese/
-├── extension.js                  # IDE 扩展核心：自动补丁引擎
+├── extension.js                  # IDE 扩展核心：自动补丁引擎（含 Hub 补丁命令）
 ├── package.json                  # 扩展清单与元数据
 ├── README.md
 │
@@ -133,6 +147,11 @@ AntigravityChinese/
 │   │       ├── extract_bundle.py  # Qoder CLI Bun bundle 提取与启动配置
 │   │       ├── patch_app_zh.py    # Qoder CLI JS bundle 汉化脚本
 │   │       └── extract_strings.py # Qoder CLI 字符串提取工具
+│   ├── hub/
+│   │   └── antigravity/
+│   │       ├── patch_hub_zh.py    # Hub 主程序 asar 解包+汉化脚本
+│   │       └── assets/
+│   │           └── zh-i18n.js     # Hub 网页 UI 词典翻译注入组件
 │   ├── ide/
 │   │   └── antigravity/
 │   │       └── patch_zh.py       # IDE 汉化脚本
@@ -151,11 +170,14 @@ AntigravityChinese/
 │       │   ├── gemini/           # Gemini CLI 替换表 (common/main/ui/qwen)
 │       │   ├── kiro/             # Kiro CLI 替换表 (common/main/ui)
 │       │   └── qoder/            # Qoder CLI 替换表 (common/main/ui)
+│       ├── hub/
+│       │   └── antigravity/      # Hub 主程序替换表 + webui.dictionary.json 网页词典
 │       └── ide/
 │           └── antigravity/      # IDE 替换表
 │
 ├── tests/                        # 自动化测试
 │   ├── test_patch_app_zh.py      # Copilot 补丁脚本测试
+│   ├── test_patch_hub_zh.py      # Hub 补丁脚本测试（合成 asar 全链路）
 │   ├── test_patch_gemini_zh.py   # Gemini 补丁脚本测试
 │   ├── test_copilot_cli_doc_pairs.py
 │   └── test_translation_resource_layout.py

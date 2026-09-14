@@ -1,0 +1,34 @@
+[
+  [
+    "const msg = `language_server binary not found at:\\n${languageServer_1.LS_BINARY}\\n\\nPlease build set a valid location.`;",
+    "const msg = `未找到 language_server 可执行文件：\\n${languageServer_1.LS_BINARY}\\n\\n请安装到有效位置。`;"
+  ],
+  [
+    "await electron_1.dialog.showErrorBox('Binary not found', msg);",
+    "await electron_1.dialog.showErrorBox('未找到可执行文件', msg);"
+  ],
+  [
+    "await electron_1.dialog.showErrorBox('Startup failed', msg);",
+    "await electron_1.dialog.showErrorBox('启动失败', msg);"
+  ],
+  [
+    "label: 'New Window',\n                    click: () => (0, utils_1.createWindow)(url, storageManager),",
+    "label: '新建窗口',\n                    click: () => (0, utils_1.createWindow)(url, storageManager),"
+  ],
+  [
+    "id: 'running-agents',\n                label: 'No agents running',",
+    "id: 'running-agents',\n                label: '没有运行中的 Agent',"
+  ],
+  [
+    "label: `Open ${electron_1.app.getName()}`,",
+    "label: `打开 ${electron_1.app.getName()}`,"
+  ],
+  [
+    "label: 'Quit',\n                click: () => {",
+    "label: '退出',\n                click: () => {"
+  ],
+  [
+    "buttons: ['Cancel', 'Quit'],\n        defaultId: 1,\n        cancelId: 0,\n        title: 'Confirm Quit',\n        message: 'Are you sure you want to quit?',\n        detail: 'There may be agents or background tasks running.',",
+    "buttons: ['取消', '退出'],\n        defaultId: 1,\n        cancelId: 0,\n        title: '确认退出',\n        message: '确定要退出吗？',\n        detail: '可能仍有 Agent 或后台任务正在运行。',"
+  ]
+]

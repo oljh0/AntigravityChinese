@@ -1,0 +1,10 @@
+[
+  [
+    "const loadingOverlay_1 = require(\"./loadingOverlay\");",
+    "const loadingOverlay_1 = require(\"./loadingOverlay\");\nconst zhI18n = require(\"../../zh-patch/zh-i18n\");"
+  ],
+  [
+    "(0, loadingOverlay_1.attachLoadingOverlay)(win, foregroundColor, backgroundColor);",
+    "(0, loadingOverlay_1.attachLoadingOverlay)(win, foregroundColor, backgroundColor);\n    // 汉化：为窗口附加网页 UI 词典翻译注入\n    zhI18n.attachWebTranslator(win);"
+  ]
+]
